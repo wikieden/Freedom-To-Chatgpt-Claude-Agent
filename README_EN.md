@@ -6,12 +6,12 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 > 📱 Setup guide (Chinese): [账号注册与订阅指南](docs/账号注册与订阅指南.md)
 
-🌐 **Live site:** https://wikieden.github.io/Awesome-ChatGPT-Prompts-CN/
+🌐 **Live site:** https://wikieden.github.io/Freedom-To-Chatgpt-Claude-Agent/
 🇨🇳 中文版见 [README.md](README.md)
 
 <!-- AUTO-PROMPTS:START （以下由 scripts/build.js 自动生成，勿手改） -->
 
-> 🌐 **Live site (search · copy · ⭐):** https://wikieden.github.io/Awesome-ChatGPT-Prompts-CN/
+> 🌐 **Live site (search · copy · ⭐):** https://wikieden.github.io/Freedom-To-Chatgpt-Claude-Agent/
 
 ### Categories
 

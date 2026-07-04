@@ -4,7 +4,7 @@
 >
 > 曾用名/别名：ChatGPT 调教指南 · 咒语指南 · 聊天提示词指南。
 >
-> 🌐 **在线版（搜索 · 一键复制 · ⭐）：** https://wikieden.github.io/Awesome-ChatGPT-Prompts-CN/ ｜ 🇬🇧 English: [README_EN.md](README_EN.md)
+> 🌐 **在线版（搜索 · 一键复制 · ⭐）：** https://wikieden.github.io/Freedom-To-Chatgpt-Claude-Agent/ ｜ 🇬🇧 English: [README_EN.md](README_EN.md)
 
 ## 🧭 本项目包含什么
 
@@ -30,13 +30,13 @@
 
 **第 3 步 · 💳 付费**：买美区 Apple 礼品卡（[Pockyt 商城](https://shop.pockyt.io/pc/home) 支持国内卡/微信/支付宝；或支付宝小程序 / Apple 官网）→ 充入余额 → **iOS App 内购**订阅 Claude / ChatGPT。→ [详细步骤](docs/账号注册与订阅指南.md#3-apple-礼品卡购买与充值)
 
-**第 4 步 · 📝 用提示词**：打开 [在线版](https://wikieden.github.io/Awesome-ChatGPT-Prompts-CN/) 搜索、一键复制；或直接看下面的 [板块目录](#板块目录)。
+**第 4 步 · 📝 用提示词**：打开 [在线版](https://wikieden.github.io/Freedom-To-Chatgpt-Claude-Agent/) 搜索、一键复制；或直接看下面的 [板块目录](#板块目录)。
 
 ## 📝 提示词大全（双语 · 复制即用）
 
 240+ 条精选提示词，覆盖新手入门、角色扮演、文生图、文生视频、Skill 推荐、提示词技巧六大板块，每条中英对照、标注难度与适用模型。
 
-- 🔎 **在线检索 / 一键复制**：https://wikieden.github.io/Awesome-ChatGPT-Prompts-CN/
+- 🔎 **在线检索 / 一键复制**：https://wikieden.github.io/Freedom-To-Chatgpt-Claude-Agent/
 - 📚 想写出更有效的提示词？看下面 [板块目录](#板块目录) 里的「💡 提示词技巧」板块，或读 [ChatGPT 入门指南](ChatGpt-receipt.md)
 - 😺 想把 ChatGPT 调教成猫娘？教程同样在 [ChatGPT 入门指南](ChatGpt-receipt.md)
 
@@ -60,7 +60,7 @@
 
 <!-- AUTO-PROMPTS:START （以下由 scripts/build.js 自动生成，勿手改） -->
 
-> 🌐 **在线版（搜索 · 一键复制 · ⭐）：** https://wikieden.github.io/Awesome-ChatGPT-Prompts-CN/
+> 🌐 **在线版（搜索 · 一键复制 · ⭐）：** https://wikieden.github.io/Freedom-To-Chatgpt-Claude-Agent/
 
 ### 板块目录
 
