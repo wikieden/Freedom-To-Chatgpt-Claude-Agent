@@ -14,7 +14,7 @@ const DATA = path.join(ROOT, "web", "data", "prompts.js");
 const README = path.join(ROOT, "README.md");
 const README_EN = path.join(ROOT, "README_EN.md");
 
-const SITE = "https://wikieden.github.io/Awesome-ChatGPT-Prompts-CN/";
+const SITE = "https://wikieden.github.io/Freedom-To-Chatgpt-Claude-Agent/";
 const START = "<!-- AUTO-PROMPTS:START （以下由 scripts/build.js 自动生成，勿手改） -->";
 const END = "<!-- AUTO-PROMPTS:END -->";
 

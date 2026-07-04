@@ -53,6 +53,14 @@ window.CATEGORIES = [
     "desc_en": "Curated agent skills"
   },
   {
+    "id": "plugin",
+    "icon": "🔌",
+    "zh": "插件 / MCP",
+    "en": "Plugins / MCP",
+    "desc_zh": "Claude Code、Codex CLI、ChatGPT 常用插件与 MCP",
+    "desc_en": "Common plugins & MCP servers for Claude Code, Codex CLI, ChatGPT"
+  },
+  {
     "id": "craft",
     "icon": "💡",
     "zh": "提示词技巧",
@@ -5433,6 +5441,210 @@ window.PROMPTS = [
       "订购"
     ],
     "source": "整理自 Google Gemini 官方发布说明（2026-07）",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-claude-code-subagents",
+    "category": "plugin",
+    "level": "advanced",
+    "title_zh": "Claude Code：用子代理（Subagents）拆分专职任务",
+    "title_en": "Claude Code: Split Work into Specialized Subagents",
+    "body_zh": "Claude Code 支持自定义子代理（subagents）：每个子代理有独立系统提示、独立工具权限、独立上下文窗口，适合把「探索代码库」「写代码」「代码审查」「安全审查」拆成互不干扰的角色。配置方式：在项目 `.claude/agents/` 或全局 `~/.claude/agents/` 下写 Markdown 文件，frontmatter 声明 name/description/tools，正文写该角色的系统提示。主对话里说明确任务，Claude Code 会自动判断该不该调用某个子代理，也可以直接说「用 code-reviewer 子代理审查这次改动」来强制指定。好处：审查和实现分离，代理不会「自己审自己」，上下文也不会被无关文件挤爆。",
+    "body_en": "Claude Code supports custom subagents: each has its own system prompt, tool permissions, and context window — good for splitting \"explore the codebase\", \"write code\", \"code review\", and \"security review\" into non-interfering roles. Configure by writing a Markdown file under project `.claude/agents/` or global `~/.claude/agents/`, with frontmatter declaring name/description/tools and the role's system prompt in the body. State the task in the main conversation and Claude Code decides when to invoke a subagent, or force it explicitly: \"use the code-reviewer subagent to review this change.\" Benefit: review and implementation stay separate — no self-approving your own work — and unrelated files don't flood the context.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude Code",
+      "subagent",
+      "插件",
+      "工作流"
+    ],
+    "source": "整理自 Claude Code 官方文档",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-claude-code-skills",
+    "category": "plugin",
+    "level": "intermediate",
+    "title_zh": "Claude Code：写一个可复用 Skill，团队共享一份操作规范",
+    "title_en": "Claude Code: Write a Reusable Skill to Share Team Conventions",
+    "body_zh": "Claude Code 的 Skill 是一份放进仓库或全局配置里的 Markdown 说明书，描述「什么场景该怎么做」，Claude 在匹配到场景时会自动读取并照做，不用每次对话重新交代规范。适合固化：提交信息格式、代码审查清单、发布流程、某个内部框架的使用套路。写法：新建 `.claude/skills/<名字>/SKILL.md`，frontmatter 写 name 和 description（描述要具体到「什么时候该触发这个 skill」），正文写步骤化的指令，可以引用仓库里的其他文件。团队协作时把 Skill 提交进版本库，所有人用 Claude Code 时行为自动对齐，不用口头传规矩。",
+    "body_en": "A Claude Code Skill is a Markdown playbook checked into a repo or global config describing \"how to handle this kind of situation\" — Claude reads and follows it automatically when the scenario matches, so you don't re-explain conventions every conversation. Good for codifying: commit message format, code review checklists, release process, or how to use an internal framework. To write one: create `.claude/skills/<name>/SKILL.md`, with frontmatter for name and description (make the description specific about *when* to trigger this skill), and step-by-step instructions in the body — it can reference other files in the repo. For teams, commit the Skill to version control so everyone's Claude Code behaves consistently without verbally repeating the rules.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude Code",
+      "Skill",
+      "插件",
+      "团队协作"
+    ],
+    "source": "整理自 Claude Code 官方文档",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-mcp-servers-common",
+    "category": "plugin",
+    "level": "intermediate",
+    "title_zh": "常用 MCP Server 速查：让 AI 直接连文件系统、GitHub、浏览器",
+    "title_en": "Common MCP Servers Cheat Sheet: Filesystem, GitHub, Browser",
+    "body_zh": "MCP（Model Context Protocol）是让 Claude / ChatGPT / 其他 Agent 接入外部工具和数据的标准协议，装上对应的 MCP server 就能直接操作，不用手动复制粘贴。几个高频起步的：filesystem（读写本地文件，排查项目常用）；github（列 issue、开 PR、看 diff，配 token 后可直接操作仓库）；playwright / browser（打开网页、点击、截图，适合调试前端或做网页测试）；postgres / sqlite（直接查数据库，别再手动导出数据贴给 AI）；puppeteer（网页自动化的另一个选择）。装法一般是在客户端配置文件（如 Claude Desktop 的 `claude_desktop_config.json`，或 Claude Code 用 `claude mcp add`）里声明 server 命令和参数，重启客户端生效。建议先只装 1-2 个真正用得上的，装太多会让每次对话都带一堆用不到的工具定义，反而拖慢响应。",
+    "body_en": "MCP (Model Context Protocol) is the standard way to connect Claude, ChatGPT, and other agents to external tools and data — install the matching MCP server and the agent can act directly instead of you copy-pasting data back and forth. A few high-value starters: filesystem (read/write local files, handy for project work); github (list issues, open PRs, view diffs — once a token is configured it can operate on the repo directly); playwright/browser (open pages, click, screenshot — good for debugging frontend or web testing); postgres/sqlite (query a database directly instead of manually exporting data to paste into a chat); puppeteer (another option for web automation). Installation is usually declaring the server command and args in a client config file (e.g. Claude Desktop's `claude_desktop_config.json`, or `claude mcp add` for Claude Code), then restarting the client. Start with only 1-2 servers you'll actually use — installing too many means every conversation carries a pile of unused tool definitions and slows things down.",
+    "models": [
+      "Claude",
+      "GPT"
+    ],
+    "tags": [
+      "MCP",
+      "插件",
+      "GitHub",
+      "文件系统",
+      "浏览器"
+    ],
+    "source": "整理自 MCP 官方文档与社区实践",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-codex-agents-md",
+    "category": "plugin",
+    "level": "intermediate",
+    "title_zh": "Codex CLI：用 AGENTS.md 固定项目规范，别每次重复交代",
+    "title_en": "Codex CLI: Lock In Project Conventions with AGENTS.md",
+    "body_zh": "Codex CLI 会自动读取仓库根目录下的 `AGENTS.md`（以及子目录里更细粒度的同名文件），把里面写的规范当成默认行为准则，不用每次对话都重新交代「用什么风格」「怎么跑测试」。建议写进去的内容：项目用什么语言/框架、代码风格（缩进、命名习惯）、怎么跑测试和 lint（具体命令）、提交信息格式、哪些目录/文件不要碰（比如生成物、第三方依赖）、有没有需要遵守的架构约束。写法上偏「给约束不给步骤」——说清「必须做什么、不能做什么」，让 Codex 自己规划怎么完成。子目录可以放更具体的 AGENTS.md 覆盖或补充根目录规则，适合 monorepo 里不同模块用不同规范的情况。",
+    "body_en": "Codex CLI automatically reads `AGENTS.md` at the repo root (and finer-grained copies in subdirectories), treating what's written there as default behavior — so you don't re-explain \"what style to use\" or \"how to run tests\" every session. Worth including: language/framework used, code style (indentation, naming), how to run tests and lint (exact commands), commit message format, directories/files to leave alone (generated output, third-party deps), and any architectural constraints to respect. Write it as constraints, not steps — state what must and must not happen, and let Codex figure out how. Subdirectory AGENTS.md files can override or extend the root rules, which works well for a monorepo where different modules follow different conventions.",
+    "models": [
+      "GPT"
+    ],
+    "tags": [
+      "Codex",
+      "AGENTS.md",
+      "插件",
+      "项目规范"
+    ],
+    "source": "整理自 OpenAI Codex CLI 官方文档",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-codex-sandbox-approval",
+    "category": "plugin",
+    "level": "intermediate",
+    "title_zh": "Codex CLI：沙盒与审批模式怎么选，别一上来就全自动",
+    "title_en": "Codex CLI: Choosing Sandbox & Approval Modes Wisely",
+    "body_zh": "Codex CLI 有几档沙盒/审批模式，控制它能不能自己改文件、跑命令、联网。刚开始用一个新仓库时建议从「只读 + 每步审批」开始，看它给出的计划和改动是否符合预期，熟悉它的行为后再逐步放宽到「工作区可写、自动执行非破坏性命令」。涉及删除文件、改动 CI 配置、执行网络请求这类操作，建议始终保留人工确认这一步，不要图省事直接全自动放开——尤其是在你还不了解这个任务边界、或者仓库有共享/生产影响的情况下。实际用法：先用限制模式跑一遍，确认输出的计划和 diff 没问题，再考虑要不要在后续同类型任务里放宽权限。",
+    "body_en": "Codex CLI has several sandbox/approval tiers controlling whether it can edit files, run commands, or access the network on its own. When starting on a new repo, begin with read-only plus per-step approval to check whether its plans and edits match your expectations, then gradually loosen to workspace-writable with auto-run for non-destructive commands once you trust its behavior. For anything involving deleting files, changing CI config, or making network requests, keep a human-confirmation step rather than going fully autonomous for convenience — especially when you don't yet know the task's boundaries or the repo has shared/production impact. Practical flow: run once in restricted mode, confirm the plan and diff look right, then decide whether to loosen permissions for similar future tasks.",
+    "models": [
+      "GPT"
+    ],
+    "tags": [
+      "Codex",
+      "沙盒",
+      "安全",
+      "插件"
+    ],
+    "source": "整理自 OpenAI Codex CLI 官方文档",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-chatgpt-custom-gpt",
+    "category": "plugin",
+    "level": "beginner",
+    "title_zh": "ChatGPT：做一个自定义 GPT，把重复任务打包成一键调用",
+    "title_en": "ChatGPT: Build a Custom GPT to Package a Repeated Task",
+    "body_zh": "如果你发现自己经常对 ChatGPT 重复同一套指令（比如「按固定格式写周报」「按公司语气改文案」），可以做一个自定义 GPT 把这套指令、参考资料和常用工具打包起来，之后打开就能直接用，不用每次重新粘贴提示词。创建时填三块最关键：Instructions（把你平时反复交代的规则写清楚，包括语气、格式、禁止事项）；Knowledge（上传参考文档，比如公司术语表、历史案例，GPT 回答时会优先参考这些文件）；Actions（如果需要连外部 API，比如查天气、查库存，配置好 schema 后 GPT 能主动调用）。做完可以设为仅自己可见，先用几次真实任务测试，觉得稳定了再考虑分享给团队。",
+    "body_en": "If you notice you repeat the same instructions to ChatGPT often (e.g. \"write my weekly report in this format\" or \"rewrite copy in our company's tone\"), package that instruction set, reference material, and any tools into a custom GPT so you can open it and go, instead of re-pasting the prompt every time. Three key sections when creating one: Instructions (write out the rules you repeat — tone, format, things to avoid); Knowledge (upload reference docs — glossaries, past examples — which the GPT will prioritize when answering); Actions (if it needs to call an external API, e.g. check weather or inventory, configure the schema and the GPT can call it proactively). Set it to private first, run it on a few real tasks, and only consider sharing with your team once it's proven stable.",
+    "models": [
+      "GPT"
+    ],
+    "tags": [
+      "ChatGPT",
+      "自定义GPT",
+      "插件",
+      "自动化"
+    ],
+    "source": "整理自 OpenAI ChatGPT 官方文档",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-chatgpt-projects",
+    "category": "plugin",
+    "level": "beginner",
+    "title_zh": "ChatGPT Projects：把长期任务的文件和上下文归到一个空间",
+    "title_en": "ChatGPT Projects: Keep a Long-Running Task's Files and Context in One Place",
+    "body_zh": "ChatGPT 的 Projects 功能可以把同一个长期任务相关的对话、上传文件、自定义指令都收进一个独立空间，避免每次开新对话都要重新上传资料、重新交代背景。适合场景：一个持续几周的写作/研究项目、一门课程的学习资料、一个产品的长期迭代讨论。用法：新建 Project 后先把会反复用到的参考文件（大纲、术语表、历史记录）传进去，再写一段项目级指令（比如「本项目所有回答都用简体中文，引用资料时标出出处」），之后在这个 Project 里的每次对话都会自动带上这些上下文，不用重复交代。整理资料时按主题建多个 Project 比全堆在一个对话里更好检索、也更不容易上下文混乱。",
+    "body_en": "ChatGPT's Projects feature groups the conversations, uploaded files, and custom instructions for one long-running task into a dedicated space, so you don't re-upload material or re-explain background every time you open a new chat. Good for: a writing/research project spanning weeks, study materials for a course, or an ongoing product iteration discussion. Usage: create a Project, upload the reference files you'll reuse often (outlines, glossaries, history), then write project-level instructions (e.g. \"answer in Simplified Chinese and cite sources when quoting material\"). Every conversation inside that Project then carries this context automatically. Organizing by topic into separate Projects is easier to search and less prone to context mixing than dumping everything into one chat.",
+    "models": [
+      "GPT"
+    ],
+    "tags": [
+      "ChatGPT",
+      "Projects",
+      "插件",
+      "知识管理"
+    ],
+    "source": "整理自 OpenAI ChatGPT 官方文档",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-claude-code-hooks",
+    "category": "plugin",
+    "level": "advanced",
+    "title_zh": "Claude Code：用 Hooks 在关键节点自动跑校验",
+    "title_en": "Claude Code: Use Hooks to Auto-Run Checks at Key Moments",
+    "body_zh": "Claude Code 的 Hooks 能在特定事件（比如每次工具调用前/后、每次回复结束时）自动执行你指定的 shell 命令，适合把「格式化」「lint」「跑测试」「敏感文件保护」这类校验从「靠记住去做」变成「自动强制发生」。常见用法：文件写入后自动跑一次 formatter，保证风格统一；每次准备执行命令前先检查是否碰了受保护路径（比如 `.env`、生产配置），命中就拦截；对话结束时自动跑一次测试套件并把结果反馈进上下文。配置在 `settings.json` 里声明事件类型和对应命令，命令执行失败时可以选择阻断当前操作。这比在提示词里反复叮嘱「记得跑测试」更可靠，因为它是硬约束而不是软提醒。",
+    "body_en": "Claude Code's Hooks run shell commands you specify at particular events (before/after each tool call, at the end of each reply, etc.) — good for turning \"format the code\", \"lint\", \"run tests\", and \"protect sensitive files\" from something you have to remember into something that's enforced automatically. Common uses: auto-run a formatter after a file write to keep style consistent; check whether a command is about to touch a protected path (like `.env` or prod config) before it runs, and block it if so; auto-run the test suite at the end of a conversation and feed the result back into context. Configure event types and their commands in `settings.json`; a failing command can block the current operation. This is more reliable than repeating \"remember to run tests\" in a prompt, because it's a hard constraint rather than a soft reminder.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude Code",
+      "Hooks",
+      "插件",
+      "自动化校验"
+    ],
+    "source": "整理自 Claude Code 官方文档",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-codex-mcp-bridge",
+    "category": "plugin",
+    "level": "advanced",
+    "title_zh": "Codex CLI 接 MCP：让它调用同一批外部工具",
+    "title_en": "Codex CLI + MCP: Call the Same External Tools",
+    "body_zh": "Codex CLI 也能作为 MCP 客户端接入外部 MCP server，意味着你给 Claude 配的 GitHub / 文件系统 / 数据库工具，同样可以让 Codex 用。好处是团队里用不同 CLI 的人可以共用同一套「工具后端」，不用为每个 Agent 重复搭建集成。配置方式是在 Codex 的配置文件里声明 MCP server 的启动命令（跟给 Claude Desktop / Claude Code 配置的方式类似），保存后 Codex 在需要时会自动发现并调用对应工具。建议先从只读类工具（查 issue、读数据库）开始接，等确认调用行为符合预期，再考虑接入会产生副作用的工具（建 PR、写数据库）。",
+    "body_en": "Codex CLI can also act as an MCP client and connect to external MCP servers — meaning the GitHub/filesystem/database tools you set up for Claude can be used by Codex too. The benefit: teams using different CLIs can share the same \"tool backend\" instead of building integrations per agent. Configure it by declaring the MCP server's launch command in Codex's config file (similar to how you'd configure Claude Desktop or Claude Code); once saved, Codex discovers and calls the matching tools as needed. Start with read-only tools (viewing issues, reading a database), confirm the call behavior matches expectations, then consider connecting tools with side effects (opening PRs, writing to a database).",
+    "models": [
+      "GPT"
+    ],
+    "tags": [
+      "Codex",
+      "MCP",
+      "插件",
+      "工具集成"
+    ],
+    "source": "整理自 MCP 与 Codex CLI 社区实践",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-choose-right-tool",
+    "category": "plugin",
+    "level": "beginner",
+    "title_zh": "该装插件/MCP 还是该写提示词？一个简单判断标准",
+    "title_en": "Plugin/MCP or Just a Better Prompt? A Simple Way to Decide",
+    "body_zh": "新手常见误区：一遇到任务就想着「有没有插件能解决」，其实很多时候一句写清楚的提示词就够了。判断标准很简单：如果任务需要 AI 读写你本机之外的真实数据/系统（代码仓库、数据库、日历、第三方 App），才需要装插件或 MCP；如果任务只是「把这段话改写得更好」「帮我分析这份我已经贴过来的文本」，纯提示词就能搞定，装插件反而增加复杂度和风险（授权范围、误操作可能）。新手建议路径：先只用聊天窗口把提示词写扎实，遇到「AI 说它做不到，因为它连不到某个系统」这种明确瓶颈时，再针对那一个具体需求去装一个插件或 MCP，不要一上来就装一堆用不上的。",
+    "body_en": "A common beginner mistake: reaching for \"is there a plugin for this\" the moment a task shows up, when often a clearly written prompt is enough. Simple rule of thumb: install a plugin or MCP only when the task needs the AI to read/write real data or systems beyond your local chat — a code repo, database, calendar, third-party app. If the task is just \"rewrite this text better\" or \"analyze this text I already pasted in,\" a plain prompt handles it — adding a plugin only adds complexity and risk (permission scope, chance of unintended actions). Recommended path for beginners: get the prompt itself solid in the chat window first; only when you hit a concrete wall — \"the AI says it can't do this because it can't reach system X\" — install one specific plugin or MCP for that need, instead of installing a pile of things you won't use.",
+    "models": [
+      "Claude",
+      "GPT",
+      "Gemini"
+    ],
+    "tags": [
+      "插件",
+      "MCP",
+      "新手",
+      "决策"
+    ],
+    "source": "原创",
     "updated": "2026-07-04"
   }
 ];

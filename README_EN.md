@@ -20,6 +20,7 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 - 🖼️ **Text-to-Image** (15)
 - 🎬 **Text-to-Video** (20)
 - 🧩 **Skills** (19)
+- 🔌 **Plugins / MCP** (10)
 - 💡 **Prompt Craft** (45)
 
 ## 🚀 Getting Started
@@ -1162,6 +1163,58 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🔴 Advanced ｜ Gemini`  ·  整理自 Google AI for Developers 发布说明（2026-07）
 
 > Google has made the Computer Use tool generally available in gemini-3-pro-preview and gemini-3-flash-preview — the model can "see" a screenshot of the screen, then plan and execute clicks, typing, and scrolling to automate web or desktop tasks that don't have a ready-made API. When you brief it, include three parts: 1) the goal — e.g. "submit all three of last week's invoices in this expense system"; 2) boundaries — specify which steps should pause for your confirmation (anything irreversible like payments, deletions, or sending messages); 3) a fallback plan — e.g. "if the page layout changed and you can't find the button, take a screenshot and ask me instead of guessing." Practical tip: the first time you run a new task, ask it to "just plan the steps without actually executing them" so you can review the plan before granting it permission to act. For anything touching login credentials or payments, always have it pause for confirmation at the key step rather than running fully automatically.
+
+## 🔌 Plugins / MCP
+
+### Claude Code: Split Work into Specialized Subagents
+`🔴 Advanced ｜ Claude`  ·  整理自 Claude Code 官方文档
+
+> Claude Code supports custom subagents: each has its own system prompt, tool permissions, and context window — good for splitting "explore the codebase", "write code", "code review", and "security review" into non-interfering roles. Configure by writing a Markdown file under project `.claude/agents/` or global `~/.claude/agents/`, with frontmatter declaring name/description/tools and the role's system prompt in the body. State the task in the main conversation and Claude Code decides when to invoke a subagent, or force it explicitly: "use the code-reviewer subagent to review this change." Benefit: review and implementation stay separate — no self-approving your own work — and unrelated files don't flood the context.
+
+### Claude Code: Write a Reusable Skill to Share Team Conventions
+`🟡 Intermediate ｜ Claude`  ·  整理自 Claude Code 官方文档
+
+> A Claude Code Skill is a Markdown playbook checked into a repo or global config describing "how to handle this kind of situation" — Claude reads and follows it automatically when the scenario matches, so you don't re-explain conventions every conversation. Good for codifying: commit message format, code review checklists, release process, or how to use an internal framework. To write one: create `.claude/skills/<name>/SKILL.md`, with frontmatter for name and description (make the description specific about *when* to trigger this skill), and step-by-step instructions in the body — it can reference other files in the repo. For teams, commit the Skill to version control so everyone's Claude Code behaves consistently without verbally repeating the rules.
+
+### Common MCP Servers Cheat Sheet: Filesystem, GitHub, Browser
+`🟡 Intermediate ｜ Claude · GPT`  ·  整理自 MCP 官方文档与社区实践
+
+> MCP (Model Context Protocol) is the standard way to connect Claude, ChatGPT, and other agents to external tools and data — install the matching MCP server and the agent can act directly instead of you copy-pasting data back and forth. A few high-value starters: filesystem (read/write local files, handy for project work); github (list issues, open PRs, view diffs — once a token is configured it can operate on the repo directly); playwright/browser (open pages, click, screenshot — good for debugging frontend or web testing); postgres/sqlite (query a database directly instead of manually exporting data to paste into a chat); puppeteer (another option for web automation). Installation is usually declaring the server command and args in a client config file (e.g. Claude Desktop's `claude_desktop_config.json`, or `claude mcp add` for Claude Code), then restarting the client. Start with only 1-2 servers you'll actually use — installing too many means every conversation carries a pile of unused tool definitions and slows things down.
+
+### Codex CLI: Lock In Project Conventions with AGENTS.md
+`🟡 Intermediate ｜ GPT`  ·  整理自 OpenAI Codex CLI 官方文档
+
+> Codex CLI automatically reads `AGENTS.md` at the repo root (and finer-grained copies in subdirectories), treating what's written there as default behavior — so you don't re-explain "what style to use" or "how to run tests" every session. Worth including: language/framework used, code style (indentation, naming), how to run tests and lint (exact commands), commit message format, directories/files to leave alone (generated output, third-party deps), and any architectural constraints to respect. Write it as constraints, not steps — state what must and must not happen, and let Codex figure out how. Subdirectory AGENTS.md files can override or extend the root rules, which works well for a monorepo where different modules follow different conventions.
+
+### Codex CLI: Choosing Sandbox & Approval Modes Wisely
+`🟡 Intermediate ｜ GPT`  ·  整理自 OpenAI Codex CLI 官方文档
+
+> Codex CLI has several sandbox/approval tiers controlling whether it can edit files, run commands, or access the network on its own. When starting on a new repo, begin with read-only plus per-step approval to check whether its plans and edits match your expectations, then gradually loosen to workspace-writable with auto-run for non-destructive commands once you trust its behavior. For anything involving deleting files, changing CI config, or making network requests, keep a human-confirmation step rather than going fully autonomous for convenience — especially when you don't yet know the task's boundaries or the repo has shared/production impact. Practical flow: run once in restricted mode, confirm the plan and diff look right, then decide whether to loosen permissions for similar future tasks.
+
+### ChatGPT: Build a Custom GPT to Package a Repeated Task
+`🟢 Beginner ｜ GPT`  ·  整理自 OpenAI ChatGPT 官方文档
+
+> If you notice you repeat the same instructions to ChatGPT often (e.g. "write my weekly report in this format" or "rewrite copy in our company's tone"), package that instruction set, reference material, and any tools into a custom GPT so you can open it and go, instead of re-pasting the prompt every time. Three key sections when creating one: Instructions (write out the rules you repeat — tone, format, things to avoid); Knowledge (upload reference docs — glossaries, past examples — which the GPT will prioritize when answering); Actions (if it needs to call an external API, e.g. check weather or inventory, configure the schema and the GPT can call it proactively). Set it to private first, run it on a few real tasks, and only consider sharing with your team once it's proven stable.
+
+### ChatGPT Projects: Keep a Long-Running Task's Files and Context in One Place
+`🟢 Beginner ｜ GPT`  ·  整理自 OpenAI ChatGPT 官方文档
+
+> ChatGPT's Projects feature groups the conversations, uploaded files, and custom instructions for one long-running task into a dedicated space, so you don't re-upload material or re-explain background every time you open a new chat. Good for: a writing/research project spanning weeks, study materials for a course, or an ongoing product iteration discussion. Usage: create a Project, upload the reference files you'll reuse often (outlines, glossaries, history), then write project-level instructions (e.g. "answer in Simplified Chinese and cite sources when quoting material"). Every conversation inside that Project then carries this context automatically. Organizing by topic into separate Projects is easier to search and less prone to context mixing than dumping everything into one chat.
+
+### Claude Code: Use Hooks to Auto-Run Checks at Key Moments
+`🔴 Advanced ｜ Claude`  ·  整理自 Claude Code 官方文档
+
+> Claude Code's Hooks run shell commands you specify at particular events (before/after each tool call, at the end of each reply, etc.) — good for turning "format the code", "lint", "run tests", and "protect sensitive files" from something you have to remember into something that's enforced automatically. Common uses: auto-run a formatter after a file write to keep style consistent; check whether a command is about to touch a protected path (like `.env` or prod config) before it runs, and block it if so; auto-run the test suite at the end of a conversation and feed the result back into context. Configure event types and their commands in `settings.json`; a failing command can block the current operation. This is more reliable than repeating "remember to run tests" in a prompt, because it's a hard constraint rather than a soft reminder.
+
+### Codex CLI + MCP: Call the Same External Tools
+`🔴 Advanced ｜ GPT`  ·  整理自 MCP 与 Codex CLI 社区实践
+
+> Codex CLI can also act as an MCP client and connect to external MCP servers — meaning the GitHub/filesystem/database tools you set up for Claude can be used by Codex too. The benefit: teams using different CLIs can share the same "tool backend" instead of building integrations per agent. Configure it by declaring the MCP server's launch command in Codex's config file (similar to how you'd configure Claude Desktop or Claude Code); once saved, Codex discovers and calls the matching tools as needed. Start with read-only tools (viewing issues, reading a database), confirm the call behavior matches expectations, then consider connecting tools with side effects (opening PRs, writing to a database).
+
+### Plugin/MCP or Just a Better Prompt? A Simple Way to Decide
+`🟢 Beginner ｜ Claude · GPT · Gemini`  ·  原创
+
+> A common beginner mistake: reaching for "is there a plugin for this" the moment a task shows up, when often a clearly written prompt is enough. Simple rule of thumb: install a plugin or MCP only when the task needs the AI to read/write real data or systems beyond your local chat — a code repo, database, calendar, third-party app. If the task is just "rewrite this text better" or "analyze this text I already pasted in," a plain prompt handles it — adding a plugin only adds complexity and risk (permission scope, chance of unintended actions). Recommended path for beginners: get the prompt itself solid in the chat window first; only when you hit a concrete wall — "the AI says it can't do this because it can't reach system X" — install one specific plugin or MCP for that need, instead of installing a pile of things you won't use.
 
 ## 💡 Prompt Craft
 
