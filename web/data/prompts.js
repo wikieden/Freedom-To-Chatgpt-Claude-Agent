@@ -5012,5 +5012,427 @@ window.PROMPTS = [
     ],
     "source": "整理自主动回忆 / 间隔重复学习法与 AI 辅助学习实践",
     "updated": "2026-06-30"
+  },
+  {
+    "id": "video-gemini-omni-io2026",
+    "category": "video",
+    "level": "intermediate",
+    "title_zh": "Gemini Omni：原生带声音的 AI 视频（I/O 2026 新模型）",
+    "title_en": "Gemini Omni: AI Video with Native Audio (new at I/O 2026)",
+    "body_zh": "谷歌在 I/O 2026 上把新的视频模型 Gemini Omni 接进了 Gemini App——它最大的特点是「画面 + 声音一起生成」，不用后期再单独配音。写提示词时别只写画面，把「声音」也写进去：①镜头内容（主体、动作、环境）；②运镜（推近/环绕/跟拍）；③声音层（对白、环境音、配乐情绪）；④时长与画幅。示例：「傍晚海边，一个女孩踩着湿沙慢走，镜头低角度跟拍；环境音：海浪声 + 远处海鸥；轻柔钢琴配乐；对白：她轻声说『终于到了』；8 秒，竖屏 9:16。」提示：先用一句话跑草稿看方向对不对，再补细节重生成，比一次写满更省次数。",
+    "body_en": "At I/O 2026 Google wired its new video model, Gemini Omni, into the Gemini app — its headline trait is generating picture and sound together, so you don't dub audio in post. Don't describe only the visuals; write the audio in too: (1) shot content (subject, action, setting); (2) camera move (push-in / orbit / tracking); (3) audio layer (dialogue, ambient sound, score mood); (4) duration and aspect ratio. Example: \"Seaside at dusk, a girl walks slowly on wet sand, low-angle tracking shot; ambient: waves plus distant gulls; soft piano score; dialogue: she whispers 'made it at last'; 8s, vertical 9:16.\" Tip: run a one-line draft first to check direction, then add detail and regenerate — cheaper than front-loading everything.",
+    "models": [
+      "Gemini"
+    ],
+    "tags": [
+      "文生视频",
+      "Gemini",
+      "原生音频",
+      "运镜",
+      "Google I/O 2026"
+    ],
+    "source": "整理自 2026 年 Google I/O 关于 Gemini App 与 Gemini Omni 视频模型的报道",
+    "updated": "2026-07-01"
+  },
+  {
+    "id": "image-doubao-seedream3-poster",
+    "category": "image",
+    "level": "beginner",
+    "title_zh": "豆包 Seedream 3.0：把中文海报文字排版做对",
+    "title_en": "Doubao Seedream 3.0: Get Chinese Poster Text Layout Right",
+    "body_zh": "字节豆包升级的图像模型 Seedream 3.0 对「中文字体 + 版式」渲染明显更稳，适合做海报、公众号封面、活动物料。别指望它猜你的排版，把文字和位置都写清楚：①主标题（写死具体文字，加引号）；②副标题/日期/地点；③风格与配色；④版式（标题居中/留白/分栏）；⑤画幅。模板：「竖版活动海报，主标题『夏夜音乐节』放大居中，副标题『7 月 12 日 · 滨江公园』置于底部；风格：清新扁平插画，蓝紫渐变；顶部留白放主视觉；比例 3:4，中文字体清晰不变形。」小技巧：文字较多时先只让它排『标题+副标题』，满意后再逐步加元素，避免一次塞满导致错字。",
+    "body_en": "ByteDance's upgraded Doubao image model, Seedream 3.0, renders Chinese type and layout much more reliably — great for posters, cover images, and event assets. Don't make it guess your layout; spell out the text and its placement: (1) main title (write the exact words in quotes); (2) subtitle / date / venue; (3) style and palette; (4) layout (centered title / whitespace / columns); (5) aspect ratio. Template: \"Vertical event poster, main title '夏夜音乐节' enlarged and centered, subtitle '7月12日 · 滨江公园' at the bottom; style: fresh flat illustration, blue-purple gradient; whitespace up top for the key visual; ratio 3:4, crisp undistorted Chinese type.\" Tip: with lots of text, first lay out just title + subtitle, then add elements step by step — stuffing it all at once causes garbled characters.",
+    "models": [
+      "豆包",
+      "即梦"
+    ],
+    "tags": [
+      "文生图",
+      "豆包",
+      "Seedream",
+      "海报",
+      "中文排版"
+    ],
+    "source": "整理自 2026 年 6 月字节豆包 Seedream 3.0 图像模型更新报道",
+    "updated": "2026-07-01"
+  },
+  {
+    "id": "craft-glm45v-chart-reasoning",
+    "category": "craft",
+    "level": "intermediate",
+    "title_zh": "智谱 GLM-4.5V：把图表/截图丢给它一步步推理",
+    "title_en": "Zhipu GLM-4.5V: Reason Step by Step over Charts and Screenshots",
+    "body_zh": "智谱新出的多模态推理模型 GLM-4.5V 能「看图 + 推理」一起做，适合读财报截图、数据图表、流程图、题目照片。用好它的关键是逼它「先读数、再推理、最后给结论」，别让它跳步：模板——「这是一张【图表/截图】。请按三步来：①先把图里你能读到的关键数字/文字逐条列出来；②基于这些数据一步步推理，回答我的问题：【你的问题】；③最后给结论，并说明哪些地方你不确定或图里没写清。」这样既能借上它的多模态能力，又能自己核对第①步的读数对不对，防止它看错数字还一本正经算下去。",
+    "body_en": "Zhipu's new multimodal reasoning model, GLM-4.5V, combines seeing and reasoning — good for reading earnings screenshots, data charts, flowcharts, or a photo of a problem. The trick is to force it to read first, reason second, conclude last, with no skipped steps. Template: \"Here is a [chart/screenshot]. Work in three steps: (1) list every key number/text you can read from the image, one by one; (2) reason step by step from that data to answer my question: [your question]; (3) give the conclusion and flag anything you're unsure about or that the image doesn't state clearly.\" You get its multimodal power while being able to verify the step-1 readings yourself — so it can't misread a number and then confidently compute on it.",
+    "models": [
+      "智谱"
+    ],
+    "tags": [
+      "提示词技巧",
+      "智谱",
+      "GLM-4.5V",
+      "多模态",
+      "推理",
+      "看图"
+    ],
+    "source": "整理自 2026 年 6 月智谱 GLM-4.5V 多模态推理模型更新报道",
+    "updated": "2026-07-01"
+  },
+  {
+    "id": "start-wenxin-x11-reasoning",
+    "category": "start",
+    "level": "beginner",
+    "title_zh": "文心 X1.1 推理模型：中文数学/逻辑题这样问",
+    "title_en": "Wenxin X1.1 Reasoning Model: How to Ask Chinese Math/Logic Questions",
+    "body_zh": "百度文心新出的推理模型 X1.1 专门加强了「一步步想」的能力，中文语境下的数学题、逻辑题、应用题表现更稳。新手用它记住两点：①明确要它「展示过程」，别只要答案——「请一步步推理，最后单独给出答案」；②给完整条件，别省略单位和前提。模板：「请用推理模式解这道题，先列已知条件，再一步步推导，最后单独给出最终答案并简单验算一遍：【把题目原文粘进来】。」验算那一步很关键，能帮你抓住它偶尔算错的地方。适合学生检查作业思路、上班族算比例/预算。",
+    "body_en": "Baidu's new Wenxin X1.1 reasoning model specifically strengthens step-by-step thinking, and it's more reliable on Chinese-language math, logic, and word problems. Two things for beginners: (1) explicitly ask it to show its work, not just the answer — \"reason step by step, then give the final answer separately\"; (2) give full conditions, don't drop units or premises. Template: \"Use reasoning mode to solve this: first list the given conditions, then derive step by step, and finally give the final answer separately with a quick check: [paste the full problem].\" That final check step is key — it helps you catch the occasional slip. Handy for students reviewing their approach, or for anyone computing ratios/budgets at work.",
+    "models": [
+      "文心"
+    ],
+    "tags": [
+      "新手入门",
+      "文心",
+      "X1.1",
+      "推理",
+      "数学",
+      "中文"
+    ],
+    "source": "整理自 2026 年 6 月百度文心 X1.1 推理模型更新报道",
+    "updated": "2026-07-01"
+  },
+  {
+    "id": "craft-give-goals-not-steps-2026",
+    "category": "craft",
+    "level": "intermediate",
+    "title_zh": "2026 新习惯：给「目标 + 验收标准」，别再逐步下命令",
+    "title_en": "New 2026 Habit: Give Goals + Acceptance Criteria, Not Step-by-Step Orders",
+    "body_zh": "2026 年 GPT、Claude、Gemini 的前沿模型默认都带上了 agent（能自己规划、调工具、多步执行）能力。旧习惯是把任务拆成一步步命令喂给它；现在更高效的做法是「说清楚要什么、什么算做好」，把过程交给它规划。模板：「目标：【你想要的最终结果】。背景/材料：【相关信息或文件】。约束：【必须遵守的规则，如字数/格式/口径】。验收标准：【满足这几条才算完成，逐条列】。请先说你打算怎么做（分几步），我确认后再执行。」关键是那句「先说计划、我确认再执行」——既用上了它的自主规划，又留了个刹车，防止它跑偏。适合写报告、做数据整理、跑多步流程。",
+    "body_en": "In 2026, frontier models from GPT, Claude, and Gemini all ship with agentic ability by default (they can plan, call tools, and run multiple steps on their own). The old habit was feeding a task as a chain of step-by-step orders; the more effective move now is to state what you want and what 'done' looks like, and let it plan the process. Template: \"Goal: [the final result you want]. Context/materials: [relevant info or files]. Constraints: [rules it must follow — length, format, tone]. Acceptance criteria: [list, item by item, what must be true to be complete]. First tell me how you'll approach it (in a few steps); after I confirm, execute.\" The key is that 'plan first, execute after I confirm' line — you tap its autonomous planning while keeping a brake so it can't drift off course. Great for reports, data cleanup, and multi-step workflows.",
+    "models": [
+      "GPT",
+      "Claude",
+      "Gemini"
+    ],
+    "tags": [
+      "提示词技巧",
+      "agent",
+      "目标导向",
+      "验收标准",
+      "2026"
+    ],
+    "source": "整理自 2026 年 6 月各前沿模型默认 agent 能力的报道与实践",
+    "updated": "2026-07-01"
+  },
+  {
+    "id": "craft-cheap-plus-effort-2026",
+    "category": "craft",
+    "level": "intermediate",
+    "title_zh": "省钱新招：用「便宜档模型 + 调高力度」替代旗舰",
+    "title_en": "Save Money: A Cheaper Model at Higher Effort Can Replace the Flagship",
+    "body_zh": "2026 年 7 月起 Anthropic 把更便宜的 Claude Sonnet 5 设成了默认模型，同期各家都把「推理力度」做成可调档。一个反直觉但省钱的规律：中档模型开到高力度，往往能追平旗舰模型开中等力度的表现——官方图表显示 Sonnet 5 在 extra-high 力度下，在部分 agent 基准上已接近 Opus 4.8。所以别一上来就顶配。实操：①默认用便宜档（如 Sonnet 5），先把力度调到 high 或 extra-high 试；②只有当结果确实不够、且这道题「答错代价很大」时，再升到旗舰或 max；③写代码/多步任务优先加力度，闲聊/改写/总结用 low 省额度。顺带一提：Sonnet 5 的 2/10 美元每百万 token 入门价截止 8 月 31 日，是当前质量前沿里最划算的窗口。",
+    "body_en": "From July 2026 Anthropic made the cheaper Claude Sonnet 5 its default model, and around the same time every major platform made reasoning effort a configurable dial. A counter-intuitive money-saver: a mid-tier model at high effort often matches a flagship at medium effort — Anthropic's own charts show Sonnet 5 at extra-high effort performing roughly in line with Opus 4.8 on some agentic benchmarks. So don't reach for the top tier by default. In practice: (1) start on the cheap tier (e.g. Sonnet 5) and dial effort up to high or extra-high first; (2) only escalate to the flagship or max when results genuinely fall short AND getting it wrong is costly; (3) raise effort for coding and multi-step tasks, use low for chat, rewriting, and summaries to save your limits. Side note: Sonnet 5's introductory $2/$10 per million tokens runs until Aug 31, currently the best value at the quality frontier.",
+    "models": [
+      "Claude",
+      "GPT",
+      "Gemini"
+    ],
+    "tags": [
+      "提示词技巧",
+      "省钱",
+      "思考力度",
+      "Sonnet 5",
+      "选型",
+      "2026"
+    ],
+    "source": "整理自 2026-07-01 Anthropic 恢复全球访问并将 Sonnet 5 设为默认、各家推理力度分档的报道",
+    "updated": "2026-07-02"
+  },
+  {
+    "id": "craft-effort-api-adaptive",
+    "category": "craft",
+    "level": "advanced",
+    "title_zh": "在 API 里调「推理力度」：output_config + 自适应思考（各家对照）",
+    "title_en": "Set Reasoning Effort in the API: output_config + Adaptive Thinking (Cross-Platform)",
+    "body_zh": "网页端点几下就能调力度，但在 API/自动化里要写对参数才生效。各家 2026 年的写法对照：Claude 把 effort 放进 output_config，配合 thinking: {\"type\": \"adaptive\"} 让模型自己决定想多深；OpenAI GPT-5.6 用 reasoning_effort，新增 max 档和把子任务外包给 subagent 的 ultra 模式；Grok 4.3 默认开启推理，API 里同样有 reasoning_effort；Gemini 用 thinking levels 并提供 Deep Think 模式。实操建议：①批量任务里默认 medium/adaptive，按失败率再上调，别全程顶满，token 和延迟都贵；②把力度当成可调超参：先用一小批样本跑 low/medium/high 对比正确率和成本，选性价比拐点；③对 agent/长任务优先加力度而不是把提示词写更长；④记录每档的耗时和花费，方便复盘。",
+    "body_en": "Clicking the dial in the web UI is easy, but in the API/automation you must set the right parameter for it to take effect. How the 2026 platforms differ: Claude puts effort inside output_config, paired with thinking: {\"type\": \"adaptive\"} so the model decides how deep to think; OpenAI's GPT-5.6 uses reasoning_effort and adds a max level plus an ultra mode that farms subtasks out to subagents; Grok 4.3 ships with reasoning on by default and also exposes reasoning_effort; Gemini uses thinking levels and offers a Deep Think mode. Practical tips: (1) default to medium/adaptive for batch jobs and escalate by failure rate — running everything at max burns tokens and latency; (2) treat effort as a tunable hyperparameter: run a small sample at low/medium/high, compare accuracy vs cost, and pick the value-for-money knee; (3) for agents and long tasks, raise effort rather than lengthening the prompt; (4) log time and cost per level so you can review later.",
+    "models": [
+      "Claude",
+      "GPT",
+      "Gemini",
+      "Grok"
+    ],
+    "tags": [
+      "提示词技巧",
+      "API",
+      "推理力度",
+      "output_config",
+      "自适应思考",
+      "进阶"
+    ],
+    "source": "整理自 2026-07 各家推理力度参数文档与实践（Claude output_config / GPT-5.6 / Grok 4.3 / Gemini）",
+    "updated": "2026-07-02"
+  },
+  {
+    "id": "image-jimeng-smart-reference",
+    "category": "image",
+    "level": "beginner",
+    "title_zh": "即梦「智能参考」：跨图保持同一个人不崩脸",
+    "title_en": "Jimeng Smart Reference: Keep the Same Character Consistent Across Images",
+    "body_zh": "即梦 AI 新出的「智能参考」主打人物一致性——上传一张参考图，让后续生成的多张图里是「同一个人」，官方强调「不崩脸」。新手三步：①先准备一张清晰、正脸、光线均匀的角色参考图（避免大角度侧脸和遮挡）；②开启智能参考并上传，然后只在提示词里改「场景、动作、服装、镜头」，别去描述五官，把长相交给参考图；③一句话模板：「参考图中的同一个人，现在【场景/动作/服装/景别】，保持面部特征和发型不变，其余按描述生成。」想做系列图（表情包、分镜、电商模特换装）时特别好用：固定参考图，逐张换场景即可。若某张脸还是飘了，就把该张重生成、或换一张更清晰的参考图。",
+    "body_en": "Jimeng AI's new Smart Reference feature is built for character consistency — upload one reference image and later generations keep the 'same person', which the team emphasizes as 'no face-melting'. Three steps for beginners: (1) prepare a clear, front-facing, evenly-lit reference of the character (avoid extreme profiles and occlusion); (2) turn on Smart Reference, upload it, then in the prompt only change scene, action, wardrobe, and shot — don't describe facial features; leave the likeness to the reference; (3) one-line template: 'the same person as in the reference, now [scene/action/wardrobe/shot size], keep facial features and hairstyle unchanged, generate the rest as described.' It shines for series work (sticker packs, storyboards, e-commerce model outfit swaps): lock the reference and swap the scene image by image. If a face still drifts, regenerate that one or swap in a sharper reference.",
+    "models": [
+      "即梦"
+    ],
+    "tags": [
+      "文生图",
+      "即梦",
+      "智能参考",
+      "人物一致性",
+      "新手"
+    ],
+    "source": "整理自 2026 年即梦 AI「智能参考」功能上线与人物一致性用法报道",
+    "updated": "2026-07-02"
+  },
+  {
+    "id": "start-china-models-2026-h2",
+    "category": "start",
+    "level": "beginner",
+    "title_zh": "2026 下半年国产模型分工：哪类活找哪个",
+    "title_en": "China Models in H2 2026: Which One for Which Job",
+    "body_zh": "国产模型到 2026 下半年已经明显「分方向」，选型别只看谁名气大，按你要干的活对号入座更省事。粗分四类：①多模态出图/出视频——豆包、可灵一路（文生图、图生视频、3D、数字人），做短视频、海报、电商素材优先；②代码/数学/低成本——DeepSeek 走混合推理、长上下文、便宜，写代码、跑数据、批量任务划算；通义 Qwen3.6 开源可商用、编程能力强，适合本地部署和二次开发；③Agent 自动化/长程任务——Kimi、智谱主攻能自己规划、调工具、多步执行的场景，适合搭工作流；④日常中文问答/写作——豆包、DeepSeek 都够用，看你顺手哪个。一句话模板拿去问 AI：「我要做【任务】，预算和使用环境是【国内/联网/本地】，在豆包 / DeepSeek / 通义 / Kimi / 智谱里帮我选一个并给一句理由。」",
+    "body_en": "By the second half of 2026 China's models have clearly split by direction — don't pick by fame alone; match the model to the job and it's simpler. Four rough buckets: (1) multimodal image/video — the Doubao and Kling family (text-to-image, image-to-video, 3D, digital humans); best for short video, posters, and e-commerce assets; (2) code/math/low-cost — DeepSeek goes for hybrid reasoning, long context, and cheap pricing, great for coding, data crunching, and batch jobs; Alibaba's Qwen3.6 is open-source and commercially usable with strong coding, ideal for local deployment and customization; (3) agentic automation/long-horizon tasks — Kimi and Zhipu focus on planning, tool-calling, and multi-step execution, good for building workflows; (4) everyday Chinese Q&A/writing — Doubao and DeepSeek are both plenty; use whichever feels smoother. A one-line template to ask any AI: 'I want to do [task], my budget/environment is [domestic / online / local]; pick one of Doubao / DeepSeek / Qwen / Kimi / Zhipu for me and give one reason.'",
+    "models": [
+      "豆包",
+      "DeepSeek",
+      "通义",
+      "Kimi",
+      "智谱",
+      "可灵"
+    ],
+    "tags": [
+      "新手入门",
+      "国产模型",
+      "选型",
+      "分工",
+      "2026"
+    ],
+    "source": "整理自 2026 年 6-7 月国产大模型横评与技术方向分化报道（豆包/DeepSeek/通义 Qwen3.6/Kimi/智谱）",
+    "updated": "2026-07-02"
+  },
+  {
+    "id": "claude-fable5-global-return",
+    "category": "start",
+    "level": "beginner",
+    "title_zh": "Claude Fable 5 全球恢复：什么时候该用它、什么时候会退回 Opus",
+    "title_en": "Claude Fable 5 Is Back Globally: When to Reach for It, When It Falls Back to Opus",
+    "body_zh": "Claude Fable 5（Anthropic 的「神话级」旗舰模型）因美国出口管制暂停近三周后，已于 2026-07-01 恢复全球可用（Claude.ai、Claude Code、Claude Cowork 全线）。新版加了更严格的安全分类器：涉及网络安全/漏洞类任务会被拦截或临时退回到 Opus 4.8 处理，多数写作/创意/复杂推理任务不受影响。Pro/Max/Team 及部分企业版用户可用，到 7 月 7 日前最多占每周用量的 50%，之后按用量额度计费。新手怎么用：①想要更强的创意写作/故事/复杂多步推理时，明确要求「用 Fable 5 回答」；②涉及安全研究、漏洞分析、渗透测试相关的问题，有心理准备可能被拦截或自动切换到其他模型，换个更中性的问法或直接用 Opus；③如果只是写代码、查资料等日常任务，Sonnet 5（已是新默认模型）通常够用更省额度。",
+    "body_en": "Claude Fable 5 (Anthropic's \"Mythos-class\" flagship) went offline for nearly three weeks under a US export-control order, then returned globally on 2026-07-01 across Claude.ai, Claude Code, and Claude Cowork. The redeployed version has tighter safety classifiers: cybersecurity/exploit-related tasks get blocked or silently routed to Opus 4.8, while most writing/creative/complex-reasoning tasks are unaffected. It's available on Pro, Max, Team, and select Enterprise plans, capped at up to 50% of your weekly usage through July 7, after which it draws from usage credits. Practical tips: 1) for stronger creative writing, storytelling, or complex multi-step reasoning, explicitly ask to \"use Fable 5\"; 2) for security research, vulnerability analysis, or pentest-adjacent questions, expect possible blocks or silent fallback — rephrase more neutrally or just use Opus directly; 3) for everyday coding or lookup tasks, Sonnet 5 (now the new default) is usually enough and saves quota.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "新手",
+      "Claude",
+      "Fable5",
+      "模型更新",
+      "2026"
+    ],
+    "source": "整理自 Anthropic 官方公告与媒体报道（2026-07-01/07-02）",
+    "updated": "2026-07-03"
+  },
+  {
+    "id": "skill-claude-cowork-scheduled-tasks",
+    "category": "skill",
+    "level": "beginner",
+    "title_zh": "Claude Cowork 定时任务：让 AI 每天自动帮你巡检/发日报",
+    "title_en": "Claude Cowork Scheduled Tasks: Let AI Auto-Run Your Daily Check-ins and Reports",
+    "body_zh": "Claude Cowork 的「定时任务(Scheduled Tasks)」能让你把一段提示词设成每天/每周自动跑一次，不用写代码接 API。新手上手三步：①先手动跑一遍——把想自动化的提示词直接发一次，确认输出是你要的样子，再考虑定时；②在输入框里打「/schedule」，用引导式的 Skill 创建定时任务，选好频率（每天/每周/每月）和时间；③写提示词时把「范围」和「产出位置」说清楚，别写「帮我总结一切」这种大而空的任务——改成「总结今天新收到的邮件里需要我回复的 3 条」「检查这个文件夹里本周新增的文件」，并指定保存路径（如「~/Documents/日报/{date}.md」，用 {date} 占位符自动填当天日期）。注意：电脑休眠或没打开 Claude 桌面客户端时任务会被跳过，等设备唤醒/App 打开后才会补跑，别指望它像服务器一样 24 小时精确定点执行。",
+    "body_en": "Cowork's Scheduled Tasks let you turn a prompt into something that runs automatically every day/week/month — no code, no API wiring. Getting started in three steps: 1) run it manually first — send the prompt once and confirm the output looks right before automating it; 2) type \"/schedule\" in the input box to launch the guided Skill that creates the scheduled task, picking a cadence (daily/weekly/monthly) and time; 3) be explicit about scope and output location — avoid vague asks like \"summarize everything\"; instead write \"summarize today's new emails that need my reply (top 3)\" or \"check this folder for files added this week,\" and specify a save path (e.g. \"~/Documents/daily-report/{date}.md\", where {date} auto-fills today's date). Note: if your computer is asleep or the Claude desktop app is closed when a task is due, it gets skipped and runs once the device wakes / the app reopens — don't expect server-grade exact-time execution.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "skill",
+      "Claude",
+      "Cowork",
+      "自动化",
+      "定时任务",
+      "新手"
+    ],
+    "source": "整理自 Claude 官方帮助中心与社区实践（2026-07）",
+    "updated": "2026-07-03"
+  },
+  {
+    "id": "craft-claude-sonnet5-new-default",
+    "category": "craft",
+    "level": "beginner",
+    "title_zh": "Claude Sonnet 5 变成新默认模型：日常任务不用手动切到 Opus/Fable 5",
+    "title_en": "Claude Sonnet 5 Is the New Default: You Do not Need to Manually Switch to Opus/Fable 5 for Everyday Tasks",
+    "body_zh": "Anthropic 在 2026-06-30 把 Claude Sonnet 5 设为新的默认模型（此前默认是更早的 Sonnet 版本）。对大多数人这是好消息：写代码、查资料、日常写作、多轮对话这些常规任务，直接用默认的 Sonnet 5 就够快够准，不用每次都手动切到更贵的 Opus 4.8 或刚回归的 Fable 5，省用量额度。什么时候还是该手动切：①任务明显需要「长链条深度推理」（复杂数学证明、大型代码库的架构级重构、要反复自我校验的方案）——切 Opus 4.8；②需要更强的创意写作/故事感/角色扮演文笔——切 Fable 5（注意涉网络安全类问题它可能被拦截，见另一条 Fable 5 使用指南）。判断方法很简单：先用默认 Sonnet 5 跑一次，如果结果明显不够深/不够有味道，再手动升级模型重跑，而不是每次都先开最贵的模型再说。",
+    "body_en": "On 2026-06-30, Anthropic made Claude Sonnet 5 the new default model (replacing an earlier Sonnet version). For most people that is good news: coding, research, everyday writing, and multi-turn chat all run fast and accurate on the default Sonnet 5, so you do not need to manually switch to pricier Opus 4.8 or the newly-returned Fable 5 every time — it saves quota. When you should still switch manually: 1) for tasks that clearly need long-chain deep reasoning (complex math proofs, architecture-level refactors of a large codebase, plans that need repeated self-checking) — switch to Opus 4.8; 2) for stronger creative writing, storytelling voice, or roleplay — switch to Fable 5 (note it may block cybersecurity-adjacent questions; see the separate Fable 5 usage guide). Simple rule: run it once on the default Sonnet 5 first, and only escalate to a pricier model and re-run if the result is clearly too shallow or lacks the quality you need — do not start with the most expensive model by default.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "craft",
+      "Claude",
+      "Sonnet5",
+      "默认模型",
+      "省钱",
+      "新手"
+    ],
+    "source": "整理自 Anthropic 官方公告（2026-06-30）",
+    "updated": "2026-07-03"
+  },
+  {
+    "id": "skill-claude-plugin-marketplace-guide",
+    "category": "skill",
+    "level": "beginner",
+    "title_zh": "Claude 插件市场(Plugin Marketplace)怎么逛：装技能前先看这三点",
+    "title_en": "Navigating Claude's Plugin Marketplace: Three Things to Check Before Installing a Skill",
+    "body_zh": "Claude 的插件市场把「技能(Skill)」打包成可一键安装的「插件(Plugin)」——装一个插件，就拿到它捆绑的全部技能。新手用好它的方法：①区分 Discover 和 Installed 两个标签——Discover 看你已连接市场里能装的插件，Installed 看你已经装了什么、状态如何；②默认只有 Anthropic 官方市场，装的插件都经过验证，想用别人做的社区插件要先手动添加第三方市场；③装社区插件前，把它当「别人写的开源代码」对待——先看一眼描述搞清楚它「做什么、什么时候该用」，默认它可能会调用外部工具、读你项目里的文件、或生成你要自己跑的代码，不放心的技能先别装；④装完不用刻意「换着法子提示」，直接说你要做的事，需要时点名让它用某个技能即可；⑤项目级技能（放在仓库 .claude/skills/ 下）适合要和团队共享、随代码一起进版本控制的场景，个人常用的装到用户级即可。",
+    "body_en": "Claude's plugin marketplace bundles Skills into installable Plugins — installing one plugin gets you every skill it contains. How beginners should use it: 1) know the two tabs — Discover shows what you can install from your connected marketplaces, Installed shows what you already have and its status; 2) by default only the official Anthropic marketplace is connected, and those plugins are vetted; to use community-built plugins you must add a third-party marketplace yourself; 3) before installing a community plugin, treat it like someone else's open-source code — skim the description to understand what it does and when to use it, and assume it may call external tools, read files in your project, or generate code you'll run yourself; skip anything that makes you uneasy; 4) once installed, you don't need to \"prompt harder\" — just ask for the task normally, and name the skill explicitly when you want to force its use; 5) project-scoped skills (placed under .claude/skills/ in a repo) are for things you want version-controlled and shared with a team; personal everyday skills are fine at user scope.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "skill",
+      "Claude",
+      "插件市场",
+      "Skill",
+      "新手"
+    ],
+    "source": "整理自 Claude 官方帮助文档与社区指南（2026-07）",
+    "updated": "2026-07-03"
+  },
+  {
+    "id": "start-gpt56-gated-what-to-use-instead",
+    "category": "start",
+    "level": "beginner",
+    "title_zh": "GPT-5.6 还轮不到普通用户：现在该用什么替代",
+    "title_en": "GPT-5.6 Isn't for Regular Users Yet: What to Use Instead Right Now",
+    "body_zh": "OpenAI 在 2026-06-26 预告了 GPT-5.6 系列（代号 Sol/Terra/Luna），但目前只对约 20 家美国政府相关机构开放访问，普通用户和大多数开发者暂时用不到，也不用满世界找「内测入口」。新手现在该怎么办：①日常问答/写作——继续用 GPT-5.5（含免费版，有用量上限）；②写代码/跑智能体任务——用 Codex 相关的智能体编程能力，或换到 Claude Sonnet 5 / DeepSeek V4 这类当前可正常访问且擅长编程的模型；③想要「最新最强」体验——与其等 GPT-5.6，不如看看已经全量开放的 Gemini 3.5 Pro（深度思考模式）或 Claude Fable 5（创意写作），这两个目前个人账号就能用。一句话：遇到「某某新模型只限内测/机构」的消息，先确认自己是否在开放名单里，不在就别折腾，换当下能稳定用的模型继续干活。",
+    "body_en": "OpenAI previewed the GPT-5.6 family (codenamed Sol/Terra/Luna) on 2026-06-26, but access is currently limited to roughly 20 US-government-affiliated organizations — regular users and most developers can't get in yet, so don't waste time hunting for a \"beta access\" link. What to do in the meantime: 1) for everyday Q&A/writing, keep using GPT-5.5 (including the free tier, with usage caps); 2) for coding or agentic tasks, use Codex's agentic coding features, or switch to a model that's fully available and strong at code right now, like Claude Sonnet 5 or DeepSeek V4; 3) if you want the \"latest and greatest\" experience, rather than waiting on GPT-5.6, try Gemini 3.5 Pro's Deep Think mode or Claude Fable 5 for creative writing — both are already available to individual accounts. Bottom line: whenever you hear \"new model X is limited to beta/enterprise access,\" check whether you're actually on the access list before chasing it — if not, just keep working with whatever model is stably available to you today.",
+    "models": [
+      "GPT",
+      "Claude",
+      "Gemini",
+      "DeepSeek"
+    ],
+    "tags": [
+      "新手",
+      "GPT-5.6",
+      "模型可用性",
+      "2026"
+    ],
+    "source": "整理自 OpenAI 预告与媒体报道（2026-06-26）",
+    "updated": "2026-07-03"
+  },
+  {
+    "id": "skill-claude-office-shared-context",
+    "category": "skill",
+    "level": "intermediate",
+    "title_zh": "Claude for Excel/PowerPoint 现在共享完整对话上下文，还能装 Skills",
+    "title_en": "Claude for Excel & PowerPoint Now Share Full Conversation Context — and Support Skills",
+    "body_zh": "Anthropic 近期更新了 Claude for Excel 和 Claude for PowerPoint：①两者现在共享完整的对话上下文——在 Excel 里和 Claude 聊过的数据、结论，切到 PowerPoint 继续做汇报页时不用重新解释一遍；②两个插件都加上了对 Skills 的支持，可以直接调用你（或团队）写好的技能来处理固定格式的报表/幻灯片任务；③企业用户可以通过 LLM 网关，用 Amazon Bedrock、Google Cloud Vertex AI 或 Microsoft Foundry 的账号体系连接 Claude，不用单独走 Anthropic 的计费。实操建议：先在 Excel 里把数据整理、公式检查、异动分析做完并让 Claude 总结要点，再切到 PowerPoint 让它「基于刚才的分析做一页给高管看的总结页」，这时上下文是接续的，不用重复贴数据。做多份报表时，把常用步骤写成一个 Skill 复用，比每次现写提示词更稳。",
+    "body_en": "Anthropic recently updated Claude for Excel and Claude for PowerPoint: 1) the two apps now share full conversation context — data and conclusions you discussed with Claude in Excel carry straight over when you switch to PowerPoint to build the deck, no need to re-explain; 2) both plugins now support Skills, so you can call a skill you (or your team) wrote to handle a recurring report or slide format; 3) enterprise users can connect Claude through an LLM gateway using their existing Amazon Bedrock, Google Cloud Vertex AI, or Microsoft Foundry accounts, instead of billing separately through Anthropic. Practical tip: finish your data cleanup, formula checks, and anomaly analysis in Excel and have Claude summarize the key points there first, then switch to PowerPoint and ask it to \"build an executive summary slide based on the analysis we just did\" — the context carries over, so you don't need to paste the data again. If you build the same kind of report repeatedly, turn the steps into a reusable Skill instead of rewriting the prompt each time.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "skill",
+      "Claude",
+      "Excel",
+      "PowerPoint",
+      "办公",
+      "企业"
+    ],
+    "source": "整理自 Anthropic 官方发布（2026-07）",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "craft-gemini-import-chat-history",
+    "category": "craft",
+    "level": "beginner",
+    "title_zh": "从 ChatGPT/Claude 换到 Gemini：一键导入你的聊天记录和偏好",
+    "title_en": "Switching to Gemini from ChatGPT/Claude: Import Your Chat History and Preferences in One Step",
+    "body_zh": "Gemini 新上线了「换家」工具：①可以直接导入你的个人上下文、偏好设置，以及在 Gemini 里积累的聊天历史，方便在自己的 Google 账号体系内迁移；②也支持上传其他厂商（比如 ChatGPT、Claude）导出的聊天记录 ZIP 压缩包，让 Gemini 提前了解你平时怎么提问、关心什么话题，减少「重新自我介绍」的麻烦。新手怎么用：先去对应平台的设置里导出你的聊天数据（一般是「导出数据/Export data」），拿到 ZIP 文件后，在 Gemini 的导入入口上传即可；导入后可以直接问一句「基于我之前的聊天记录，你觉得我平时用 AI 主要处理哪几类事情」来验证它是否真的读懂了你的历史习惯。提醒：迁移前检查一下导出文件里有没有你不想让新平台看到的敏感内容，需要的话先手动删减再上传。",
+    "body_en": "Gemini has rolled out a new \"switch over\" tool: 1) it can directly import your personal context, preferences, and any chat history you've already built up in Gemini, so moving within your own Google account is seamless; 2) it also accepts a ZIP export of chat history from other providers (like ChatGPT or Claude), so Gemini can learn how you usually ask questions and what you care about, without you re-explaining everything from scratch. How to use it: go to the export/data settings of your current platform, download the ZIP of your chat history, then upload it through Gemini's import option. After importing, test it with a prompt like \"based on my past chat history, what do you think I mainly use AI for\" to confirm it actually picked up on your habits. One caution: before migrating, check the export file for anything sensitive you don't want the new platform to see, and trim it manually first if needed.",
+    "models": [
+      "Gemini"
+    ],
+    "tags": [
+      "craft",
+      "Gemini",
+      "换平台",
+      "聊天记录导入",
+      "新手"
+    ],
+    "source": "整理自 Google Gemini 官方发布说明（2026-07）",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "skill-gemini-computer-use-agent",
+    "category": "skill",
+    "level": "advanced",
+    "title_zh": "Gemini 3 Pro/Flash 的 Computer Use：让模型直接看屏幕点鼠标",
+    "title_en": "Gemini 3 Pro/Flash Computer Use: Let the Model See the Screen and Click for You",
+    "body_zh": "Google 已经在 gemini-3-pro-preview 和 gemini-3-flash-preview 里正式提供了 Computer Use 工具——模型可以「看」屏幕截图，然后规划并执行点击、输入、滚动等操作，用来自动化那些没有现成 API 的网页/桌面任务。写给它的任务描述要包含三部分：①目标——例如「帮我在这个报销系统里把上周的三张发票都提交」；②边界——明确哪些步骤要暂停等你确认（比如涉及付款、删除、发送这类不可逆操作）；③失败时怎么办——比如「如果页面结构变了找不到按钮，就截图问我，不要瞎点」。实操建议：第一次跑一个新任务时，先让它「只规划步骤，不要真的执行」，你确认步骤没问题后再放开权限运行；涉及登录信息、支付这类敏感操作，始终让它在关键节点暂停确认，不要设成全自动。",
+    "body_en": "Google has made the Computer Use tool generally available in gemini-3-pro-preview and gemini-3-flash-preview — the model can \"see\" a screenshot of the screen, then plan and execute clicks, typing, and scrolling to automate web or desktop tasks that don't have a ready-made API. When you brief it, include three parts: 1) the goal — e.g. \"submit all three of last week's invoices in this expense system\"; 2) boundaries — specify which steps should pause for your confirmation (anything irreversible like payments, deletions, or sending messages); 3) a fallback plan — e.g. \"if the page layout changed and you can't find the button, take a screenshot and ask me instead of guessing.\" Practical tip: the first time you run a new task, ask it to \"just plan the steps without actually executing them\" so you can review the plan before granting it permission to act. For anything touching login credentials or payments, always have it pause for confirmation at the key step rather than running fully automatically.",
+    "models": [
+      "Gemini"
+    ],
+    "tags": [
+      "skill",
+      "Gemini",
+      "Computer Use",
+      "agent",
+      "自动化",
+      "进阶"
+    ],
+    "source": "整理自 Google AI for Developers 发布说明（2026-07）",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "start-doubao-seed21-agent-foundation",
+    "category": "start",
+    "level": "intermediate",
+    "title_zh": "豆包 Doubao-Seed-2.1：新一代「智能体基座模型」能干什么",
+    "title_en": "Doubao-Seed-2.1: What Doubao's New Agent-Foundation Model Can Do",
+    "body_zh": "豆包近期把智能体模型升级到了 Doubao-Seed-2.1（含 Pro、Turbo 两个版本），定位是给「编程 + Agent 时代」用的基座模型，比之前版本更擅长两件事：①端到端把一个编码任务从需求理解做到交付（不只是写函数片段，而是能拆任务、写代码、自查、修复）；②多模态理解更强，能更准确地读懂截图、图表、界面截屏里的信息再决策下一步。给普通用户的用法建议：让它做「多步骤」任务时，先说清楚最终交付物长什么样（比如「给我一个能跑的最小可用版本，附运行说明」），再让它自己拆解步骤执行，比你手把手教它每一步更省事；Turbo 版本适合先快速试错、跑通流程，确认思路没问题后再切 Pro 版本做正式交付，这样比一直用最贵的版本更省钱。",
+    "body_en": "Doubao recently upgraded its agent model to Doubao-Seed-2.1 (with Pro and Turbo versions), positioned as the foundation model for the \"coding + agent\" era. It's stronger at two things compared to earlier versions: 1) delivering a coding task end to end — not just writing function snippets, but breaking down the task, writing the code, self-checking, and fixing issues; 2) better multimodal understanding, reading screenshots, charts, and UI captures more accurately before deciding the next step. Practical tip for everyday users: for multi-step tasks, describe what the final deliverable should look like up front (e.g. \"give me a minimal working version with a run guide\") and let it break the steps down itself — that's more efficient than walking it through each step manually. Use the Turbo version to quickly iterate and validate your approach, then switch to Pro for the final delivery once you're confident in the plan, rather than running everything on the most expensive tier from the start.",
+    "models": [
+      "豆包"
+    ],
+    "tags": [
+      "新手",
+      "豆包",
+      "Seed-2.1",
+      "Agent",
+      "国产模型"
+    ],
+    "source": "整理自公开报道与厂商发布信息整理（2026-06/07）",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "craft-gemini-connect-apps-agentic",
+    "category": "craft",
+    "level": "intermediate",
+    "title_zh": "Gemini 接入 OpenTable / Canva / Instacart：一句话订位、设计、下单",
+    "title_en": "Gemini Connects to OpenTable, Canva, and Instacart: Book, Design, and Shop with One Sentence",
+    "body_zh": "Gemini 现在可以直接连接更多第三方应用，首批包括 OpenTable（订餐厅）、Canva（做设计）、Instacart（买菜下单），用自然语言描述需求就能让它代为操作，不用自己再打开好几个 App 来回切换。写提示词时建议这样分层：①先说场景和限制——例如「周六晚 7 点，4 个人，市中心附近，人均预算 300 元以内的餐厅」；②明确要不要它「直接下单/预订」还是「只给我几个选项让我自己选」——涉及花钱和占座这类动作，先让它列选项，确认后再授权它真正提交；③如果是设计类任务（连 Canva），把风格参考和用途说清楚（比如「生日会海报，活泼风格，要能改文字」），比只给一句「帮我做个海报」出来的结果更可控。安全提醒：所有涉及支付、预订、下单的操作，第一次使用时都应该让它在最终确认前停下来给你看一眼，确认无误再点「继续」。",
+    "body_en": "Gemini can now connect directly to more third-party apps — the first batch includes OpenTable (restaurant bookings), Canva (design), and Instacart (grocery ordering) — so you can describe what you need in plain language and let it act on your behalf instead of switching between several apps yourself. When writing the prompt, structure it in layers: 1) state the scenario and constraints first, e.g. \"Saturday 7pm, party of 4, near downtown, budget under $40 per person\"; 2) be explicit about whether you want it to book/order directly or just show you a few options to pick from yourself — for anything involving money or holding a reservation, have it list options first and only authorize the actual booking after you confirm; 3) for design tasks through Canva, spell out the style reference and purpose (e.g. \"birthday party poster, playful style, text should be editable\") rather than just saying \"make me a poster\" — you'll get a far more controllable result. Safety note: the first time you use any action that involves payment, booking, or ordering, have it pause and show you the final details before confirming, and only approve once everything checks out.",
+    "models": [
+      "Gemini"
+    ],
+    "tags": [
+      "craft",
+      "Gemini",
+      "第三方应用",
+      "agent",
+      "订购"
+    ],
+    "source": "整理自 Google Gemini 官方发布说明（2026-07）",
+    "updated": "2026-07-04"
   }
 ];

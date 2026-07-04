@@ -15,12 +15,12 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 ### Categories
 
-- 🚀 **Getting Started** (14)
+- 🚀 **Getting Started** (19)
 - 🎭 **Role Prompts** (150)
-- 🖼️ **Text-to-Image** (13)
-- 🎬 **Text-to-Video** (19)
-- 🧩 **Skills** (15)
-- 💡 **Prompt Craft** (38)
+- 🖼️ **Text-to-Image** (15)
+- 🎬 **Text-to-Video** (20)
+- 🧩 **Skills** (19)
+- 💡 **Prompt Craft** (45)
 
 ## 🚀 Getting Started
 
@@ -93,6 +93,31 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟢 Beginner ｜ GPT · Claude · Gemini · DeepSeek · Kimi`  ·  整理自 2026 年 5–6 月模型集中发布报道（GPT-5.6 / Gemini 3.5 / Claude Opus 4.8 与 Fable 5 等）
 
 > In May–June 2026 nearly everyone shipped at once: OpenAI's GPT-5.6 (touting a roughly million-token ultra-long context), Google's Gemini 3.5 (Flash first at I/O, Pro right after), Anthropic's Claude Opus 4.8 and the new flagship Claude Fable 5 (built for long-horizon agents and reasoning), while China's DeepSeek, Kimi, Doubao, Tongyi, ERNIE, and Zhipu each iterated too. Don't get lost in version numbers — three rules are enough for beginners: (1) Just pick a mainstream one and start — for everyday Q&A and writing, GPT, Claude, Gemini, or DeepSeek are all fine; starting beats hunting for "the best." (2) Switch model by task — for long documents pick a big-context model (GPT-5.6, Gemini, DeepSeek, Kimi); for "go do it for me" agent work pick a strong agent (Claude, Kimi); for images/video use dedicated tools (Jimeng, Kling, Qwen-Image, Sora). (3) Ask the same question to two and compare — send your real question to two or three models and stick with whichever answer suits you. One-line picker prompt: "I want to ______. Tell me which model fits best right now and why, and give me a prompt I can copy immediately."
+
+### Wenxin X1.1 Reasoning Model: How to Ask Chinese Math/Logic Questions
+`🟢 Beginner ｜ 文心`  ·  整理自 2026 年 6 月百度文心 X1.1 推理模型更新报道
+
+> Baidu's new Wenxin X1.1 reasoning model specifically strengthens step-by-step thinking, and it's more reliable on Chinese-language math, logic, and word problems. Two things for beginners: (1) explicitly ask it to show its work, not just the answer — "reason step by step, then give the final answer separately"; (2) give full conditions, don't drop units or premises. Template: "Use reasoning mode to solve this: first list the given conditions, then derive step by step, and finally give the final answer separately with a quick check: [paste the full problem]." That final check step is key — it helps you catch the occasional slip. Handy for students reviewing their approach, or for anyone computing ratios/budgets at work.
+
+### China Models in H2 2026: Which One for Which Job
+`🟢 Beginner ｜ 豆包 · DeepSeek · 通义 · Kimi · 智谱 · 可灵`  ·  整理自 2026 年 6-7 月国产大模型横评与技术方向分化报道（豆包/DeepSeek/通义 Qwen3.6/Kimi/智谱）
+
+> By the second half of 2026 China's models have clearly split by direction — don't pick by fame alone; match the model to the job and it's simpler. Four rough buckets: (1) multimodal image/video — the Doubao and Kling family (text-to-image, image-to-video, 3D, digital humans); best for short video, posters, and e-commerce assets; (2) code/math/low-cost — DeepSeek goes for hybrid reasoning, long context, and cheap pricing, great for coding, data crunching, and batch jobs; Alibaba's Qwen3.6 is open-source and commercially usable with strong coding, ideal for local deployment and customization; (3) agentic automation/long-horizon tasks — Kimi and Zhipu focus on planning, tool-calling, and multi-step execution, good for building workflows; (4) everyday Chinese Q&A/writing — Doubao and DeepSeek are both plenty; use whichever feels smoother. A one-line template to ask any AI: 'I want to do [task], my budget/environment is [domestic / online / local]; pick one of Doubao / DeepSeek / Qwen / Kimi / Zhipu for me and give one reason.'
+
+### Claude Fable 5 Is Back Globally: When to Reach for It, When It Falls Back to Opus
+`🟢 Beginner ｜ Claude`  ·  整理自 Anthropic 官方公告与媒体报道（2026-07-01/07-02）
+
+> Claude Fable 5 (Anthropic's "Mythos-class" flagship) went offline for nearly three weeks under a US export-control order, then returned globally on 2026-07-01 across Claude.ai, Claude Code, and Claude Cowork. The redeployed version has tighter safety classifiers: cybersecurity/exploit-related tasks get blocked or silently routed to Opus 4.8, while most writing/creative/complex-reasoning tasks are unaffected. It's available on Pro, Max, Team, and select Enterprise plans, capped at up to 50% of your weekly usage through July 7, after which it draws from usage credits. Practical tips: 1) for stronger creative writing, storytelling, or complex multi-step reasoning, explicitly ask to "use Fable 5"; 2) for security research, vulnerability analysis, or pentest-adjacent questions, expect possible blocks or silent fallback — rephrase more neutrally or just use Opus directly; 3) for everyday coding or lookup tasks, Sonnet 5 (now the new default) is usually enough and saves quota.
+
+### GPT-5.6 Isn't for Regular Users Yet: What to Use Instead Right Now
+`🟢 Beginner ｜ GPT · Claude · Gemini · DeepSeek`  ·  整理自 OpenAI 预告与媒体报道（2026-06-26）
+
+> OpenAI previewed the GPT-5.6 family (codenamed Sol/Terra/Luna) on 2026-06-26, but access is currently limited to roughly 20 US-government-affiliated organizations — regular users and most developers can't get in yet, so don't waste time hunting for a "beta access" link. What to do in the meantime: 1) for everyday Q&A/writing, keep using GPT-5.5 (including the free tier, with usage caps); 2) for coding or agentic tasks, use Codex's agentic coding features, or switch to a model that's fully available and strong at code right now, like Claude Sonnet 5 or DeepSeek V4; 3) if you want the "latest and greatest" experience, rather than waiting on GPT-5.6, try Gemini 3.5 Pro's Deep Think mode or Claude Fable 5 for creative writing — both are already available to individual accounts. Bottom line: whenever you hear "new model X is limited to beta/enterprise access," check whether you're actually on the access list before chasing it — if not, just keep working with whatever model is stably available to you today.
+
+### Doubao-Seed-2.1: What Doubao's New Agent-Foundation Model Can Do
+`🟡 Intermediate ｜ 豆包`  ·  整理自公开报道与厂商发布信息整理（2026-06/07）
+
+> Doubao recently upgraded its agent model to Doubao-Seed-2.1 (with Pro and Turbo versions), positioned as the foundation model for the "coding + agent" era. It's stronger at two things compared to earlier versions: 1) delivering a coding task end to end — not just writing function snippets, but breaking down the task, writing the code, self-checking, and fixing issues; 2) better multimodal understanding, reading screenshots, charts, and UI captures more accurately before deciding the next step. Practical tip for everyday users: for multi-step tasks, describe what the final deliverable should look like up front (e.g. "give me a minimal working version with a run guide") and let it break the steps down itself — that's more efficient than walking it through each step manually. Use the Turbo version to quickly iterate and validate your approach, then switch to Pro for the final delivery once you're confident in the plan, rather than running everything on the most expensive tier from the start.
 
 ## 🎭 Role Prompts
 
@@ -922,6 +947,16 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 > AI image generation's biggest pain has always been garbled text — especially Chinese. Alibaba Tongyi's Qwen-Image (7B and unified generate-edit since 2.0) targets exactly this, with industry-leading text rendering: it reliably gets Chinese titles, subtitles, and paragraphs right — even complex calligraphy — and natively supports 2K resolution and instructions up to ~1000 tokens, making it ideal for posters, slide-style graphics, infographics, and comics. Tips: (1) List the exact text to display in quotes instead of letting the model improvise — e.g. "Title: Summer Sale; Subtitle: 50% off everything; Footer: Ends June 30"; (2) Specify layout — "vertical poster, centered title, clean whitespace, blue-and-white palette"; (3) Don't cram too much text — fewer words render more accurately; (4) Proofread character by character, and regenerate or use "edit" to fix any single line that's wrong. One-line prompt template: "Make a vertical promo poster, main title '______', subtitle '______', one footer line '______', minimalist style, lots of whitespace, text must be crisp and accurate." Alternatives: Jimeng, Doubao Seedream, and Wenxin Yige are also improving Chinese text — worth comparing.
 
+### Doubao Seedream 3.0: Get Chinese Poster Text Layout Right
+`🟢 Beginner ｜ 豆包 · 即梦`  ·  整理自 2026 年 6 月字节豆包 Seedream 3.0 图像模型更新报道
+
+> ByteDance's upgraded Doubao image model, Seedream 3.0, renders Chinese type and layout much more reliably — great for posters, cover images, and event assets. Don't make it guess your layout; spell out the text and its placement: (1) main title (write the exact words in quotes); (2) subtitle / date / venue; (3) style and palette; (4) layout (centered title / whitespace / columns); (5) aspect ratio. Template: "Vertical event poster, main title '夏夜音乐节' enlarged and centered, subtitle '7月12日 · 滨江公园' at the bottom; style: fresh flat illustration, blue-purple gradient; whitespace up top for the key visual; ratio 3:4, crisp undistorted Chinese type." Tip: with lots of text, first lay out just title + subtitle, then add elements step by step — stuffing it all at once causes garbled characters.
+
+### Jimeng Smart Reference: Keep the Same Character Consistent Across Images
+`🟢 Beginner ｜ 即梦`  ·  整理自 2026 年即梦 AI「智能参考」功能上线与人物一致性用法报道
+
+> Jimeng AI's new Smart Reference feature is built for character consistency — upload one reference image and later generations keep the 'same person', which the team emphasizes as 'no face-melting'. Three steps for beginners: (1) prepare a clear, front-facing, evenly-lit reference of the character (avoid extreme profiles and occlusion); (2) turn on Smart Reference, upload it, then in the prompt only change scene, action, wardrobe, and shot — don't describe facial features; leave the likeness to the reference; (3) one-line template: 'the same person as in the reference, now [scene/action/wardrobe/shot size], keep facial features and hairstyle unchanged, generate the rest as described.' It shines for series work (sticker packs, storyboards, e-commerce model outfit swaps): lock the reference and swap the scene image by image. If a face still drifts, regenerate that one or swap in a sharper reference.
+
 ## 🎬 Text-to-Video
 
 ### Kling/Sora camera-motion prompt
@@ -1026,6 +1061,11 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 > Describing motion in text alone often makes AI video 'move wrong.' Kling's Motion Control is the most controllable approach today, giving you three ways to direct movement — pick per shot: 1) Motion brush — 'paint' the regions you want to move, e.g. let only the hair and skirt sway while the person stays put; great for local motion; 2) Reference-video motion transfer — upload a motion reference (a turn, a camera move) and have the AI map that motion onto your shot; great for replicating a specific action; 3) First/last frame — give a start and end image and let it fill the middle; great for seamless transitions or loops. Workflow: generate a high-quality first frame in Midjourney/Jimeng, then open Kling and choose Motion Control; keep the text prompt for overall pacing, camera, and lighting only, and hand 'who moves and how' to the brush or reference video for steadier results. Tips: control one main motion per generation, and stitch shots for complex action; since 2.6, audio and video can be generated together in one pass, saving you the dubbing step.
 
+### Gemini Omni: AI Video with Native Audio (new at I/O 2026)
+`🟡 Intermediate ｜ Gemini`  ·  整理自 2026 年 Google I/O 关于 Gemini App 与 Gemini Omni 视频模型的报道
+
+> At I/O 2026 Google wired its new video model, Gemini Omni, into the Gemini app — its headline trait is generating picture and sound together, so you don't dub audio in post. Don't describe only the visuals; write the audio in too: (1) shot content (subject, action, setting); (2) camera move (push-in / orbit / tracking); (3) audio layer (dialogue, ambient sound, score mood); (4) duration and aspect ratio. Example: "Seaside at dusk, a girl walks slowly on wet sand, low-angle tracking shot; ambient: waves plus distant gulls; soft piano score; dialogue: she whispers 'made it at last'; 8s, vertical 9:16." Tip: run a one-line draft first to check direction, then add detail and regenerate — cheaper than front-loading everything.
+
 ## 🧩 Skills
 
 ### Skill: prompt auto-optimizer
@@ -1102,6 +1142,26 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟡 Intermediate ｜ Gemini`  ·  整理自 2026 年 I/O 后 Gemini Spark / Daily Brief 官方介绍与上手报道
 
 > After I/O 2026, Google turned the Gemini app into a proactive agent: Spark runs on cloud VMs and can execute long-running tasks in the background without tying up your phone, while Daily Brief organizes your Gmail, Calendar, and Drive overnight and hands you a morning summary. How to set it up: open the Gemini app → Settings → Spark → Enable Spark → grant Gmail/Calendar/Drive permissions → choose a delivery time (most pick 06:30–07:30) → Save. Key tip: the first Brief is generic — don't judge too soon; it learns from which items you open, who you reply to, and what you ignore, and by around day five it truly reflects your day. Spark has three parts — a Task (the goal), a Schedule (when it runs automatically), and a Skill (a reusable set of instructions and tools) — and you can define a Skill much like writing a prompt. Note: as of June 2026 Daily Brief requires an AI Ultra subscription, so a missing menu usually means your plan is too low. Skill prompt template for Spark: "Every day at 07:00: summarize important emails from the last 24 hours and today's schedule, flag the 3 things needing my reply/decision today, and give one-line summaries for the rest."
+
+### Claude Cowork Scheduled Tasks: Let AI Auto-Run Your Daily Check-ins and Reports
+`🟢 Beginner ｜ Claude`  ·  整理自 Claude 官方帮助中心与社区实践（2026-07）
+
+> Cowork's Scheduled Tasks let you turn a prompt into something that runs automatically every day/week/month — no code, no API wiring. Getting started in three steps: 1) run it manually first — send the prompt once and confirm the output looks right before automating it; 2) type "/schedule" in the input box to launch the guided Skill that creates the scheduled task, picking a cadence (daily/weekly/monthly) and time; 3) be explicit about scope and output location — avoid vague asks like "summarize everything"; instead write "summarize today's new emails that need my reply (top 3)" or "check this folder for files added this week," and specify a save path (e.g. "~/Documents/daily-report/{date}.md", where {date} auto-fills today's date). Note: if your computer is asleep or the Claude desktop app is closed when a task is due, it gets skipped and runs once the device wakes / the app reopens — don't expect server-grade exact-time execution.
+
+### Navigating Claude's Plugin Marketplace: Three Things to Check Before Installing a Skill
+`🟢 Beginner ｜ Claude`  ·  整理自 Claude 官方帮助文档与社区指南（2026-07）
+
+> Claude's plugin marketplace bundles Skills into installable Plugins — installing one plugin gets you every skill it contains. How beginners should use it: 1) know the two tabs — Discover shows what you can install from your connected marketplaces, Installed shows what you already have and its status; 2) by default only the official Anthropic marketplace is connected, and those plugins are vetted; to use community-built plugins you must add a third-party marketplace yourself; 3) before installing a community plugin, treat it like someone else's open-source code — skim the description to understand what it does and when to use it, and assume it may call external tools, read files in your project, or generate code you'll run yourself; skip anything that makes you uneasy; 4) once installed, you don't need to "prompt harder" — just ask for the task normally, and name the skill explicitly when you want to force its use; 5) project-scoped skills (placed under .claude/skills/ in a repo) are for things you want version-controlled and shared with a team; personal everyday skills are fine at user scope.
+
+### Claude for Excel & PowerPoint Now Share Full Conversation Context — and Support Skills
+`🟡 Intermediate ｜ Claude`  ·  整理自 Anthropic 官方发布（2026-07）
+
+> Anthropic recently updated Claude for Excel and Claude for PowerPoint: 1) the two apps now share full conversation context — data and conclusions you discussed with Claude in Excel carry straight over when you switch to PowerPoint to build the deck, no need to re-explain; 2) both plugins now support Skills, so you can call a skill you (or your team) wrote to handle a recurring report or slide format; 3) enterprise users can connect Claude through an LLM gateway using their existing Amazon Bedrock, Google Cloud Vertex AI, or Microsoft Foundry accounts, instead of billing separately through Anthropic. Practical tip: finish your data cleanup, formula checks, and anomaly analysis in Excel and have Claude summarize the key points there first, then switch to PowerPoint and ask it to "build an executive summary slide based on the analysis we just did" — the context carries over, so you don't need to paste the data again. If you build the same kind of report repeatedly, turn the steps into a reusable Skill instead of rewriting the prompt each time.
+
+### Gemini 3 Pro/Flash Computer Use: Let the Model See the Screen and Click for You
+`🔴 Advanced ｜ Gemini`  ·  整理自 Google AI for Developers 发布说明（2026-07）
+
+> Google has made the Computer Use tool generally available in gemini-3-pro-preview and gemini-3-flash-preview — the model can "see" a screenshot of the screen, then plan and execute clicks, typing, and scrolling to automate web or desktop tasks that don't have a ready-made API. When you brief it, include three parts: 1) the goal — e.g. "submit all three of last week's invoices in this expense system"; 2) boundaries — specify which steps should pause for your confirmation (anything irreversible like payments, deletions, or sending messages); 3) a fallback plan — e.g. "if the page layout changed and you can't find the button, take a screenshot and ask me instead of guessing." Practical tip: the first time you run a new task, ask it to "just plan the steps without actually executing them" so you can review the plan before granting it permission to act. For anything touching login credentials or payments, always have it pause for confirmation at the key step rather than running fully automatically.
 
 ## 💡 Prompt Craft
 
@@ -1320,5 +1380,40 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟡 Intermediate ｜ GPT · Gemini · DeepSeek · Kimi`  ·  整理自 2026 年 6 月各家超长上下文（GPT-5.6 约百万 token 等）报道与长文档实践
 
 > In 2026 context windows keep growing (GPT-5.6 is said to be ~1M tokens, and Gemini, DeepSeek, and Kimi all offer very long contexts). The biggest win for ordinary users isn't "writing longer" but "reading more": you can drop in a whole contract, an entire manual, dozens of pages of a paper, or a full meeting transcript and have the AI answer from the complete text instead of you pasting fragments. Three keys to using it well: (1) Give everything at once and state the task — "This is the full 40-page contract; first explain in 5 sentences what it's about, then list clauses potentially unfavorable to me (Party B)"; (2) Make it cite the source and mark locations — "after each conclusion, attach the original sentence you relied on so I can verify" — which sharply cuts fabrication; (3) For long material go "map first, then detail" — ask for a table-of-contents-style overview, then dig into the sections you care about. Tips: even with a big window, putting key info at the start and end with your question last is still more reliable; mask private or confidential data before uploading. One-line prompt: "Here is the full text. Answer only from its contents, say so if unsure, and mark the original sentence you relied on: ______"
+
+### Zhipu GLM-4.5V: Reason Step by Step over Charts and Screenshots
+`🟡 Intermediate ｜ 智谱`  ·  整理自 2026 年 6 月智谱 GLM-4.5V 多模态推理模型更新报道
+
+> Zhipu's new multimodal reasoning model, GLM-4.5V, combines seeing and reasoning — good for reading earnings screenshots, data charts, flowcharts, or a photo of a problem. The trick is to force it to read first, reason second, conclude last, with no skipped steps. Template: "Here is a [chart/screenshot]. Work in three steps: (1) list every key number/text you can read from the image, one by one; (2) reason step by step from that data to answer my question: [your question]; (3) give the conclusion and flag anything you're unsure about or that the image doesn't state clearly." You get its multimodal power while being able to verify the step-1 readings yourself — so it can't misread a number and then confidently compute on it.
+
+### New 2026 Habit: Give Goals + Acceptance Criteria, Not Step-by-Step Orders
+`🟡 Intermediate ｜ GPT · Claude · Gemini`  ·  整理自 2026 年 6 月各前沿模型默认 agent 能力的报道与实践
+
+> In 2026, frontier models from GPT, Claude, and Gemini all ship with agentic ability by default (they can plan, call tools, and run multiple steps on their own). The old habit was feeding a task as a chain of step-by-step orders; the more effective move now is to state what you want and what 'done' looks like, and let it plan the process. Template: "Goal: [the final result you want]. Context/materials: [relevant info or files]. Constraints: [rules it must follow — length, format, tone]. Acceptance criteria: [list, item by item, what must be true to be complete]. First tell me how you'll approach it (in a few steps); after I confirm, execute." The key is that 'plan first, execute after I confirm' line — you tap its autonomous planning while keeping a brake so it can't drift off course. Great for reports, data cleanup, and multi-step workflows.
+
+### Save Money: A Cheaper Model at Higher Effort Can Replace the Flagship
+`🟡 Intermediate ｜ Claude · GPT · Gemini`  ·  整理自 2026-07-01 Anthropic 恢复全球访问并将 Sonnet 5 设为默认、各家推理力度分档的报道
+
+> From July 2026 Anthropic made the cheaper Claude Sonnet 5 its default model, and around the same time every major platform made reasoning effort a configurable dial. A counter-intuitive money-saver: a mid-tier model at high effort often matches a flagship at medium effort — Anthropic's own charts show Sonnet 5 at extra-high effort performing roughly in line with Opus 4.8 on some agentic benchmarks. So don't reach for the top tier by default. In practice: (1) start on the cheap tier (e.g. Sonnet 5) and dial effort up to high or extra-high first; (2) only escalate to the flagship or max when results genuinely fall short AND getting it wrong is costly; (3) raise effort for coding and multi-step tasks, use low for chat, rewriting, and summaries to save your limits. Side note: Sonnet 5's introductory $2/$10 per million tokens runs until Aug 31, currently the best value at the quality frontier.
+
+### Set Reasoning Effort in the API: output_config + Adaptive Thinking (Cross-Platform)
+`🔴 Advanced ｜ Claude · GPT · Gemini · Grok`  ·  整理自 2026-07 各家推理力度参数文档与实践（Claude output_config / GPT-5.6 / Grok 4.3 / Gemini）
+
+> Clicking the dial in the web UI is easy, but in the API/automation you must set the right parameter for it to take effect. How the 2026 platforms differ: Claude puts effort inside output_config, paired with thinking: {"type": "adaptive"} so the model decides how deep to think; OpenAI's GPT-5.6 uses reasoning_effort and adds a max level plus an ultra mode that farms subtasks out to subagents; Grok 4.3 ships with reasoning on by default and also exposes reasoning_effort; Gemini uses thinking levels and offers a Deep Think mode. Practical tips: (1) default to medium/adaptive for batch jobs and escalate by failure rate — running everything at max burns tokens and latency; (2) treat effort as a tunable hyperparameter: run a small sample at low/medium/high, compare accuracy vs cost, and pick the value-for-money knee; (3) for agents and long tasks, raise effort rather than lengthening the prompt; (4) log time and cost per level so you can review later.
+
+### Claude Sonnet 5 Is the New Default: You Do not Need to Manually Switch to Opus/Fable 5 for Everyday Tasks
+`🟢 Beginner ｜ Claude`  ·  整理自 Anthropic 官方公告（2026-06-30）
+
+> On 2026-06-30, Anthropic made Claude Sonnet 5 the new default model (replacing an earlier Sonnet version). For most people that is good news: coding, research, everyday writing, and multi-turn chat all run fast and accurate on the default Sonnet 5, so you do not need to manually switch to pricier Opus 4.8 or the newly-returned Fable 5 every time — it saves quota. When you should still switch manually: 1) for tasks that clearly need long-chain deep reasoning (complex math proofs, architecture-level refactors of a large codebase, plans that need repeated self-checking) — switch to Opus 4.8; 2) for stronger creative writing, storytelling voice, or roleplay — switch to Fable 5 (note it may block cybersecurity-adjacent questions; see the separate Fable 5 usage guide). Simple rule: run it once on the default Sonnet 5 first, and only escalate to a pricier model and re-run if the result is clearly too shallow or lacks the quality you need — do not start with the most expensive model by default.
+
+### Switching to Gemini from ChatGPT/Claude: Import Your Chat History and Preferences in One Step
+`🟢 Beginner ｜ Gemini`  ·  整理自 Google Gemini 官方发布说明（2026-07）
+
+> Gemini has rolled out a new "switch over" tool: 1) it can directly import your personal context, preferences, and any chat history you've already built up in Gemini, so moving within your own Google account is seamless; 2) it also accepts a ZIP export of chat history from other providers (like ChatGPT or Claude), so Gemini can learn how you usually ask questions and what you care about, without you re-explaining everything from scratch. How to use it: go to the export/data settings of your current platform, download the ZIP of your chat history, then upload it through Gemini's import option. After importing, test it with a prompt like "based on my past chat history, what do you think I mainly use AI for" to confirm it actually picked up on your habits. One caution: before migrating, check the export file for anything sensitive you don't want the new platform to see, and trim it manually first if needed.
+
+### Gemini Connects to OpenTable, Canva, and Instacart: Book, Design, and Shop with One Sentence
+`🟡 Intermediate ｜ Gemini`  ·  整理自 Google Gemini 官方发布说明（2026-07）
+
+> Gemini can now connect directly to more third-party apps — the first batch includes OpenTable (restaurant bookings), Canva (design), and Instacart (grocery ordering) — so you can describe what you need in plain language and let it act on your behalf instead of switching between several apps yourself. When writing the prompt, structure it in layers: 1) state the scenario and constraints first, e.g. "Saturday 7pm, party of 4, near downtown, budget under $40 per person"; 2) be explicit about whether you want it to book/order directly or just show you a few options to pick from yourself — for anything involving money or holding a reservation, have it list options first and only authorize the actual booking after you confirm; 3) for design tasks through Canva, spell out the style reference and purpose (e.g. "birthday party poster, playful style, text should be editable") rather than just saying "make me a poster" — you'll get a far more controllable result. Safety note: the first time you use any action that involves payment, booking, or ordering, have it pause and show you the final details before confirming, and only approve once everything checks out.
 
 <!-- AUTO-PROMPTS:END -->
