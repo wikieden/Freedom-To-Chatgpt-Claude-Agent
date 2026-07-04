@@ -5610,5 +5610,148 @@ window.PROMPTS = [
     ],
     "source": "原创",
     "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-skills-marketplace-npx",
+    "category": "plugin",
+    "level": "intermediate",
+    "title_zh": "Claude Code Skill 市场：用 npx skills add 一键装技能",
+    "title_en": "Claude Code Skill Marketplace: One-Line Install via npx skills add",
+    "body_zh": "社区已经把 Claude Code 的 Skill 生态做成了「市场」（如 skills.sh），别人写好的技能可以直接用一条命令装进你的项目，不用自己从零写 SKILL.md。常见用法：`npx skills add <作者>/<仓库>@<技能名>`，装完 Claude Code 会自动在匹配场景下调用。挑技能时按你的实际短板找，比如前端配色土就装设计类，写代码总漏测试就装工程规范类，不用一次装一堆——技能越多，Claude 判断该用哪个的成本越高，装 3-5 个高频用的比装 20 个吃灰的效果更好。装完先拿一个小任务验证它真的生效（观察 Claude 是否提到用了这个技能），再放心用在正式工作里。",
+    "body_en": "The community has turned the Claude Code Skill ecosystem into a \"marketplace\" (e.g. skills.sh) — skills other people wrote can be installed into your project with one command instead of writing a SKILL.md from scratch. Typical usage: `npx skills add <author>/<repo>@<skill-name>`; once installed, Claude Code invokes it automatically when the scenario matches. Pick skills based on your actual weak spots — bad at color/design? install a design skill; keep forgetting to write tests? install an engineering-conventions skill. Don't install a pile at once — the more skills installed, the harder it is for Claude to judge which one applies; 3-5 frequently-used skills beat 20 that sit unused. After installing, verify on one small task that it actually fires (check whether Claude mentions using the skill) before relying on it for real work.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude Code",
+      "Skill市场",
+      "插件",
+      "npx"
+    ],
+    "source": "参考 helloianneo/awesome-claude-code-skills（GitHub）",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-context7-live-docs",
+    "category": "plugin",
+    "level": "intermediate",
+    "title_zh": "Context7 Skill：让 AI 写代码前先查最新官方文档",
+    "title_en": "Context7 Skill: Pull Live Official Docs Before Writing Code",
+    "body_zh": "AI 写代码最常见的坑是「用的 API 是训练数据里的旧版本」，尤其是版本更新快的框架。Context7 这个 skill 能让 Claude Code 在写代码前直接拉取某个库当前版本的官方文档塞进上下文，不用你自己去查文档再贴链接。适合用在：升级依赖后不确定新 API 怎么调；用一个不熟的库，怕 AI 凭记忆编造过时用法；框架刚出大版本，训练数据可能还没覆盖。用法很简单，装上后正常描述任务，比如「用 {库名} 最新版实现 {功能}」，Claude 会自己判断要不要先查文档再写。装：`npx skills add intellectronica/agent-skills@context7`。",
+    "body_en": "The most common AI-coding pitfall is \"using an API version baked into training data that's now stale,\" especially for fast-moving frameworks. The Context7 skill lets Claude Code pull a library's current official docs straight into context before writing code, so you don't have to look up docs and paste links yourself. Useful when: you upgraded a dependency and aren't sure how the new API works; you're using an unfamiliar library and worry the AI will hallucinate outdated usage from memory; a framework just shipped a major version training data may not cover yet. Usage is simple — once installed, just describe the task normally, e.g. \"implement {feature} using the latest {library}\", and Claude decides whether to check docs first. Install: `npx skills add intellectronica/agent-skills@context7`.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude Code",
+      "Context7",
+      "插件",
+      "文档"
+    ],
+    "source": "参考 helloianneo/awesome-claude-code-skills（GitHub）",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-superpowers-workflow",
+    "category": "plugin",
+    "level": "advanced",
+    "title_zh": "Superpowers：把 TDD / 代码审查 / Git 工作流打包成一套 Skill",
+    "title_en": "Superpowers: TDD, Code Review, and Git Workflow as One Skill Bundle",
+    "body_zh": "obra/superpowers 是一套开源 Skill 合集，把「先测试后实现（TDD）」「并行子代理协作」「代码审查」「Git 工作流」这些工程实践打包成 Claude Code 能直接照做的规范，装上之后不用每次口头重复交代「记得先写测试」。里面的 brainstorming skill 尤其实用：强制在动手写代码前先跟你确认方案，避免 AI 想当然地按自己理解直接开写，改到一半才发现方向错了。适合已经有一定工程习惯、想让 AI 行为更贴近团队规范的人；纯新手直接装可能会觉得步骤偏多，建议先跑几个真实任务观察它怎么工作。装：`npx skills add obra/superpowers`。",
+    "body_en": "obra/superpowers is an open-source skill bundle packaging engineering practices — test-first development (TDD), parallel subagent collaboration, code review, and Git workflow — into conventions Claude Code follows directly, so you stop repeating \"remember to write tests first\" every session. Its brainstorming skill is especially useful: it forces a plan confirmation with you before any code gets written, preventing the AI from just running with its own assumption and only surfacing a wrong direction halfway through. Good for people with some existing engineering habits who want AI behavior to match team conventions; total beginners might find the steps heavier than needed — try it on a few real tasks first to see how it behaves. Install: `npx skills add obra/superpowers`.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude Code",
+      "Superpowers",
+      "TDD",
+      "插件",
+      "工作流"
+    ],
+    "source": "参考 obra/superpowers（GitHub）",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-subagents-catalog-100plus",
+    "category": "plugin",
+    "level": "intermediate",
+    "title_zh": "现成的 100+ Claude Code 子代理合集，不用自己从零写",
+    "title_en": "100+ Ready-Made Claude Code Subagents — No Need to Write From Scratch",
+    "body_zh": "如果你觉得自己写子代理（subagent）的 system prompt 太费劲，社区已经有整理好的合集可以直接拿来用，覆盖后端开发、语言专家（Python/Go/Rust 等）、基础设施/运维、质量与安全、数据与AI、开发者体验、垂直领域、业务与产品、多代理编排、研究分析十大类，共 100 多个现成子代理。用法：按你项目实际需要挑几个装（比如做后端就装 backend-developer + code-reviewer + security-auditor 这一小簇），而不是整个合集全装——原因同 skill：装太多子代理，Claude 主对话判断「该派给谁」的成本会上升，且大部分用不上的子代理只会占地方。挑选标准：先看你最近一周实际在做什么类型的活，缺哪个角色就装哪个。",
+    "body_en": "If writing a subagent's system prompt from scratch feels like too much work, the community has already curated ready-to-use collections spanning ten categories — core/backend development, language specialists (Python/Go/Rust, etc.), infrastructure/ops, quality & security, data & AI, developer experience, specialized domains, business & product, multi-agent orchestration, and research & analysis — 100+ subagents total. Usage: install a handful matching your actual project needs (e.g. for backend work, install just backend-developer + code-reviewer + security-auditor) rather than the whole collection — same reasoning as skills: too many subagents raises the cost of the main session deciding \"who to delegate to,\" and most unused ones just take up space. Selection rule: look at what you've actually been working on this past week and install the role you're missing.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude Code",
+      "subagent",
+      "插件",
+      "合集"
+    ],
+    "source": "参考 VoltAgent/awesome-claude-code-subagents（GitHub）",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-mcp-memory-sequential-fetch",
+    "category": "plugin",
+    "level": "intermediate",
+    "title_zh": "三个被低估的官方 MCP：memory / sequential-thinking / fetch",
+    "title_en": "Three Underrated Official MCP Servers: memory, sequential-thinking, fetch",
+    "body_zh": "除了 filesystem、github 这些常见 MCP，官方参考实现里还有三个容易被忽略但很实用：memory（跨对话保存实体和关系，类似给 Agent 一个持久化笔记本，下次对话还记得你项目里的关键事实，不用每次重新交代背景）；sequential-thinking（把复杂问题拆成可回溯、可修正的多步推理链，适合规划类任务，中途发现某一步错了可以只改那一步，不用推倒重来）；fetch（把网页内容转成干净的 Markdown 再喂给 AI，比直接丢一个 URL 让模型自己「看」网页更可控，尤其适合长文章）。三个都轻量、无需额外账号/API Key，适合刚开始接触 MCP 的人从这几个练手，再逐步加更重的集成（数据库、第三方 SaaS）。",
+    "body_en": "Beyond common MCP servers like filesystem and github, the official reference implementations include three underrated but genuinely useful ones: memory (persists entities and relationships across conversations — like giving the agent a durable notebook so it remembers key facts about your project next session, without you re-explaining background); sequential-thinking (breaks a complex problem into a revisable, backtrackable multi-step reasoning chain — good for planning tasks, where if you spot a wrong step midway you can fix just that step instead of starting over); fetch (converts a webpage into clean Markdown before feeding it to the AI — more controllable than just dropping a URL and letting the model \"look\" at the page itself, especially for long articles). All three are lightweight, need no extra account or API key, and are a good place to start learning MCP before adding heavier integrations like databases or third-party SaaS.",
+    "models": [
+      "Claude",
+      "GPT"
+    ],
+    "tags": [
+      "MCP",
+      "插件",
+      "memory",
+      "sequential-thinking",
+      "fetch"
+    ],
+    "source": "参考 modelcontextprotocol/servers 官方参考实现",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-frontend-design-skill",
+    "category": "plugin",
+    "level": "intermediate",
+    "title_zh": "官方 Frontend Design Skill：治好 AI 做的 UI「一眼假」",
+    "title_en": "Official Frontend Design Skill: Curing That \"Obviously AI-Made\" UI Look",
+    "body_zh": "Anthropic 官方出的 Frontend Design skill 专门解决一个常见痛点：AI 生成的界面能跑但「一看就是 AI 做的」——配色保守、字体千篇一律、动效要么没有要么很生硬。装上这个 skill 后，Claude 在做界面相关任务时会主动往「大胆但克制的配色」「有辨识度的字体搭配」「有意图而非装饰性的动效」这几个方向靠拢，而不是默认抄一套最保守的模板。适合场景：做落地页、产品截图、Demo 界面这类需要「看起来专业」的输出；如果只是内部工具、不追求视觉效果，装不装区别不大。装：`npx skills add anthropics/skills@frontend-design`。",
+    "body_en": "Anthropic's official Frontend Design skill targets a common pain point: AI-generated UIs run fine but \"obviously look AI-made\" — conservative colors, generic fonts, animation that's either absent or clunky. With this skill installed, Claude leans toward bold-but-restrained color choices, distinctive font pairings, and purposeful (not decorative) motion when handling UI tasks, instead of defaulting to the safest possible template. Good for: landing pages, product screenshots, demo interfaces — anything that needs to \"look professional.\" For internal tools where visual polish doesn't matter much, it makes less difference. Install: `npx skills add anthropics/skills@frontend-design`.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude Code",
+      "Frontend Design",
+      "插件",
+      "UI"
+    ],
+    "source": "参考 Anthropic 官方 skills 仓库 / helloianneo/awesome-claude-code-skills",
+    "updated": "2026-07-04"
+  },
+  {
+    "id": "plugin-find-skills-meta",
+    "category": "plugin",
+    "level": "advanced",
+    "title_zh": "Find Skills：让 Agent 自己去找、自己去装新技能",
+    "title_en": "Find Skills: Let the Agent Discover and Install Its Own Skills",
+    "body_zh": "Vercel Labs 出的 Find Skills 是个「元技能」——本身不解决具体业务问题，而是让 Claude Code 具备「发现并安装其他 skill」的能力。用法：遇到一个当前技能库里没覆盖的场景，直接跟 Claude 说「帮我找个能处理 {具体需求} 的 skill 并装上」，它会去搜索、评估、安装，不用你自己先跑去 skills.sh 翻。这个适合已经对 skill 生态有一定了解、想进一步减少手动运维成本的人；如果你还在摸索阶段，建议先手动装几个熟悉流程，再引入这个自动化层，否则出问题时不好排查是哪个环节的锅。装：`npx skills add vercel-labs/skills@find-skills`。",
+    "body_en": "Vercel Labs' Find Skills is a \"meta-skill\" — it doesn't solve a specific business problem itself, but gives Claude Code the ability to discover and install other skills. Usage: when you hit a scenario your current skill set doesn't cover, just tell Claude \"find and install a skill that handles {specific need}\" and it searches, evaluates, and installs — no need to go browse skills.sh yourself first. This fits people who already understand the skill ecosystem reasonably well and want to cut manual upkeep further; if you're still learning the ropes, install a few skills manually first to get familiar with the flow before adding this automation layer, otherwise it's harder to debug which step went wrong when something breaks. Install: `npx skills add vercel-labs/skills@find-skills`.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude Code",
+      "Find Skills",
+      "插件",
+      "自动化"
+    ],
+    "source": "参考 helloianneo/awesome-claude-code-skills（GitHub）",
+    "updated": "2026-07-04"
   }
 ];

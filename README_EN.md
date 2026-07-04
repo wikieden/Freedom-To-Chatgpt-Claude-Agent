@@ -20,7 +20,7 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 - 🖼️ **Text-to-Image** (15)
 - 🎬 **Text-to-Video** (20)
 - 🧩 **Skills** (19)
-- 🔌 **Plugins / MCP** (10)
+- 🔌 **Plugins / MCP** (17)
 - 💡 **Prompt Craft** (45)
 
 ## 🚀 Getting Started
@@ -1205,6 +1205,41 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟢 Beginner ｜ Claude · GPT · Gemini`  ·  原创
 
 > A common beginner mistake: reaching for "is there a plugin for this" the moment a task shows up, when often a clearly written prompt is enough. Simple rule of thumb: install a plugin or MCP only when the task needs the AI to read/write real data or systems beyond your local chat — a code repo, database, calendar, third-party app. If the task is just "rewrite this text better" or "analyze this text I already pasted in," a plain prompt handles it — adding a plugin only adds complexity and risk (permission scope, chance of unintended actions). Recommended path for beginners: get the prompt itself solid in the chat window first; only when you hit a concrete wall — "the AI says it can't do this because it can't reach system X" — install one specific plugin or MCP for that need, instead of installing a pile of things you won't use.
+
+### Claude Code Skill Marketplace: One-Line Install via npx skills add
+`🟡 Intermediate ｜ Claude`  ·  参考 helloianneo/awesome-claude-code-skills（GitHub）
+
+> The community has turned the Claude Code Skill ecosystem into a "marketplace" (e.g. skills.sh) — skills other people wrote can be installed into your project with one command instead of writing a SKILL.md from scratch. Typical usage: `npx skills add <author>/<repo>@<skill-name>`; once installed, Claude Code invokes it automatically when the scenario matches. Pick skills based on your actual weak spots — bad at color/design? install a design skill; keep forgetting to write tests? install an engineering-conventions skill. Don't install a pile at once — the more skills installed, the harder it is for Claude to judge which one applies; 3-5 frequently-used skills beat 20 that sit unused. After installing, verify on one small task that it actually fires (check whether Claude mentions using the skill) before relying on it for real work.
+
+### Context7 Skill: Pull Live Official Docs Before Writing Code
+`🟡 Intermediate ｜ Claude`  ·  参考 helloianneo/awesome-claude-code-skills（GitHub）
+
+> The most common AI-coding pitfall is "using an API version baked into training data that's now stale," especially for fast-moving frameworks. The Context7 skill lets Claude Code pull a library's current official docs straight into context before writing code, so you don't have to look up docs and paste links yourself. Useful when: you upgraded a dependency and aren't sure how the new API works; you're using an unfamiliar library and worry the AI will hallucinate outdated usage from memory; a framework just shipped a major version training data may not cover yet. Usage is simple — once installed, just describe the task normally, e.g. "implement {feature} using the latest {library}", and Claude decides whether to check docs first. Install: `npx skills add intellectronica/agent-skills@context7`.
+
+### Superpowers: TDD, Code Review, and Git Workflow as One Skill Bundle
+`🔴 Advanced ｜ Claude`  ·  参考 obra/superpowers（GitHub）
+
+> obra/superpowers is an open-source skill bundle packaging engineering practices — test-first development (TDD), parallel subagent collaboration, code review, and Git workflow — into conventions Claude Code follows directly, so you stop repeating "remember to write tests first" every session. Its brainstorming skill is especially useful: it forces a plan confirmation with you before any code gets written, preventing the AI from just running with its own assumption and only surfacing a wrong direction halfway through. Good for people with some existing engineering habits who want AI behavior to match team conventions; total beginners might find the steps heavier than needed — try it on a few real tasks first to see how it behaves. Install: `npx skills add obra/superpowers`.
+
+### 100+ Ready-Made Claude Code Subagents — No Need to Write From Scratch
+`🟡 Intermediate ｜ Claude`  ·  参考 VoltAgent/awesome-claude-code-subagents（GitHub）
+
+> If writing a subagent's system prompt from scratch feels like too much work, the community has already curated ready-to-use collections spanning ten categories — core/backend development, language specialists (Python/Go/Rust, etc.), infrastructure/ops, quality & security, data & AI, developer experience, specialized domains, business & product, multi-agent orchestration, and research & analysis — 100+ subagents total. Usage: install a handful matching your actual project needs (e.g. for backend work, install just backend-developer + code-reviewer + security-auditor) rather than the whole collection — same reasoning as skills: too many subagents raises the cost of the main session deciding "who to delegate to," and most unused ones just take up space. Selection rule: look at what you've actually been working on this past week and install the role you're missing.
+
+### Three Underrated Official MCP Servers: memory, sequential-thinking, fetch
+`🟡 Intermediate ｜ Claude · GPT`  ·  参考 modelcontextprotocol/servers 官方参考实现
+
+> Beyond common MCP servers like filesystem and github, the official reference implementations include three underrated but genuinely useful ones: memory (persists entities and relationships across conversations — like giving the agent a durable notebook so it remembers key facts about your project next session, without you re-explaining background); sequential-thinking (breaks a complex problem into a revisable, backtrackable multi-step reasoning chain — good for planning tasks, where if you spot a wrong step midway you can fix just that step instead of starting over); fetch (converts a webpage into clean Markdown before feeding it to the AI — more controllable than just dropping a URL and letting the model "look" at the page itself, especially for long articles). All three are lightweight, need no extra account or API key, and are a good place to start learning MCP before adding heavier integrations like databases or third-party SaaS.
+
+### Official Frontend Design Skill: Curing That "Obviously AI-Made" UI Look
+`🟡 Intermediate ｜ Claude`  ·  参考 Anthropic 官方 skills 仓库 / helloianneo/awesome-claude-code-skills
+
+> Anthropic's official Frontend Design skill targets a common pain point: AI-generated UIs run fine but "obviously look AI-made" — conservative colors, generic fonts, animation that's either absent or clunky. With this skill installed, Claude leans toward bold-but-restrained color choices, distinctive font pairings, and purposeful (not decorative) motion when handling UI tasks, instead of defaulting to the safest possible template. Good for: landing pages, product screenshots, demo interfaces — anything that needs to "look professional." For internal tools where visual polish doesn't matter much, it makes less difference. Install: `npx skills add anthropics/skills@frontend-design`.
+
+### Find Skills: Let the Agent Discover and Install Its Own Skills
+`🔴 Advanced ｜ Claude`  ·  参考 helloianneo/awesome-claude-code-skills（GitHub）
+
+> Vercel Labs' Find Skills is a "meta-skill" — it doesn't solve a specific business problem itself, but gives Claude Code the ability to discover and install other skills. Usage: when you hit a scenario your current skill set doesn't cover, just tell Claude "find and install a skill that handles {specific need}" and it searches, evaluates, and installs — no need to go browse skills.sh yourself first. This fits people who already understand the skill ecosystem reasonably well and want to cut manual upkeep further; if you're still learning the ropes, install a few skills manually first to get familiar with the flow before adding this automation layer, otherwise it's harder to debug which step went wrong when something breaks. Install: `npx skills add vercel-labs/skills@find-skills`.
 
 ## 💡 Prompt Craft
 

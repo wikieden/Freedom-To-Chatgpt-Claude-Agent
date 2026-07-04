@@ -1,6 +1,6 @@
 # AI 提示词大全 + 账号注册与付费全攻略（GPT · Claude · Gemini · 国产模型 ｜ 新手友好 · 双语）
 
-> 中文 AI 新手资源合集：**提示词大全**（角色 / 文生图 / 文生视频 / Skill）+ **美区账号注册全流程** + **Apple 礼品卡付费全路径** + **科学上网配置**。一个仓库把"会用 + 能用上 + 付得了费"全打通。
+> 中文 AI 新手资源合集：**提示词大全**（角色 / 文生图 / 文生视频 / Skill / 插件 · MCP）+ **美区账号注册全流程** + **Apple 礼品卡付费全路径** + **科学上网配置**。一个仓库把"会用 + 能用上 + 付得了费"全打通。
 >
 > 曾用名/别名：ChatGPT 调教指南 · 咒语指南 · 聊天提示词指南。
 >
@@ -10,7 +10,7 @@
 
 | 模块 | 内容 | 入口 |
 |---|---|---|
-| 📝 **提示词大全** | 240+ 条双语提示词：新手入门 / 角色 / 文生图 / 文生视频 / Skill / 提示词技巧 | [↓ 跳到板块目录](#板块目录) |
+| 📝 **提示词大全** | 280+ 条双语提示词：新手入门 / 角色 / 文生图 / 文生视频 / Skill / 插件·MCP / 提示词技巧 | [↓ 跳到板块目录](#板块目录) |
 | 🔐 **账号注册全流程** | 美区 Apple ID、Claude、OpenAI ChatGPT / Codex 的注册与激活（含防封、养号） | [注册指南](docs/账号注册与订阅指南.md#2-美区-app-store-账号apple-id) |
 | 💳 **付费全路径** | Apple 礼品卡购买（Pockyt / 支付宝 / 官网）→ iOS 内购订阅 Claude / ChatGPT | [付费指南](docs/账号注册与订阅指南.md#3-apple-礼品卡购买与充值) |
 | 🪜 **科学上网** | Clash Verge Rev / FLClash / Shadowrocket + TUN 模式 + IP 确认 | [上网指南](docs/账号注册与订阅指南.md#1-科学上网工具按平台选含-tun-模式) |
@@ -34,7 +34,7 @@
 
 ## 📝 提示词大全（双语 · 复制即用）
 
-240+ 条精选提示词，覆盖新手入门、角色扮演、文生图、文生视频、Skill 推荐、提示词技巧六大板块，每条中英对照、标注难度与适用模型。
+280+ 条精选提示词，覆盖新手入门、角色扮演、文生图、文生视频、Skill 推荐、插件/MCP、提示词技巧七大板块，每条中英对照、标注难度与适用模型。「插件/MCP」板块收录并翻译整理自 Claude Code、Codex CLI、ChatGPT 生态里被广泛验证的官方文档与开源合集，非原创内容均在条目 `source` 字段标注出处。
 
 - 🔎 **在线检索 / 一键复制**：https://wikieden.github.io/Freedom-To-Chatgpt-Claude-Agent/
 - 📚 想写出更有效的提示词？看下面 [板块目录](#板块目录) 里的「💡 提示词技巧」板块，或读 [ChatGPT 入门指南](ChatGpt-receipt.md)
@@ -69,7 +69,7 @@
 - 🖼️ **文生图** (15)
 - 🎬 **文生视频** (20)
 - 🧩 **Skill 推荐** (19)
-- 🔌 **插件 / MCP** (10)
+- 🔌 **插件 / MCP** (17)
 - 💡 **提示词技巧** (45)
 
 ## 🚀 新手入门
@@ -1256,6 +1256,41 @@
 `🟢 新手 ｜ Claude · GPT · Gemini`  ·  原创
 
 > 新手常见误区：一遇到任务就想着「有没有插件能解决」，其实很多时候一句写清楚的提示词就够了。判断标准很简单：如果任务需要 AI 读写你本机之外的真实数据/系统（代码仓库、数据库、日历、第三方 App），才需要装插件或 MCP；如果任务只是「把这段话改写得更好」「帮我分析这份我已经贴过来的文本」，纯提示词就能搞定，装插件反而增加复杂度和风险（授权范围、误操作可能）。新手建议路径：先只用聊天窗口把提示词写扎实，遇到「AI 说它做不到，因为它连不到某个系统」这种明确瓶颈时，再针对那一个具体需求去装一个插件或 MCP，不要一上来就装一堆用不上的。
+
+### Claude Code Skill 市场：用 npx skills add 一键装技能
+`🟡 进阶 ｜ Claude`  ·  参考 helloianneo/awesome-claude-code-skills（GitHub）
+
+> 社区已经把 Claude Code 的 Skill 生态做成了「市场」（如 skills.sh），别人写好的技能可以直接用一条命令装进你的项目，不用自己从零写 SKILL.md。常见用法：`npx skills add <作者>/<仓库>@<技能名>`，装完 Claude Code 会自动在匹配场景下调用。挑技能时按你的实际短板找，比如前端配色土就装设计类，写代码总漏测试就装工程规范类，不用一次装一堆——技能越多，Claude 判断该用哪个的成本越高，装 3-5 个高频用的比装 20 个吃灰的效果更好。装完先拿一个小任务验证它真的生效（观察 Claude 是否提到用了这个技能），再放心用在正式工作里。
+
+### Context7 Skill：让 AI 写代码前先查最新官方文档
+`🟡 进阶 ｜ Claude`  ·  参考 helloianneo/awesome-claude-code-skills（GitHub）
+
+> AI 写代码最常见的坑是「用的 API 是训练数据里的旧版本」，尤其是版本更新快的框架。Context7 这个 skill 能让 Claude Code 在写代码前直接拉取某个库当前版本的官方文档塞进上下文，不用你自己去查文档再贴链接。适合用在：升级依赖后不确定新 API 怎么调；用一个不熟的库，怕 AI 凭记忆编造过时用法；框架刚出大版本，训练数据可能还没覆盖。用法很简单，装上后正常描述任务，比如「用 {库名} 最新版实现 {功能}」，Claude 会自己判断要不要先查文档再写。装：`npx skills add intellectronica/agent-skills@context7`。
+
+### Superpowers：把 TDD / 代码审查 / Git 工作流打包成一套 Skill
+`🔴 高级 ｜ Claude`  ·  参考 obra/superpowers（GitHub）
+
+> obra/superpowers 是一套开源 Skill 合集，把「先测试后实现（TDD）」「并行子代理协作」「代码审查」「Git 工作流」这些工程实践打包成 Claude Code 能直接照做的规范，装上之后不用每次口头重复交代「记得先写测试」。里面的 brainstorming skill 尤其实用：强制在动手写代码前先跟你确认方案，避免 AI 想当然地按自己理解直接开写，改到一半才发现方向错了。适合已经有一定工程习惯、想让 AI 行为更贴近团队规范的人；纯新手直接装可能会觉得步骤偏多，建议先跑几个真实任务观察它怎么工作。装：`npx skills add obra/superpowers`。
+
+### 现成的 100+ Claude Code 子代理合集，不用自己从零写
+`🟡 进阶 ｜ Claude`  ·  参考 VoltAgent/awesome-claude-code-subagents（GitHub）
+
+> 如果你觉得自己写子代理（subagent）的 system prompt 太费劲，社区已经有整理好的合集可以直接拿来用，覆盖后端开发、语言专家（Python/Go/Rust 等）、基础设施/运维、质量与安全、数据与AI、开发者体验、垂直领域、业务与产品、多代理编排、研究分析十大类，共 100 多个现成子代理。用法：按你项目实际需要挑几个装（比如做后端就装 backend-developer + code-reviewer + security-auditor 这一小簇），而不是整个合集全装——原因同 skill：装太多子代理，Claude 主对话判断「该派给谁」的成本会上升，且大部分用不上的子代理只会占地方。挑选标准：先看你最近一周实际在做什么类型的活，缺哪个角色就装哪个。
+
+### 三个被低估的官方 MCP：memory / sequential-thinking / fetch
+`🟡 进阶 ｜ Claude · GPT`  ·  参考 modelcontextprotocol/servers 官方参考实现
+
+> 除了 filesystem、github 这些常见 MCP，官方参考实现里还有三个容易被忽略但很实用：memory（跨对话保存实体和关系，类似给 Agent 一个持久化笔记本，下次对话还记得你项目里的关键事实，不用每次重新交代背景）；sequential-thinking（把复杂问题拆成可回溯、可修正的多步推理链，适合规划类任务，中途发现某一步错了可以只改那一步，不用推倒重来）；fetch（把网页内容转成干净的 Markdown 再喂给 AI，比直接丢一个 URL 让模型自己「看」网页更可控，尤其适合长文章）。三个都轻量、无需额外账号/API Key，适合刚开始接触 MCP 的人从这几个练手，再逐步加更重的集成（数据库、第三方 SaaS）。
+
+### 官方 Frontend Design Skill：治好 AI 做的 UI「一眼假」
+`🟡 进阶 ｜ Claude`  ·  参考 Anthropic 官方 skills 仓库 / helloianneo/awesome-claude-code-skills
+
+> Anthropic 官方出的 Frontend Design skill 专门解决一个常见痛点：AI 生成的界面能跑但「一看就是 AI 做的」——配色保守、字体千篇一律、动效要么没有要么很生硬。装上这个 skill 后，Claude 在做界面相关任务时会主动往「大胆但克制的配色」「有辨识度的字体搭配」「有意图而非装饰性的动效」这几个方向靠拢，而不是默认抄一套最保守的模板。适合场景：做落地页、产品截图、Demo 界面这类需要「看起来专业」的输出；如果只是内部工具、不追求视觉效果，装不装区别不大。装：`npx skills add anthropics/skills@frontend-design`。
+
+### Find Skills：让 Agent 自己去找、自己去装新技能
+`🔴 高级 ｜ Claude`  ·  参考 helloianneo/awesome-claude-code-skills（GitHub）
+
+> Vercel Labs 出的 Find Skills 是个「元技能」——本身不解决具体业务问题，而是让 Claude Code 具备「发现并安装其他 skill」的能力。用法：遇到一个当前技能库里没覆盖的场景，直接跟 Claude 说「帮我找个能处理 {具体需求} 的 skill 并装上」，它会去搜索、评估、安装，不用你自己先跑去 skills.sh 翻。这个适合已经对 skill 生态有一定了解、想进一步减少手动运维成本的人；如果你还在摸索阶段，建议先手动装几个熟悉流程，再引入这个自动化层，否则出问题时不好排查是哪个环节的锅。装：`npx skills add vercel-labs/skills@find-skills`。
 
 ## 💡 提示词技巧
 
