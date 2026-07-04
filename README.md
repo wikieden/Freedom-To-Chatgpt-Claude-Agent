@@ -14,6 +14,7 @@
 | 🔐 **账号注册全流程** | 美区 Apple ID、Claude、OpenAI ChatGPT / Codex 的注册与激活（含防封、养号） | [注册指南](docs/账号注册与订阅指南.md#2-美区-app-store-账号apple-id) |
 | 💳 **付费全路径** | Apple 礼品卡购买（Pockyt / 支付宝 / 官网）→ iOS 内购订阅 Claude / ChatGPT | [付费指南](docs/账号注册与订阅指南.md#3-apple-礼品卡购买与充值) |
 | 🪜 **科学上网** | Clash Verge Rev / FLClash / Shadowrocket + TUN 模式 + IP 确认 | [上网指南](docs/账号注册与订阅指南.md#1-科学上网工具按平台选含-tun-模式) |
+| 🔌 **AI 生态资源合集** | MCP Server 官方/精选、100+ Claude Code Subagent、50+ Skill，整理自四个知名开源合集 | [生态资源合集](docs/生态资源合集.md) |
 
 ## 🚀 5 分钟快速开始（新手按顺序走）
 
@@ -38,6 +39,7 @@
 
 - 🔎 **在线检索 / 一键复制**：https://wikieden.github.io/Freedom-To-Chatgpt-Claude-Agent/
 - 📚 想写出更有效的提示词？看下面 [板块目录](#板块目录) 里的「💡 提示词技巧」板块，或读 [ChatGPT 入门指南](ChatGpt-receipt.md)
+- 🔌 想要更全的 MCP Server / Subagent / Skill 清单（不止提示词库里精选的 8 条）？看 [AI 生态资源合集](docs/生态资源合集.md)
 - 😺 想把 ChatGPT 调教成猫娘？教程同样在 [ChatGPT 入门指南](ChatGpt-receipt.md)
 
 > 下方「板块目录」及各板块内容由 [`scripts/build.js`](scripts/build.js) 从单一数据源 `web/data/prompts.js` 自动生成，请勿手改生成区。
