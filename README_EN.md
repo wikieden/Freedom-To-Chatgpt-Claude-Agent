@@ -17,12 +17,12 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 ### Categories
 
 - 🚀 **Getting Started** (19)
-- 🎭 **Role Prompts** (148)
+- 🎭 **Role Prompts** (149)
 - 🖼️ **Text-to-Image** (15)
-- 🎬 **Text-to-Video** (20)
+- 🎬 **Text-to-Video** (21)
 - 🧩 **Skills** (19)
 - 🔌 **Plugins / MCP** (17)
-- 💡 **Prompt Craft** (45)
+- 💡 **Prompt Craft** (48)
 
 ## 🚀 Getting Started
 
@@ -863,6 +863,11 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 > Instead of having AI "explain" knowledge to you, have it quiz you — that's how things actually stick. Hand any material (a textbook chapter, a doc, your notes, even an article) to the AI and let it act as your study coach, using active recall and spaced repetition to help you internalize it. Copy this role prompt: "You are my study coach. I'll send you study material. Please: (1) first capture the core in 3–5 bullet points; (2) then ask me ONE question at a time (easy to hard, mixing recall questions and application questions), and after I answer, judge it, fill the gaps, then ask the next; (3) note any point I get wrong or vague, and after a few rounds re-quiz me on it with a different wording (spaced repetition); (4) never dump the full answer up front — make me think first. When ready, say 'send me the material.'" Works on any model (GPT, Claude, Gemini, DeepSeek, Kimi). Power move: at the end, have it export a "my weak-points list" so your next session starts right there.
 
+### DeepSeek-V3.1 hybrid reasoning: think slow where it matters, answer fast where it doesn't
+`🟡 Intermediate ｜ DeepSeek`  ·  参考 2026-07 DeepSeek-V3.1 发布信息
+
+> DeepSeek-V3.1 is a hybrid reasoning model — it has both a "quick answer" mode and a "deep thinking" mode in the same model, so you no longer need to switch to R1 separately just for reasoning power. Tell it explicitly which mode you want: This requires multi-step reasoning / a rigorous code review — please switch to deep thinking mode and show your intermediate reasoning steps before the conclusion. For simple factual questions or format conversions, just say please answer in quick mode, no need to show your reasoning — that saves both wait time and tokens.
+
 ## 🖼️ Text-to-Image
 
 ### Midjourney realistic portrait formula
@@ -1057,6 +1062,11 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟡 Intermediate ｜ Gemini`  ·  整理自 2026 年 Google I/O 关于 Gemini App 与 Gemini Omni 视频模型的报道
 
 > At I/O 2026 Google wired its new video model, Gemini Omni, into the Gemini app — its headline trait is generating picture and sound together, so you don't dub audio in post. Don't describe only the visuals; write the audio in too: (1) shot content (subject, action, setting); (2) camera move (push-in / orbit / tracking); (3) audio layer (dialogue, ambient sound, score mood); (4) duration and aspect ratio. Example: "Seaside at dusk, a girl walks slowly on wet sand, low-angle tracking shot; ambient: waves plus distant gulls; soft piano score; dialogue: she whispers 'made it at last'; 8s, vertical 9:16." Tip: run a one-line draft first to check direction, then add detail and regenerate — cheaper than front-loading everything.
+
+### Kling/Jimeng: keep the same character's look consistent across multiple shots
+`🟡 Intermediate ｜ 可灵 · 即梦`  ·  参考 2026-07 国内 AI 视频工具趋势
+
+> Domestic video models made clear progress on character consistency in 2026, but to keep the same character's look stable across multiple shots, you still need to lock down the character description and repeat it every time. Approach: start with a clear reference image or a fixed character description (hairstyle, face shape, clothing color, age markers — the more specific, the better), then repeat that same description at the start of every shot's prompt, followed by the camera move and scene change, e.g. [fixed character description] + camera slowly pushes in from eye-level to a close-up, background shifts from indoors to a dusk street, lighting shifts from warm indoor light to sunset backlight. If the character drifts, first check whether the character description got dropped or abbreviated in one of the shot prompts — that's the most common cause.
 
 ## 🧩 Skills
 
@@ -1494,5 +1504,20 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟡 Intermediate ｜ Gemini`  ·  整理自 Google Gemini 官方发布说明（2026-07）
 
 > Gemini can now connect directly to more third-party apps — the first batch includes OpenTable (restaurant bookings), Canva (design), and Instacart (grocery ordering) — so you can describe what you need in plain language and let it act on your behalf instead of switching between several apps yourself. When writing the prompt, structure it in layers: 1) state the scenario and constraints first, e.g. "Saturday 7pm, party of 4, near downtown, budget under $40 per person"; 2) be explicit about whether you want it to book/order directly or just show you a few options to pick from yourself — for anything involving money or holding a reservation, have it list options first and only authorize the actual booking after you confirm; 3) for design tasks through Canva, spell out the style reference and purpose (e.g. "birthday party poster, playful style, text should be editable") rather than just saying "make me a poster" — you'll get a far more controllable result. Safety note: the first time you use any action that involves payment, booking, or ordering, have it pause and show you the final details before confirming, and only approve once everything checks out.
+
+### Use Claude's live web preview to review mobile/tablet/desktop in one pass
+`🟡 Intermediate ｜ Claude`  ·  参考 2026-07 Claude 网页预览功能更新
+
+> Claude's front-end code generation now comes with a bigger, faster-refreshing live preview panel that can switch between mobile, tablet, and desktop views with one click. Don't just ask it to "build a page" — bake the review checklist into the prompt itself: Implement [page/component description], then use the preview to check it in mobile, tablet, and desktop views in turn: look for text overflow, buttons smaller than 44px that are hard to tap, and key content getting squeezed out of view on narrow screens. Fix anything you find directly, and tell me which size you adjusted for what. That gets you a version that's already been self-checked for responsiveness in one pass, instead of you clicking through each breakpoint afterward.
+
+### ChatGPT code execution: have it run code and narrate what it finds
+`🟡 Intermediate ｜ GPT`  ·  参考 2026-07 ChatGPT 代码执行功能更新
+
+> ChatGPT Plus can now execute Python directly inside the conversation and show the results, without switching to a separate Code Interpreter environment. After uploading a data file, try: Analyze this data [uploaded file]. Write and run the code directly, and after each step, explain in a sentence or two what you found and what hypothesis you're testing next. At the end, give me the 3 findings most worth attention, each with a chart. This lets you see the full analysis chain and interrupt to redirect at any point, instead of getting a black-box result dropped on you.
+
+### Gemini Deep Research: get a source-cited research brief in one shot
+`🟡 Intermediate ｜ Gemini`  ·  参考 2026-07 Gemini 深度研究全面开放更新
+
+> Gemini's Deep Research is now available to all paid users — it breaks down your question, runs multiple rounds of search, and compiles a report, but the default structure may not fit your needs. Constrain the output like this: Do deep research on [topic]. Structure the output as: conclusion first → supporting evidence (with source links) → points of disagreement across sources → what I should ask next. Cite the source after each key finding, and if sources conflict, call out the disagreement explicitly instead of splitting the difference. That gets you a brief you can actually present, not a pile of stitched-together link summaries.
 
 <!-- AUTO-PROMPTS:END -->

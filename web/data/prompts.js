@@ -5753,5 +5753,106 @@ window.PROMPTS = [
     ],
     "source": "参考 helloianneo/awesome-claude-code-skills（GitHub）",
     "updated": "2026-07-04"
+  },
+  {
+    "id": "claude-web-preview-responsive-review",
+    "category": "craft",
+    "level": "intermediate",
+    "title_zh": "用 Claude 网页实时预览做手机/平板/桌面三端走查",
+    "title_en": "Use Claude's live web preview to review mobile/tablet/desktop in one pass",
+    "body_zh": "Claude 现在生成前端代码时会带一个更大、刷新更快的实时预览窗口，还能一键切换手机、平板、桌面三种视图。别只让它「写个页面」，直接把走查标准塞进提示词：请帮我实现【页面/组件描述】，做完后依次在预览里切到手机、平板、桌面三种视图检查一遍：有没有文字溢出、按钮是否小于 44px 不好点、关键信息在窄屏是否被挤到看不见。发现问题直接改，改完告诉我你在哪个尺寸下做了什么调整。这样一次对话就能拿到经过响应式自检的版本，而不是回头自己一个个尺寸去点。",
+    "body_en": "Claude's front-end code generation now comes with a bigger, faster-refreshing live preview panel that can switch between mobile, tablet, and desktop views with one click. Don't just ask it to \"build a page\" — bake the review checklist into the prompt itself: Implement [page/component description], then use the preview to check it in mobile, tablet, and desktop views in turn: look for text overflow, buttons smaller than 44px that are hard to tap, and key content getting squeezed out of view on narrow screens. Fix anything you find directly, and tell me which size you adjusted for what. That gets you a version that's already been self-checked for responsiveness in one pass, instead of you clicking through each breakpoint afterward.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude",
+      "前端",
+      "实时预览",
+      "响应式"
+    ],
+    "source": "参考 2026-07 Claude 网页预览功能更新",
+    "updated": "2026-07-05"
+  },
+  {
+    "id": "chatgpt-code-execution-data-walkthrough",
+    "category": "craft",
+    "level": "intermediate",
+    "title_zh": "ChatGPT 代码执行：让它边跑代码边讲发现了什么",
+    "title_en": "ChatGPT code execution: have it run code and narrate what it finds",
+    "body_zh": "ChatGPT Plus 现在能直接在对话里执行 Python 并展示运行结果，不用再切到单独的 Code Interpreter 环境。上传数据文件后可以这样问：帮我分析这份数据【上传的文件】。请直接写代码执行，每跑完一步就用一两句人话说明你发现了什么、下一步打算验证什么假设，最后给我 3 条最值得关注的结论和对应的图表。这样能看到完整的分析链路、随时打断纠正方向，而不是等一个黑箱结果甩过来。",
+    "body_en": "ChatGPT Plus can now execute Python directly inside the conversation and show the results, without switching to a separate Code Interpreter environment. After uploading a data file, try: Analyze this data [uploaded file]. Write and run the code directly, and after each step, explain in a sentence or two what you found and what hypothesis you're testing next. At the end, give me the 3 findings most worth attention, each with a chart. This lets you see the full analysis chain and interrupt to redirect at any point, instead of getting a black-box result dropped on you.",
+    "models": [
+      "GPT"
+    ],
+    "tags": [
+      "ChatGPT",
+      "代码执行",
+      "数据分析",
+      "Code Interpreter"
+    ],
+    "source": "参考 2026-07 ChatGPT 代码执行功能更新",
+    "updated": "2026-07-05"
+  },
+  {
+    "id": "gemini-deep-research-structured-brief",
+    "category": "craft",
+    "level": "intermediate",
+    "title_zh": "Gemini 深度研究：一次性拿到有来源标注的调研简报",
+    "title_en": "Gemini Deep Research: get a source-cited research brief in one shot",
+    "body_zh": "Gemini 的深度研究功能已经开放给所有付费用户，会自己拆解问题、多轮搜索、再汇总成报告，但默认结构不一定适合你。可以这样限定输出：请对【研究主题】做深度研究。按「结论先行 → 支持证据（附来源链接）→ 有分歧的地方 → 我还应该追问什么」的结构输出，每条关键结论后面标注信息来源，如果不同来源结论冲突，明确指出分歧点而不是各打五十大板。这样拿到的是一份能直接汇报用的简报，而不是一堆链接摘要的拼盘。",
+    "body_en": "Gemini's Deep Research is now available to all paid users — it breaks down your question, runs multiple rounds of search, and compiles a report, but the default structure may not fit your needs. Constrain the output like this: Do deep research on [topic]. Structure the output as: conclusion first → supporting evidence (with source links) → points of disagreement across sources → what I should ask next. Cite the source after each key finding, and if sources conflict, call out the disagreement explicitly instead of splitting the difference. That gets you a brief you can actually present, not a pile of stitched-together link summaries.",
+    "models": [
+      "Gemini"
+    ],
+    "tags": [
+      "Gemini",
+      "深度研究",
+      "调研",
+      "信息来源"
+    ],
+    "source": "参考 2026-07 Gemini 深度研究全面开放更新",
+    "updated": "2026-07-05"
+  },
+  {
+    "id": "deepseek-v3-1-hybrid-reasoning-mode",
+    "category": "role",
+    "level": "intermediate",
+    "title_zh": "DeepSeek-V3.1 混合推理：该慢想的地方慢想，该快答的地方快答",
+    "title_en": "DeepSeek-V3.1 hybrid reasoning: think slow where it matters, answer fast where it doesn't",
+    "body_zh": "DeepSeek-V3.1 是混合推理模型，同一个模型里同时有「快速回答」和「深度思考」两种模式，不用像以前一样为了推理能力单独切到 R1。提问时明确告诉它需要哪种模式：这是一道需要多步推导的题目/需要严谨代码审查的任务，请开启深度思考模式，把中间推理步骤也展示出来，最后给结论。如果只是简单事实性问题或者格式转换，直接说请用快速模式回答，不用展开推理过程，能省不少等待时间和 token。",
+    "body_en": "DeepSeek-V3.1 is a hybrid reasoning model — it has both a \"quick answer\" mode and a \"deep thinking\" mode in the same model, so you no longer need to switch to R1 separately just for reasoning power. Tell it explicitly which mode you want: This requires multi-step reasoning / a rigorous code review — please switch to deep thinking mode and show your intermediate reasoning steps before the conclusion. For simple factual questions or format conversions, just say please answer in quick mode, no need to show your reasoning — that saves both wait time and tokens.",
+    "models": [
+      "DeepSeek"
+    ],
+    "tags": [
+      "DeepSeek",
+      "混合推理",
+      "V3.1",
+      "效率"
+    ],
+    "source": "参考 2026-07 DeepSeek-V3.1 发布信息",
+    "updated": "2026-07-05"
+  },
+  {
+    "id": "keling-jimeng-character-consistency-shots",
+    "category": "video",
+    "level": "intermediate",
+    "title_zh": "可灵/即梦：多镜头里让同一个角色长相不跑偏",
+    "title_en": "Kling/Jimeng: keep the same character's look consistent across multiple shots",
+    "body_zh": "2026 年国内视频模型在「人物一致性」上进步明显，但想要多个镜头里角色长相不跑偏，提示词还是要把角色特征锁死、反复重申。写法：先用一张清晰正面参考图或者一段固定的角色描述（发型、脸型、服装颜色、年龄特征，越具体越好），后续每一镜的提示词开头都重复这段描述，再接运镜和场景变化，比如【角色固定描述】+ 镜头从平视缓慢推近到近景，背景从室内切换到黄昏街道，光线从暖黄灯光变为夕阳逆光。如果角色跑偏，优先检查是不是每镜提示词里的角色描述被省略或简化了，这是最常见的翻车原因。",
+    "body_en": "Domestic video models made clear progress on character consistency in 2026, but to keep the same character's look stable across multiple shots, you still need to lock down the character description and repeat it every time. Approach: start with a clear reference image or a fixed character description (hairstyle, face shape, clothing color, age markers — the more specific, the better), then repeat that same description at the start of every shot's prompt, followed by the camera move and scene change, e.g. [fixed character description] + camera slowly pushes in from eye-level to a close-up, background shifts from indoors to a dusk street, lighting shifts from warm indoor light to sunset backlight. If the character drifts, first check whether the character description got dropped or abbreviated in one of the shot prompts — that's the most common cause.",
+    "models": [
+      "可灵",
+      "即梦"
+    ],
+    "tags": [
+      "可灵",
+      "即梦",
+      "视频生成",
+      "人物一致性"
+    ],
+    "source": "参考 2026-07 国内 AI 视频工具趋势",
+    "updated": "2026-07-05"
   }
 ];
