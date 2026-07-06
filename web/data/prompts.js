@@ -5854,5 +5854,87 @@ window.PROMPTS = [
     ],
     "source": "参考 2026-07 国内 AI 视频工具趋势",
     "updated": "2026-07-05"
+  },
+  {
+    "id": "skill-chatgpt-personal-finance-review",
+    "category": "skill",
+    "level": "beginner",
+    "title_zh": "ChatGPT 个人理财：接入账户后怎么问出有用的复盘",
+    "title_en": "ChatGPT Personal Finance: How to Ask Useful Questions Once Your Accounts Are Connected",
+    "body_zh": "OpenAI 于 2026 年 6 月 30 日将「个人理财」功能从 Pro 扩展到美区 Plus 用户，通过 Plaid 连接超过 12000 家金融机构的账户后，ChatGPT 能看到你的消费、订阅、账单和资产走势，并结合这些上下文回答问题。仅仅连上账户不会自动变聪明，得会问：请基于我最近三个月的消费数据，分类统计各项支出占比，找出环比增长最快的三个类别，并说明可能原因；这个月有哪些订阅是我超过 60 天没用过的，建议我取消哪些；给我一个未来 3 个月的储蓄目标拆解，考虑到我下月有一笔大额支出。用完记得检查隐私设置，你可以随时删除已连接的财务数据，个人理财对话与普通对话是分开存储的。",
+    "body_en": "On June 30, 2026, OpenAI expanded ChatGPT's \"personal finance\" feature from Pro to Plus users in the US — after connecting accounts across more than 12,000 financial institutions via Plaid, ChatGPT can see your spending, subscriptions, bills, and portfolio and answer questions grounded in that context. Just connecting accounts doesn't automatically make it useful — you need to ask well: Based on my spending over the past three months, break down the share of each category, find the three categories that grew fastest month over month, and explain likely reasons. Which subscriptions haven't I used in over 60 days this month, and which should I cancel? Give me a savings goal breakdown for the next 3 months, accounting for a large expense I have next month. Afterward, check your privacy settings — you can delete connected financial data anytime, and personal finance conversations are stored separately from regular chats.",
+    "models": [
+      "ChatGPT"
+    ],
+    "tags": [
+      "ChatGPT",
+      "个人理财",
+      "Plaid",
+      "预算",
+      "新手"
+    ],
+    "source": "参考 2026-06/07 OpenAI ChatGPT 个人理财功能扩展报道",
+    "updated": "2026-07-06"
+  },
+  {
+    "id": "skill-claude-sonnet5-adaptive-thinking-agent",
+    "category": "skill",
+    "level": "intermediate",
+    "title_zh": "Claude Sonnet 5：用 100 万上下文 + 自适应思考跑长任务代理",
+    "title_en": "Claude Sonnet 5: Running Long-Horizon Agent Tasks with 1M Context + Adaptive Thinking",
+    "body_zh": "Claude Sonnet 5（2026 年 6 月 30 日发布）默认开启 100 万 token 上下文和「自适应思考」——模型自己判断该想多久，不再需要（也不能）手动开关「扩展思考」，官方把它定位为目前最像 Agent 的 Sonnet：能自己规划任务、调用浏览器和终端、独立完成多步工作。用它跑长任务时，不用像以前一样手把手拆步骤，改成给目标+边界+验收标准：目标是把这个仓库里所有过期的依赖升级到最新兼容版本；边界是不改动业务逻辑，每次改动都跑一遍测试；如果测试失败就回滚这一步，记录原因后继续下一个依赖；全部完成后给我一份变更清单。相信它的自适应思考会自己决定哪里该慢下来深想、哪里可以直接执行，不用你在提示词里手动加「请仔细思考」这类指令。",
+    "body_en": "Claude Sonnet 5 (released June 30, 2026) ships with a 1M-token context window and \"adaptive thinking\" on by default — the model decides for itself how long to think, and manually toggling extended thinking is no longer available (it now returns an error). Anthropic positions it as the most agent-like Sonnet yet: it plans its own tasks and uses browsers and terminals to work independently across multiple steps. When running long tasks with it, skip the old habit of hand-holding through every step — instead give it a goal, boundaries, and acceptance criteria: Goal: upgrade every outdated dependency in this repo to the latest compatible version. Boundaries: don't change business logic, and run the test suite after every change. If a test fails, roll back that step, log the reason, and move to the next dependency. When everything's done, give me a changelog. Trust its adaptive thinking to decide on its own where to slow down and where to just execute — you no longer need to manually add \"think carefully\" instructions in the prompt.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude",
+      "Sonnet 5",
+      "Agent",
+      "长任务",
+      "自适应思考"
+    ],
+    "source": "参考 2026-06-30 Anthropic Claude Sonnet 5 发布信息",
+    "updated": "2026-07-06"
+  },
+  {
+    "id": "craft-prompt-chain-pipeline-2026",
+    "category": "craft",
+    "level": "intermediate",
+    "title_zh": "别写一条超长提示词，把任务串成流水线",
+    "title_en": "Stop Writing One Giant Prompt — Chain Your Task into a Pipeline",
+    "body_zh": "2026 年提示词工程的一个明显趋势是从「一句话提示词」转向「提示词流水线」：把复杂任务拆成几个独立步骤，让上一步的输出直接变成下一步的输入，而不是塞进一条巨型提示词里指望模型一次性做对。典型四步流水线：1）研究——收集事实和素材，只要信息不要成稿；2）起草——基于研究结果写第一版，明确说明这是草稿不追求完美；3）批评——另开一轮对话或者明确说「现在切换角色，你是挑剔的审稿人」，专门挑草稿的逻辑漏洞和薄弱论据；4）润色——把批评意见喂回去，让模型只改被指出的问题，不要整体重写。每一步都单独验收，出问题只需要重跑那一步，而不是从头再来一条长提示词，省时间也省 token。",
+    "body_en": "A clear 2026 prompt-engineering trend is the shift from \"one giant prompt\" to \"prompt pipelines\": break a complex task into separate steps and feed each step's output directly into the next, instead of cramming everything into a single massive prompt and hoping the model gets it right in one pass. A typical four-step pipeline: 1) Research — gather facts and material, information only, no drafting; 2) Draft — write a first version from the research, explicitly noting it's a draft and doesn't need to be perfect; 3) Critique — start a fresh conversation or say \"switch roles now, you're a nitpicky reviewer,\" and have it specifically hunt for logical gaps and weak arguments in the draft; 4) Polish — feed the critique back and have the model fix only the flagged issues rather than rewriting everything. Sign off on each step independently — if something breaks, you only rerun that one step instead of the whole long prompt, saving both time and tokens.",
+    "models": [
+      "通用"
+    ],
+    "tags": [
+      "提示词工程",
+      "工作流",
+      "流水线",
+      "进阶"
+    ],
+    "source": "参考 2026 提示词工程趋势整理",
+    "updated": "2026-07-06"
+  },
+  {
+    "id": "start-doubao-paid-tiers-2026",
+    "category": "start",
+    "level": "beginner",
+    "title_zh": "豆包开始分层收费：普通聊天还是免费，这些场景才要花钱",
+    "title_en": "Doubao Introduces Paid Tiers: Everyday Chat Stays Free, Here's What Costs Money",
+    "body_zh": "豆包在 2026 年上半年推出三档订阅（标准/加强/专业，连续包月约 68/200/500 元），但官方明确日常聊天、问答、写东西、做作业这些基础用途一直免费，收费主要针对生产力向场景：超长文档解析、专业级 AI 绘画、更快的大模型响应、PPT 生成、数据分析、影视级视频制作等「专属特权」功能。新手选型建议：先用免费版覆盖日常提问和写作；只有当你频繁需要处理超长文档（如几百页 PDF）、批量出图出片、或者对响应速度有硬性要求时，再考虑升级到对应档位，不用一上来就订最贵的专业版。",
+    "body_en": "In the first half of 2026, Doubao rolled out three subscription tiers (Standard/Plus/Pro, roughly ¥68/¥200/¥500 per month), but the company has clarified that everyday chat, Q&A, writing, and homework help all remain free — paid tiers target productivity-heavy use cases: parsing very long documents, professional-grade AI image generation, faster model responses, PPT generation, data analysis, and film-grade video production. For beginners: start with the free tier for everyday questions and writing, and only consider upgrading once you regularly need to process very long documents (hundreds of pages), batch-generate images or video, or have hard requirements on response speed — there's no need to jump straight to the most expensive Pro tier.",
+    "models": [
+      "豆包"
+    ],
+    "tags": [
+      "豆包",
+      "订阅",
+      "收费",
+      "新手"
+    ],
+    "source": "参考 2026 豆包分层付费方案报道",
+    "updated": "2026-07-06"
   }
 ];

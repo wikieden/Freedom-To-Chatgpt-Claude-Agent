@@ -16,13 +16,13 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 ### Categories
 
-- 🚀 **Getting Started** (19)
+- 🚀 **Getting Started** (20)
 - 🎭 **Role Prompts** (149)
 - 🖼️ **Text-to-Image** (15)
 - 🎬 **Text-to-Video** (21)
-- 🧩 **Skills** (19)
+- 🧩 **Skills** (21)
 - 🔌 **Plugins / MCP** (17)
-- 💡 **Prompt Craft** (48)
+- 💡 **Prompt Craft** (49)
 
 ## 🚀 Getting Started
 
@@ -120,6 +120,11 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟡 Intermediate ｜ 豆包`  ·  整理自公开报道与厂商发布信息整理（2026-06/07）
 
 > Doubao recently upgraded its agent model to Doubao-Seed-2.1 (with Pro and Turbo versions), positioned as the foundation model for the "coding + agent" era. It's stronger at two things compared to earlier versions: 1) delivering a coding task end to end — not just writing function snippets, but breaking down the task, writing the code, self-checking, and fixing issues; 2) better multimodal understanding, reading screenshots, charts, and UI captures more accurately before deciding the next step. Practical tip for everyday users: for multi-step tasks, describe what the final deliverable should look like up front (e.g. "give me a minimal working version with a run guide") and let it break the steps down itself — that's more efficient than walking it through each step manually. Use the Turbo version to quickly iterate and validate your approach, then switch to Pro for the final delivery once you're confident in the plan, rather than running everything on the most expensive tier from the start.
+
+### Doubao Introduces Paid Tiers: Everyday Chat Stays Free, Here's What Costs Money
+`🟢 Beginner ｜ 豆包`  ·  参考 2026 豆包分层付费方案报道
+
+> In the first half of 2026, Doubao rolled out three subscription tiers (Standard/Plus/Pro, roughly ¥68/¥200/¥500 per month), but the company has clarified that everyday chat, Q&A, writing, and homework help all remain free — paid tiers target productivity-heavy use cases: parsing very long documents, professional-grade AI image generation, faster model responses, PPT generation, data analysis, and film-grade video production. For beginners: start with the free tier for everyday questions and writing, and only consider upgrading once you regularly need to process very long documents (hundreds of pages), batch-generate images or video, or have hard requirements on response speed — there's no need to jump straight to the most expensive Pro tier.
 
 ## 🎭 Role Prompts
 
@@ -1165,6 +1170,16 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 > Google has made the Computer Use tool generally available in gemini-3-pro-preview and gemini-3-flash-preview — the model can "see" a screenshot of the screen, then plan and execute clicks, typing, and scrolling to automate web or desktop tasks that don't have a ready-made API. When you brief it, include three parts: 1) the goal — e.g. "submit all three of last week's invoices in this expense system"; 2) boundaries — specify which steps should pause for your confirmation (anything irreversible like payments, deletions, or sending messages); 3) a fallback plan — e.g. "if the page layout changed and you can't find the button, take a screenshot and ask me instead of guessing." Practical tip: the first time you run a new task, ask it to "just plan the steps without actually executing them" so you can review the plan before granting it permission to act. For anything touching login credentials or payments, always have it pause for confirmation at the key step rather than running fully automatically.
 
+### ChatGPT Personal Finance: How to Ask Useful Questions Once Your Accounts Are Connected
+`🟢 Beginner ｜ ChatGPT`  ·  参考 2026-06/07 OpenAI ChatGPT 个人理财功能扩展报道
+
+> On June 30, 2026, OpenAI expanded ChatGPT's "personal finance" feature from Pro to Plus users in the US — after connecting accounts across more than 12,000 financial institutions via Plaid, ChatGPT can see your spending, subscriptions, bills, and portfolio and answer questions grounded in that context. Just connecting accounts doesn't automatically make it useful — you need to ask well: Based on my spending over the past three months, break down the share of each category, find the three categories that grew fastest month over month, and explain likely reasons. Which subscriptions haven't I used in over 60 days this month, and which should I cancel? Give me a savings goal breakdown for the next 3 months, accounting for a large expense I have next month. Afterward, check your privacy settings — you can delete connected financial data anytime, and personal finance conversations are stored separately from regular chats.
+
+### Claude Sonnet 5: Running Long-Horizon Agent Tasks with 1M Context + Adaptive Thinking
+`🟡 Intermediate ｜ Claude`  ·  参考 2026-06-30 Anthropic Claude Sonnet 5 发布信息
+
+> Claude Sonnet 5 (released June 30, 2026) ships with a 1M-token context window and "adaptive thinking" on by default — the model decides for itself how long to think, and manually toggling extended thinking is no longer available (it now returns an error). Anthropic positions it as the most agent-like Sonnet yet: it plans its own tasks and uses browsers and terminals to work independently across multiple steps. When running long tasks with it, skip the old habit of hand-holding through every step — instead give it a goal, boundaries, and acceptance criteria: Goal: upgrade every outdated dependency in this repo to the latest compatible version. Boundaries: don't change business logic, and run the test suite after every change. If a test fails, roll back that step, log the reason, and move to the next dependency. When everything's done, give me a changelog. Trust its adaptive thinking to decide on its own where to slow down and where to just execute — you no longer need to manually add "think carefully" instructions in the prompt.
+
 ## 🔌 Plugins / MCP
 
 ### Claude Code: Split Work into Specialized Subagents
@@ -1519,5 +1534,10 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟡 Intermediate ｜ Gemini`  ·  参考 2026-07 Gemini 深度研究全面开放更新
 
 > Gemini's Deep Research is now available to all paid users — it breaks down your question, runs multiple rounds of search, and compiles a report, but the default structure may not fit your needs. Constrain the output like this: Do deep research on [topic]. Structure the output as: conclusion first → supporting evidence (with source links) → points of disagreement across sources → what I should ask next. Cite the source after each key finding, and if sources conflict, call out the disagreement explicitly instead of splitting the difference. That gets you a brief you can actually present, not a pile of stitched-together link summaries.
+
+### Stop Writing One Giant Prompt — Chain Your Task into a Pipeline
+`🟡 Intermediate ｜ 通用`  ·  参考 2026 提示词工程趋势整理
+
+> A clear 2026 prompt-engineering trend is the shift from "one giant prompt" to "prompt pipelines": break a complex task into separate steps and feed each step's output directly into the next, instead of cramming everything into a single massive prompt and hoping the model gets it right in one pass. A typical four-step pipeline: 1) Research — gather facts and material, information only, no drafting; 2) Draft — write a first version from the research, explicitly noting it's a draft and doesn't need to be perfect; 3) Critique — start a fresh conversation or say "switch roles now, you're a nitpicky reviewer," and have it specifically hunt for logical gaps and weak arguments in the draft; 4) Polish — feed the critique back and have the model fix only the flagged issues rather than rewriting everything. Sign off on each step independently — if something breaks, you only rerun that one step instead of the whole long prompt, saving both time and tokens.
 
 <!-- AUTO-PROMPTS:END -->
