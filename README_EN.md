@@ -16,13 +16,13 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 ### Categories
 
-- 🚀 **Getting Started** (20)
+- 🚀 **Getting Started** (21)
 - 🎭 **Role Prompts** (149)
 - 🖼️ **Text-to-Image** (15)
 - 🎬 **Text-to-Video** (21)
-- 🧩 **Skills** (21)
+- 🧩 **Skills** (23)
 - 🔌 **Plugins / MCP** (17)
-- 💡 **Prompt Craft** (49)
+- 💡 **Prompt Craft** (50)
 
 ## 🚀 Getting Started
 
@@ -125,6 +125,11 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟢 Beginner ｜ 豆包`  ·  参考 2026 豆包分层付费方案报道
 
 > In the first half of 2026, Doubao rolled out three subscription tiers (Standard/Plus/Pro, roughly ¥68/¥200/¥500 per month), but the company has clarified that everyday chat, Q&A, writing, and homework help all remain free — paid tiers target productivity-heavy use cases: parsing very long documents, professional-grade AI image generation, faster model responses, PPT generation, data analysis, and film-grade video production. For beginners: start with the free tier for everyday questions and writing, and only consider upgrading once you regularly need to process very long documents (hundreds of pages), batch-generate images or video, or have hard requirements on response speed — there's no need to jump straight to the most expensive Pro tier.
+
+### Doubao and Qwen Are Shutting Down Custom Agents on July 15 — What to Do With Yours
+`🟢 Beginner ｜ 豆包 · 通义千问`  ·  整理自豆包/通义千问官方下线公告与《人工智能拟人化互动服务管理暂行办法》相关报道（2026-07）
+
+> On July 3-4, Doubao and Qwen (Tongyi Qianwen) both announced that their custom "agent" features will be officially shut down on July 15, 2026 — the same day China's new Interim Measures for the Administration of AI Anthropomorphic Interactive Services take effect, which require platforms to strictly review all public-facing agent content and crack down on inappropriate personas and non-compliant user-generated content. Rather than review agents one by one, both platforms chose to pull the feature entirely. Only "user-built custom agents" (custom personas, roleplay bots, etc.) are affected — everyday chat, Q&A, and writing all keep working normally. If you previously configured an agent, you have a window from July 15 to October 15 to view and save your configuration and chat history yourself; after that, it can no longer be viewed or restored in the app. What to do now: open any agent you've configured and copy its full system prompt/persona description into a text file today. If that persona is useful to you, paste it as a prompt into a platform that still supports custom characters (Kimi, GLM, DeepSeek, etc.) or save it into your own prompt library — don't wait until the feature disappears to scramble for it.
 
 ## 🎭 Role Prompts
 
@@ -1180,6 +1185,16 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 > Claude Sonnet 5 (released June 30, 2026) ships with a 1M-token context window and "adaptive thinking" on by default — the model decides for itself how long to think, and manually toggling extended thinking is no longer available (it now returns an error). Anthropic positions it as the most agent-like Sonnet yet: it plans its own tasks and uses browsers and terminals to work independently across multiple steps. When running long tasks with it, skip the old habit of hand-holding through every step — instead give it a goal, boundaries, and acceptance criteria: Goal: upgrade every outdated dependency in this repo to the latest compatible version. Boundaries: don't change business logic, and run the test suite after every change. If a test fails, roll back that step, log the reason, and move to the next dependency. When everything's done, give me a changelog. Trust its adaptive thinking to decide on its own where to slow down and where to just execute — you no longer need to manually add "think carefully" instructions in the prompt.
 
+### New Gemini Android Skills: Turn Rambling Speech Into Polished Texts and Build Custom Widgets by Talking
+`🟢 Beginner ｜ Gemini`  ·  整理自 Google Gemini Intelligence for Android 发布说明（2026）
+
+> Gemini Intelligence is bringing two new features to select Samsung and Google phones (a small rollout starting this summer, expanding to more devices later): 1) Rambler — automatically turns your loosely-structured spoken thoughts into a polished text message, and can switch languages mid-sentence (e.g. mixing Chinese and English still gets understood and cleaned up correctly); audio is only used for real-time transcription and isn't stored. 2) Create My Widget — describe what you want in one natural-language sentence and it builds a custom widget you can drop straight onto your home screen, e.g. saying "suggest three high-protein, low-calorie meal-prep recipes every week" generates a dedicated meal-prep widget; a cyclist could say "I only care about wind speed and whether it'll rain" to get a weather widget showing just those two things. Tips: tell Rambler who the message is for and roughly what tone before dictating — it works better with that context than with no framing at all. For widgets, be explicit about what information to include and exclude, and if the first result isn't quite right, just say "drop X, add Y" to iterate.
+
+### Claude Code Remote Control Adds Trusted Devices: Verify Yourself Before Steering From Your Phone
+`🟡 Intermediate ｜ Claude`  ·  整理自 Claude Code 官方文档 Remote Control / Trusted Devices 说明（2026-07）
+
+> Claude Code's Remote Control feature lets you view and steer a local session from your phone or the web, and Team/Enterprise plans now add an extra safeguard called Trusted Devices: once an admin enables it, members must verify their device with Face ID, Touch ID, Windows Hello, or a passkey before they can view or steer a local session remotely, and re-verification is required if the sign-in is more than 18 hours old. This check only applies to the remote-control scenario — using Claude Code directly in a local terminal, or calling it via API, is completely unaffected, so day-to-day use won't be blocked. Anthropic notes that biometric data stays on the device for verification only; the company only stores the device's public key plus basic metadata like display name, platform, and enrollment time — never fingerprints or face data themselves. For team admins: if anyone on your team might remotely steer sessions touching production or sensitive code from their phone, turn this on under claude.ai/admin-settings/claude-code to add one more lock to that path. Solo developers using a single machine aren't affected and don't need to configure anything.
+
 ## 🔌 Plugins / MCP
 
 ### Claude Code: Split Work into Specialized Subagents
@@ -1539,5 +1554,10 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟡 Intermediate ｜ 通用`  ·  参考 2026 提示词工程趋势整理
 
 > A clear 2026 prompt-engineering trend is the shift from "one giant prompt" to "prompt pipelines": break a complex task into separate steps and feed each step's output directly into the next, instead of cramming everything into a single massive prompt and hoping the model gets it right in one pass. A typical four-step pipeline: 1) Research — gather facts and material, information only, no drafting; 2) Draft — write a first version from the research, explicitly noting it's a draft and doesn't need to be perfect; 3) Critique — start a fresh conversation or say "switch roles now, you're a nitpicky reviewer," and have it specifically hunt for logical gaps and weak arguments in the draft; 4) Polish — feed the critique back and have the model fix only the flagged issues rather than rewriting everything. Sign off on each step independently — if something breaks, you only rerun that one step instead of the whole long prompt, saving both time and tokens.
+
+### GPT-5.6's Ultra Mode: Splitting One Big Task Across Parallel Subagents
+`🟡 Intermediate ｜ GPT`  ·  整理自 OpenAI GPT-5.6 Sol/Terra/Luna 预览发布说明（2026-07）
+
+> OpenAI has begun a limited preview of the GPT-5.6 series with a new naming scheme: the generation number plus a capability tier — Sol (flagship), Terra (balanced), and Luna (fast and affordable) — each tier able to advance on its own cadence instead of all upgrading together. The new Ultra mode isn't simply "let the model think longer"; it splits a complex task across multiple subagents that work in parallel and then get merged, speeding up work that can genuinely be decomposed (e.g. researching three options at once, or writing tests and implementation in parallel). When briefing Ultra mode, include: 1) what the final deliverable should look like; 2) whether the task can actually be split into independent sub-parts (a strictly sequential single-threaded task won't get faster just by turning Ultra on); 3) an explicit final "merge/dedupe" step so the subagents' separate outputs get combined into one coherent result rather than just concatenated. Sol/Terra/Luna are all in limited preview right now, not yet generally available — individual developers may want to test token costs on Terra/Luna first before deciding whether to upgrade to Sol.
 
 <!-- AUTO-PROMPTS:END -->

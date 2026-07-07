@@ -5936,5 +5936,89 @@ window.PROMPTS = [
     ],
     "source": "参考 2026 豆包分层付费方案报道",
     "updated": "2026-07-06"
+  },
+  {
+    "id": "start-doubao-qwen-agent-shutdown-0715",
+    "category": "start",
+    "level": "beginner",
+    "title_zh": "豆包、通义千问智能体功能 7 月 15 日下线，你的智能体和记录怎么办",
+    "title_en": "Doubao and Qwen Are Shutting Down Custom Agents on July 15 — What to Do With Yours",
+    "body_zh": "豆包和通义千问在 7 月 3-4 日同日宣布：自建「智能体」功能将于 2026 年 7 月 15 日正式下线，这天也是《人工智能拟人化互动服务管理暂行办法》正式施行的日期，新规要求平台严格审核所有公开智能体内容、严控不良人设与违规 UGC，两家选择直接下线该功能而不是逐一整改。受影响的只是「用户自建智能体」这一项（自定义人设、角色扮演机器人等），日常聊天、问答、写作这些基础功能不受影响，可以正常用。如果你之前配置过智能体，官方给了 7 月 15 日到 10 月 15 日的窗口期可以查看和自行保存配置信息及历史对话，过期后就无法在 App 内查看或恢复了。行动建议：现在就打开你配置过的智能体，把「系统设定/人设描述」整段复制出来存成一个文本文件；如果这套人设对你有用，可以直接把这段文字当提示词，粘贴到 Kimi、GLM、DeepSeek 等仍支持自定义角色的平台或者存进你自己的提示词库里继续用，不用等平台下线才手忙脚乱去找。",
+    "body_en": "On July 3-4, Doubao and Qwen (Tongyi Qianwen) both announced that their custom \"agent\" features will be officially shut down on July 15, 2026 — the same day China's new Interim Measures for the Administration of AI Anthropomorphic Interactive Services take effect, which require platforms to strictly review all public-facing agent content and crack down on inappropriate personas and non-compliant user-generated content. Rather than review agents one by one, both platforms chose to pull the feature entirely. Only \"user-built custom agents\" (custom personas, roleplay bots, etc.) are affected — everyday chat, Q&A, and writing all keep working normally. If you previously configured an agent, you have a window from July 15 to October 15 to view and save your configuration and chat history yourself; after that, it can no longer be viewed or restored in the app. What to do now: open any agent you've configured and copy its full system prompt/persona description into a text file today. If that persona is useful to you, paste it as a prompt into a platform that still supports custom characters (Kimi, GLM, DeepSeek, etc.) or save it into your own prompt library — don't wait until the feature disappears to scramble for it.",
+    "models": [
+      "豆包",
+      "通义千问"
+    ],
+    "tags": [
+      "豆包",
+      "通义千问",
+      "智能体",
+      "政策",
+      "新手"
+    ],
+    "source": "整理自豆包/通义千问官方下线公告与《人工智能拟人化互动服务管理暂行办法》相关报道（2026-07）",
+    "updated": "2026-07-07"
+  },
+  {
+    "id": "craft-gpt56-ultra-mode-subagents",
+    "category": "craft",
+    "level": "intermediate",
+    "title_zh": "GPT-5.6 的 Ultra 模式：把一个大任务拆给多个子智能体并行做",
+    "title_en": "GPT-5.6's Ultra Mode: Splitting One Big Task Across Parallel Subagents",
+    "body_zh": "OpenAI 开始限量预览 GPT-5.6 系列，这次改用「代际数字 + 能力档位」命名：Sol（旗舰）、Terra（均衡）、Luna（快速经济），三档可以各自独立升级，不用整代一起换。新增的 Ultra 模式不是单纯「让模型想更久」，而是把复杂任务拆给多个子智能体并行处理再汇总，用来加速那些能拆解的复杂工作（比如同时研究三个方案、分头写测试和实现代码）。写给 Ultra 模式的任务描述建议包含：①最终要交付的成果长什么样；②这个任务能不能拆成互相独立的子部分（如果本身是强顺序依赖的单线任务，开 Ultra 模式反而没有提速效果）；③要求最后有一步「汇总/去重」，把子智能体各自的产出合并成一份连贯结果，而不是原样拼接。目前 Sol/Terra/Luna 均为限量预览，还没有全量开放，个人开发者可以先用 Terra/Luna 档位试算token 成本再决定是否升级到 Sol。",
+    "body_en": "OpenAI has begun a limited preview of the GPT-5.6 series with a new naming scheme: the generation number plus a capability tier — Sol (flagship), Terra (balanced), and Luna (fast and affordable) — each tier able to advance on its own cadence instead of all upgrading together. The new Ultra mode isn't simply \"let the model think longer\"; it splits a complex task across multiple subagents that work in parallel and then get merged, speeding up work that can genuinely be decomposed (e.g. researching three options at once, or writing tests and implementation in parallel). When briefing Ultra mode, include: 1) what the final deliverable should look like; 2) whether the task can actually be split into independent sub-parts (a strictly sequential single-threaded task won't get faster just by turning Ultra on); 3) an explicit final \"merge/dedupe\" step so the subagents' separate outputs get combined into one coherent result rather than just concatenated. Sol/Terra/Luna are all in limited preview right now, not yet generally available — individual developers may want to test token costs on Terra/Luna first before deciding whether to upgrade to Sol.",
+    "models": [
+      "GPT"
+    ],
+    "tags": [
+      "GPT-5.6",
+      "Ultra模式",
+      "子智能体",
+      "进阶"
+    ],
+    "source": "整理自 OpenAI GPT-5.6 Sol/Terra/Luna 预览发布说明（2026-07）",
+    "updated": "2026-07-07"
+  },
+  {
+    "id": "skill-gemini-android-rambler-widget",
+    "category": "skill",
+    "level": "beginner",
+    "title_zh": "Gemini 在 Android 上的新技能：口述变文字消息、说一句话拼出自定义小组件",
+    "title_en": "New Gemini Android Skills: Turn Rambling Speech Into Polished Texts and Build Custom Widgets by Talking",
+    "body_zh": "Gemini Intelligence 带来的两个新功能正陆续登陆部分三星和 Google 手机（今年夏天先小范围铺开，之后逐步扩大到更多设备）：①Rambler——把你随口说的、结构松散的话自动整理成一条得体的文字消息，支持中途切换语言（比如中英文夹杂说也能理解并整理通顺），语音只用于实时转写、不会被存储；②Create My Widget——用一句自然语言描述就能生成一个可以直接放在桌面的自定义小组件，比如对着手机说「每周给我推荐三个高蛋白低卡的备餐食谱」，就会生成一个专属的备餐小组件；骑行爱好者也可以说「我只关心风速和会不会下雨」，做一个只显示这两项的天气组件。上手建议：先说清楚「这条消息是发给谁、大概是什么语气」再让 Rambler 整理，效果比不给上下文直接口述更准；做小组件时把「只要什么信息、不要什么信息」讲清楚，一次说不到位可以直接补一句「去掉xx，加上xx」来迭代。",
+    "body_en": "Gemini Intelligence is bringing two new features to select Samsung and Google phones (a small rollout starting this summer, expanding to more devices later): 1) Rambler — automatically turns your loosely-structured spoken thoughts into a polished text message, and can switch languages mid-sentence (e.g. mixing Chinese and English still gets understood and cleaned up correctly); audio is only used for real-time transcription and isn't stored. 2) Create My Widget — describe what you want in one natural-language sentence and it builds a custom widget you can drop straight onto your home screen, e.g. saying \"suggest three high-protein, low-calorie meal-prep recipes every week\" generates a dedicated meal-prep widget; a cyclist could say \"I only care about wind speed and whether it'll rain\" to get a weather widget showing just those two things. Tips: tell Rambler who the message is for and roughly what tone before dictating — it works better with that context than with no framing at all. For widgets, be explicit about what information to include and exclude, and if the first result isn't quite right, just say \"drop X, add Y\" to iterate.",
+    "models": [
+      "Gemini"
+    ],
+    "tags": [
+      "Gemini",
+      "Android",
+      "语音",
+      "小组件",
+      "新手"
+    ],
+    "source": "整理自 Google Gemini Intelligence for Android 发布说明（2026）",
+    "updated": "2026-07-07"
+  },
+  {
+    "id": "skill-claude-trusted-devices-remote-control",
+    "category": "skill",
+    "level": "intermediate",
+    "title_zh": "Claude Code 远程控制新增「信任设备」：手机操控电脑前先验证一次",
+    "title_en": "Claude Code Remote Control Adds Trusted Devices: Verify Yourself Before Steering From Your Phone",
+    "body_zh": "Claude Code 的 Remote Control 功能可以让你用手机/网页远程查看和操控本地正在跑的会话，现在 Team/Enterprise 版新增了「信任设备（Trusted Devices）」这道保险：管理员在后台开启后，成员必须先用 Face ID / Touch ID / Windows Hello 或密钥（passkey）验证设备身份，才能远程查看或操控本地会话，登录状态超过 18 小时就需要重新验证一次。这道验证只作用在「远程操控」这一个场景，本地终端里直接用 Claude Code、以及走 API 的调用完全不受影响，不用担心日常使用被卡住。官方强调生物信息只留在设备本地做验证，Anthropic 这边只会存设备的公钥和名称、平台、注册时间等基础信息，不会拿到指纹或人脸数据本身。给团队管理员的建议：如果团队里有人会用手机远程操控涉及生产环境或敏感代码的会话，建议在「claude.ai/admin-settings/claude-code」里把这个开关打开，给远程操控这条链路多上一道锁；个人开发者单机使用不受影响，不用特意配置。",
+    "body_en": "Claude Code's Remote Control feature lets you view and steer a local session from your phone or the web, and Team/Enterprise plans now add an extra safeguard called Trusted Devices: once an admin enables it, members must verify their device with Face ID, Touch ID, Windows Hello, or a passkey before they can view or steer a local session remotely, and re-verification is required if the sign-in is more than 18 hours old. This check only applies to the remote-control scenario — using Claude Code directly in a local terminal, or calling it via API, is completely unaffected, so day-to-day use won't be blocked. Anthropic notes that biometric data stays on the device for verification only; the company only stores the device's public key plus basic metadata like display name, platform, and enrollment time — never fingerprints or face data themselves. For team admins: if anyone on your team might remotely steer sessions touching production or sensitive code from their phone, turn this on under claude.ai/admin-settings/claude-code to add one more lock to that path. Solo developers using a single machine aren't affected and don't need to configure anything.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude",
+      "Claude Code",
+      "远程控制",
+      "安全",
+      "进阶"
+    ],
+    "source": "整理自 Claude Code 官方文档 Remote Control / Trusted Devices 说明（2026-07）",
+    "updated": "2026-07-07"
   }
 ];
