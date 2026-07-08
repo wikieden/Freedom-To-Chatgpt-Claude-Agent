@@ -6020,5 +6020,172 @@ window.PROMPTS = [
     ],
     "source": "整理自 Claude Code 官方文档 Remote Control / Trusted Devices 说明（2026-07）",
     "updated": "2026-07-07"
+  },
+  {
+    "id": "skill-fable5-skill-distillation",
+    "category": "skill",
+    "level": "intermediate",
+    "title_zh": "「技能蒸馏」：免费窗口关闭前，让 Fable 5 教会 Opus 4.8 你要的方法",
+    "title_en": "Skill Distillation: Have Fable 5 Teach Opus 4.8 Your Method Before the Free Window Closes",
+    "body_zh": "Fable 5 于 2026-07-01 恢复后，套餐内 50% 免费用量的窗口在今天（7 月 7 日）到期，从 7 月 8 日起超出部分要按用量计费（输入约 10 美元/百万 token，输出约 50 美元/百万 token）。社区因此火了一个叫「技能蒸馏（Skill Distillation）」的技巧：与其在窗口关闭前拼命用 Fable 5 直接干活，不如让它把自己「做事的方法」写成一份 SKILL.md 交给更便宜的日常模型（如 Opus 4.8、Sonnet 5）去执行——真正能传下去的不是模型能力本身，而是写成文字的工作纪律和步骤，这份文件在窗口关闭后依然有效。可以直接用这句提示词：「请把你在动手修改代码前先写计划、每一步都自我核验之后才继续的这套工作方法，写成一份 SKILL.md，让另一个模型加载后也能照着做。」这招不止适用于 Fable 5 免费窗口，任何「临时能用上更强模型」的场景（免费试用期、买了一个周末的高阶套餐）都可以照搬：先蒸馏方法，而不是急着直接产出结果。",
+    "body_en": "Fable 5 came back online on 2026-07-01, and the window where 50% of usage counted as included in the plan expires today (July 7); from July 8 onward, extra usage is billed by the token (roughly $10 per million input tokens, $50 per million output). This gave rise to a community trick called \"skill distillation\": instead of racing to squeeze direct output out of Fable 5 before the meter starts, have it write down its own working method as a SKILL.md file that a cheaper daily model (Opus 4.8, Sonnet 5) can then load and follow. What actually transfers isn't the model's raw capability — it's the written discipline and procedure, and that file keeps working long after the window closes. A prompt template that works: \"Write down the discipline you follow — planning before editing, self-verifying every step before moving on — as a SKILL.md that another model can load and follow.\" This isn't specific to Fable 5's free window either; it applies any time you get temporary access to a stronger model (a free trial, a weekend of a premium tier): distill the method first, don't just chase the output.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "skill",
+      "Claude",
+      "Fable5",
+      "Opus",
+      "技能蒸馏",
+      "2026"
+    ],
+    "source": "整理自 Reddit 热帖与相关博客报道（2026-07）",
+    "updated": "2026-07-07"
+  },
+  {
+    "id": "craft-claude-science-workbench",
+    "category": "craft",
+    "level": "intermediate",
+    "title_zh": "Claude 科学工作台：把 Opus 4.8 接进 60+ 科研数据库直接查文献",
+    "title_en": "Claude Science Workbench: Wire Opus 4.8 Into 60+ Scientific Databases",
+    "body_zh": "Anthropic 推出「Claude Science Workbench」，把 Opus 4.8 连接到基因组学、蛋白质组学、化学信息学、临床试验文献等 60 多个科研数据库，省去手动搜索、下载、整理论文的过程。用好它的三个要点：①提问时给出具体检索词（物种/基因名/化合物编号/临床试验号），而不是「帮我查一下 XX 领域的进展」这种泛泛的问法；②明确要求它注明每条结论的数据来源和检索路径，方便你回头核实——科研场景对「编造引用」的容忍度最低；③把它当「文献检索 + 初步整理」的助手，结论仍需你或领域专家复核。目前公开的 GeneBench-Pro 计算生物学基准上，各家模型正确率都不高（Opus 4.8 约 16%，GPT-5.6 Sol 约 31.5%），说明这类任务离「全自动信任」还很远，别把它当成能替你做科研判断的黑箱。",
+    "body_en": "Anthropic launched the Claude Science Workbench, connecting Opus 4.8 to 60+ scientific databases spanning genomics, proteomics, cheminformatics, and clinical trial literature — skipping the manual work of searching, downloading, and organizing papers. Three tips for using it well: 1) give specific search terms (species, gene names, compound IDs, clinical trial numbers) instead of a vague \"summarize progress in field X\"; 2) explicitly ask it to cite the data source and retrieval path for every claim, so you can verify later — research contexts have near-zero tolerance for fabricated citations; 3) treat it as a \"literature search plus first-pass organizing\" assistant — conclusions still need review by you or a domain expert. On the newly public GeneBench-Pro computational-biology benchmark, accuracy is still low across the board (Opus 4.8 around 16%, GPT-5.6 Sol around 31.5%), which is a reminder this category of task is far from \"fully automatable\" — don't treat it as a black box that can make scientific judgment calls for you.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "craft",
+      "Claude",
+      "科研",
+      "Science Workbench",
+      "2026"
+    ],
+    "source": "整理自 Anthropic 官方公告与相关报道（2026-07）",
+    "updated": "2026-07-07"
+  },
+  {
+    "id": "video-kling3-omni-dual-character-lipsync",
+    "category": "video",
+    "level": "intermediate",
+    "title_zh": "可灵 3.0 Omni：让两个角色同时说话，各自对上口型",
+    "title_en": "Kling 3.0 Omni: Two Characters Talking at Once, Each With Its Own Lip-Sync",
+    "body_zh": "可灵 3.0 Omni 支持在同一镜头里，两个角色各自按自己的音轨逐音素对口型——此前多数视频模型只能做「单人对口型」，双人对话场景得靠额外剪辑或后补 lip-sync。它原生支持中/英/日/韩/西班牙语等多语言配音，且按秒计价、不额外加钱，最长支持 15 秒、原生 4K 输出。写提示词的要点：①分别描述两个角色各自的台词和情绪，不要把对白写成一整段旁白；②写清楚谁先说、谁后说、有没有打断或重叠；③需要电影感的话加运镜提示（比如「过肩镜头切正反打」）。可灵这款应用最近还冲进过 App Store 免费榜前五，说明多角色对话类视频的需求很旺，适合拿来做短剧对手戏、播客可视化、双人访谈内容。",
+    "body_en": "Kling 3.0 Omni can render two characters talking in the same shot, each one lip-synced phoneme-by-phoneme to its own audio track — most prior video models could only handle single-speaker lip-sync, leaving two-person dialogue scenes needing extra editing or a separate lip-sync pass. It natively supports multilingual dubbing (Mandarin, English, Japanese, Korean, Spanish) bundled into the per-second price with no extra charge, plus up to 15 seconds of native 4K output. Prompt-writing tips: 1) describe each character's line and emotion separately rather than writing the dialogue as one block of narration; 2) spell out who speaks first, who speaks second, and whether there's interruption or overlap; 3) add camera-movement cues (e.g. \"over-the-shoulder shot-reverse-shot\") if you want a cinematic feel. Kling's app has climbed into the App Store's top-5 free chart recently, a sign that demand for multi-character dialogue video is strong — good for short-drama scenes, podcast visualizations, or two-person interview content.",
+    "models": [
+      "可灵"
+    ],
+    "tags": [
+      "video",
+      "可灵",
+      "Kling",
+      "多角色",
+      "口型同步",
+      "2026"
+    ],
+    "source": "整理自可灵官方发布与媒体报道（2026-07）",
+    "updated": "2026-07-07"
+  },
+  {
+    "id": "skill-claude-tag-slack-teammate",
+    "category": "skill",
+    "level": "intermediate",
+    "title_zh": "Claude Tag：在 Slack 里养一个常驻 AI 队友，@ 一下就派活",
+    "title_en": "Claude Tag: an always-on AI teammate in Slack you just @-mention",
+    "body_zh": "Anthropic 在 2026-06-23 上线了 Claude Tag（Team/Enterprise 版 Beta），把 Claude 直接做成 Slack 里的一个「队友」而不是外挂机器人。用法很简单：在任意频道 @Claude 加一句需求，它会自己拆解成几个步骤，调用它有权限的工具去执行，最后在同一个线程里回复结果。三个和普通机器人不一样的地方：①同一个频道里所有人共用「同一个 Claude」，谁都能看到它在干什么，也能接着上一个人的进度继续派活，不用重新交代背景；②它会持续跟读频道消息积累上下文，团队的黑话、项目现状不用每次重复说明；③适合派「多步骤但目标明确」的活，比如整理会议纪要生成待办、根据历史讨论起草文档初稿、汇总多人反馈。用法建议：先在一个低风险频道（比如内部工具讨论组）试运行几天，观察它的输出质量，再决定要不要把它拉进核心项目频道；重要决定还是要人过一遍再拍板，别当甩手队友。",
+    "body_en": "Anthropic launched Claude Tag on 2026-06-23 (beta for Team/Enterprise), turning Claude into a persistent Slack teammate instead of a bolt-on bot. Usage: @-mention Claude anywhere in a channel with a plain-language request; it breaks the task into steps, uses whatever tools it has access to, and replies in the same thread when done. Three things that differ from a typical bot: 1) everyone in a channel shares the same Claude instance — anyone can see what it's doing and pick up where the last person left off, no re-explaining needed; 2) it keeps reading channel messages over time and accumulates context, so you don't need to restate team jargon or project status every time; 3) it's best suited for multi-step but well-defined tasks — turning a meeting thread into action items, drafting a doc from prior discussion, or rolling up scattered feedback. Practical tip: pilot it in a low-stakes channel for a few days to gauge quality before adding it to a core project channel, and still have a human review anything consequential before it ships.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude Tag",
+      "Slack",
+      "团队协作",
+      "Agent"
+    ],
+    "source": "Anthropic 官方博客 (2026-06-23)",
+    "updated": "2026-07-08"
+  },
+  {
+    "id": "skill-claude-code-2119-stacked-skills",
+    "category": "skill",
+    "level": "advanced",
+    "title_zh": "Claude Code 2.1.199：一次调用能叠加最多 5 个 Skill 了",
+    "title_en": "Claude Code 2.1.199: chain up to 5 skills in a single invocation",
+    "body_zh": "Claude Code 在 2026-07-02 发布的 2.1.199 版本改进了「叠加调用 Skill」的行为：以前一次连续触发多个 slash-skill，实际只有第一个会被加载，后面的会被忽略；现在最多能同时加载 5 个 Skill 叠加生效。同时修了一个老 bug：重复调用同一个已加载的 Skill，会把说明文字重复塞进上下文（既浪费 token 又可能让 Claude 收到自相矛盾的重复指令），现在会自动去重。这次更新还顺带优化了 MCP 报错提示，出问题时能更快看出是插件配置的问题还是网络问题。对日常使用的实际影响：如果你的工作流需要「先用 A 技能整理数据、再用 B 技能生成文档、最后用 C 技能校验格式」，现在可以在一次任务里把它们串起来，不用手动分成三轮对话；但也要注意别一次堆太多 Skill 进上下文，超过实际需要的技能数量反而会稀释指令的优先级，一般 2-3 个组合最稳。",
+    "body_en": "Claude Code's 2.1.199 release (2026-07-02) fixed how stacked skill invocations behave: previously, triggering several slash-skills back to back would only load the first one and silently drop the rest; now up to 5 skills can be loaded together in one turn. It also fixed a bug where re-invoking an already-loaded skill duplicated its instructions in context (wasting tokens and risking contradictory repeated guidance) — that's now deduplicated automatically. The release also cleaned up MCP error messages so it's faster to tell whether a failure is a plugin config issue or a network issue. Practical effect: if your workflow is \"use skill A to clean data, skill B to draft the doc, skill C to check formatting,\" you can now chain all three in a single task instead of three separate turns — but don't over-stack; loading more skills than you actually need dilutes instruction priority, so 2-3 skills at once tends to work best.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude Code",
+      "Skill",
+      "更新日志",
+      "工作流"
+    ],
+    "source": "Claude Code Changelog (2.1.199, 2026-07-02)",
+    "updated": "2026-07-08"
+  },
+  {
+    "id": "image-mj81-conversational-voice-cn",
+    "category": "image",
+    "level": "beginner",
+    "title_zh": "Midjourney 对话式生成：不背参数，说中文甚至开麦也能出图",
+    "title_en": "Midjourney Conversational Mode: no parameters needed — describe it, even in Chinese, even by voice",
+    "body_zh": "Midjourney V7/V8.1 都支持「对话模式（Conversational Mode）」：不用再手打 `--ar --sref` 这些参数，直接用自然语言描述你想要什么，AI 会自己把它翻译成规范的 Midjourney 提示词。两个新手友好的细节：①支持多语言，包括直接打中文描述，它会自动处理翻译和参数选择；②支持语音输入——点麦克风图标说话，再点一次结束，免打字（注意：语音版对话模式必须搭配草稿模式 Draft Mode 使用，纯文字版可以不开草稿模式）。更好用的是它能「指哪改哪」：可以直接说「把第 4 张再抽一次变体」「把第 2 张的光线调暖一点」，不用重新写完整提示词。新手上手建议：先开草稿模式，用对话模式快速把方向试出来（成本低、速度快），满意了再关草稿、加 HD 出高清图。这套流程比死记参数表友好得多，尤其适合不熟悉英文关键词、只想「说人话」出图的人。",
+    "body_en": "Both Midjourney V7 and V8.1 support Conversational Mode: instead of typing parameters like `--ar` or `--sref`, you just describe what you want in plain language and the AI translates it into a proper Midjourney prompt. Two beginner-friendly details: 1) it's multilingual, including Chinese — it handles translation and parameter selection automatically; 2) it supports voice input — click the mic icon, speak, click again to stop (note: voice-based conversational mode requires Draft Mode to be on; text-based conversational mode works without it). It also supports pointing at a specific result and iterating: say things like \"make another variation of image 4\" or \"warm up the lighting in image 2\" instead of rewriting the whole prompt. Suggested flow for beginners: start in Draft Mode and use conversational mode to quickly explore directions (cheap and fast), then turn off draft and add HD once you've landed on something you like. This is far friendlier than memorizing a parameter cheat sheet, especially if you're not comfortable writing English keyword prompts and just want to describe things in your own words.",
+    "models": [
+      "Midjourney"
+    ],
+    "tags": [
+      "Midjourney",
+      "对话模式",
+      "语音输入",
+      "新手友好"
+    ],
+    "source": "Midjourney 官方文档 (Draft & Conversational Modes)",
+    "updated": "2026-07-08"
+  },
+  {
+    "id": "video-jimeng-seedance2-canvas-multiframe",
+    "category": "video",
+    "level": "intermediate",
+    "title_zh": "即梦 Seedance 2.0：新画布 + 智能多帧 2.0，怎么拼多段素材精修",
+    "title_en": "Jimeng Seedance 2.0: the new canvas and Smart Multi-Frame 2.0 for stitching and fine-editing clips",
+    "body_zh": "字节跳动即梦在 Seedance 2.0（2026-02 发布，近期持续迭代）里加了两个对剪辑党很实用的功能：①新版「画布」——把创作流程可视化整合进一个画面，素材可以并行摆放、多资产同时操作，还加了「工单模式」，一键调用某张图或某段视频继续加工，不用在多个页面间来回切换；②「智能多帧 2.0」——支持「视频+视频」或「视频+图片」拼接创作，最多一次上传 20 个素材，还能锁定某一小段单独精修，而不影响前后已经满意的部分。实操场景：先用文生视频/图生视频批量出几段候选镜头，扔进画布统一预览筛选，再用智能多帧把选中的几段拼成一条完整叙事，中间哪段镜头不满意，直接锁定那一小段重新生成，比整段推倒重来省时间也省额度。适合做短剧、产品宣传片、多镜头故事这类需要拼接和局部返工的项目。",
+    "body_en": "ByteDance's Jimeng added two editor-friendly features in Seedance 2.0 (released 2026-02, still being iterated on): 1) a redesigned Canvas that visually unifies the creation workflow — assets can be arranged in parallel and operated on together, plus a new \"work order\" mode that lets you jump straight into reworking a specific image or clip without hopping between separate pages; 2) Smart Multi-Frame 2.0, which supports stitching \"video + video\" or \"video + image\" combinations (up to 20 assets in one upload) and lets you lock a specific short segment for targeted re-editing without disturbing the parts you already like. Practical workflow: batch-generate several candidate shots with text-to-video/image-to-video, drop them into the Canvas to preview and shortlist, then use Multi-Frame to stitch the chosen clips into a full narrative — if one segment isn't right, lock just that segment and regenerate instead of redoing the whole sequence, saving both time and credits. Good fit for short dramas, product promo videos, or any multi-shot story that needs stitching and partial rework.",
+    "models": [
+      "即梦",
+      "Seedance"
+    ],
+    "tags": [
+      "即梦",
+      "Seedance",
+      "视频剪辑",
+      "多帧编辑"
+    ],
+    "source": "即梦 Seedance 2.0 官方手册",
+    "updated": "2026-07-08"
+  },
+  {
+    "id": "video-kling3-4k-mode-member-timing",
+    "category": "video",
+    "level": "intermediate",
+    "title_zh": "可灵 3.0 出 4K 视频：什么时候该开，会员折扣怎么卡时间省钱",
+    "title_en": "Kling 3.0's 4K video mode: when to turn it on, and how to time membership discounts",
+    "body_zh": "可灵视频 3.0 系列（含 Omni）把 `mode` 参数设为 `4k` 就能直出和高品质模式同等表现力、但分辨率拉满到 4K 的视频，同时支持时长 5-15 秒、9:16/16:9 双比例、最长 15 秒连续生成加智能分镜。但 4K 不是每次都该开：①4K 消耗的灵感值明显更高，适合已经通过普通分辨率试好构图、运镜、口型之后的「定稿」那一条，别一上来就用 4K 批量试错；②社交媒体/短视频平台大多会二次压缩，1080P 甚至 720P 草稿在手机上观感差异很小，只有要投影、大屏播放或后期精修才值得上 4K。省钱技巧：可灵的会员折扣是分级的，铂金及以上等级享灵感值 8 折，黄金享 9 折，且官方不定期推出限时优惠（如 2026 年 6 月底的 3.0 系列视频模型限时 8 折），批量出片前先看一眼当前是否在优惠窗口内，能省下不少灵感值。一句话流程：普通分辨率海选 → 锁定最终镜头 → 4K 只用在要交付的那一条，且尽量卡在折扣期出。",
+    "body_en": "Kling's 3.0 video series (including Omni) lets you set `mode` to `4k` to render at full 4K resolution with the same expressive quality as high-quality mode, alongside 5-15s durations, 9:16/16:9 aspect ratios, and up to 15 seconds of continuous generation with smart shot-splitting. But 4K isn't worth turning on every time: 1) it burns noticeably more credits, so save it for the \"final cut\" clip after you've already validated composition, camera movement, and lip-sync at normal resolution — don't use 4K for bulk trial-and-error; 2) most social platforms re-compress video anyway, so a 1080p or even 720p draft looks nearly identical on a phone screen — only go 4K if you're projecting on a big screen or doing detailed post-production. Money-saving tip: Kling's membership discounts are tiered — Platinum and above get 20% off credits, Gold gets 10% off, and Kling periodically runs limited-time promos (e.g., 20% off the 3.0 video series in late June 2026) — so check whether you're inside a discount window before a batch render. One-line workflow: shortlist at normal resolution → lock the final shot → reserve 4K for the delivery clip, ideally timed to a discount window.",
+    "models": [
+      "可灵",
+      "Kling"
+    ],
+    "tags": [
+      "可灵",
+      "Kling",
+      "4K",
+      "会员优惠"
+    ],
+    "source": "可灵AI 官方文档与资讯",
+    "updated": "2026-07-08"
   }
 ];

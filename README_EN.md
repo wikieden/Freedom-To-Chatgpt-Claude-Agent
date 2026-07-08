@@ -18,11 +18,11 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 - 🚀 **Getting Started** (21)
 - 🎭 **Role Prompts** (149)
-- 🖼️ **Text-to-Image** (15)
-- 🎬 **Text-to-Video** (21)
-- 🧩 **Skills** (23)
+- 🖼️ **Text-to-Image** (16)
+- 🎬 **Text-to-Video** (24)
+- 🧩 **Skills** (26)
 - 🔌 **Plugins / MCP** (17)
-- 💡 **Prompt Craft** (50)
+- 💡 **Prompt Craft** (51)
 
 ## 🚀 Getting Started
 
@@ -964,6 +964,11 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 > Jimeng AI's new Smart Reference feature is built for character consistency — upload one reference image and later generations keep the 'same person', which the team emphasizes as 'no face-melting'. Three steps for beginners: (1) prepare a clear, front-facing, evenly-lit reference of the character (avoid extreme profiles and occlusion); (2) turn on Smart Reference, upload it, then in the prompt only change scene, action, wardrobe, and shot — don't describe facial features; leave the likeness to the reference; (3) one-line template: 'the same person as in the reference, now [scene/action/wardrobe/shot size], keep facial features and hairstyle unchanged, generate the rest as described.' It shines for series work (sticker packs, storyboards, e-commerce model outfit swaps): lock the reference and swap the scene image by image. If a face still drifts, regenerate that one or swap in a sharper reference.
 
+### Midjourney Conversational Mode: no parameters needed — describe it, even in Chinese, even by voice
+`🟢 Beginner ｜ Midjourney`  ·  Midjourney 官方文档 (Draft & Conversational Modes)
+
+> Both Midjourney V7 and V8.1 support Conversational Mode: instead of typing parameters like `--ar` or `--sref`, you just describe what you want in plain language and the AI translates it into a proper Midjourney prompt. Two beginner-friendly details: 1) it's multilingual, including Chinese — it handles translation and parameter selection automatically; 2) it supports voice input — click the mic icon, speak, click again to stop (note: voice-based conversational mode requires Draft Mode to be on; text-based conversational mode works without it). It also supports pointing at a specific result and iterating: say things like "make another variation of image 4" or "warm up the lighting in image 2" instead of rewriting the whole prompt. Suggested flow for beginners: start in Draft Mode and use conversational mode to quickly explore directions (cheap and fast), then turn off draft and add HD once you've landed on something you like. This is far friendlier than memorizing a parameter cheat sheet, especially if you're not comfortable writing English keyword prompts and just want to describe things in your own words.
+
 ## 🎬 Text-to-Video
 
 ### Kling/Sora camera-motion prompt
@@ -1077,6 +1082,21 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟡 Intermediate ｜ 可灵 · 即梦`  ·  参考 2026-07 国内 AI 视频工具趋势
 
 > Domestic video models made clear progress on character consistency in 2026, but to keep the same character's look stable across multiple shots, you still need to lock down the character description and repeat it every time. Approach: start with a clear reference image or a fixed character description (hairstyle, face shape, clothing color, age markers — the more specific, the better), then repeat that same description at the start of every shot's prompt, followed by the camera move and scene change, e.g. [fixed character description] + camera slowly pushes in from eye-level to a close-up, background shifts from indoors to a dusk street, lighting shifts from warm indoor light to sunset backlight. If the character drifts, first check whether the character description got dropped or abbreviated in one of the shot prompts — that's the most common cause.
+
+### Kling 3.0 Omni: Two Characters Talking at Once, Each With Its Own Lip-Sync
+`🟡 Intermediate ｜ 可灵`  ·  整理自可灵官方发布与媒体报道（2026-07）
+
+> Kling 3.0 Omni can render two characters talking in the same shot, each one lip-synced phoneme-by-phoneme to its own audio track — most prior video models could only handle single-speaker lip-sync, leaving two-person dialogue scenes needing extra editing or a separate lip-sync pass. It natively supports multilingual dubbing (Mandarin, English, Japanese, Korean, Spanish) bundled into the per-second price with no extra charge, plus up to 15 seconds of native 4K output. Prompt-writing tips: 1) describe each character's line and emotion separately rather than writing the dialogue as one block of narration; 2) spell out who speaks first, who speaks second, and whether there's interruption or overlap; 3) add camera-movement cues (e.g. "over-the-shoulder shot-reverse-shot") if you want a cinematic feel. Kling's app has climbed into the App Store's top-5 free chart recently, a sign that demand for multi-character dialogue video is strong — good for short-drama scenes, podcast visualizations, or two-person interview content.
+
+### Jimeng Seedance 2.0: the new canvas and Smart Multi-Frame 2.0 for stitching and fine-editing clips
+`🟡 Intermediate ｜ 即梦 · Seedance`  ·  即梦 Seedance 2.0 官方手册
+
+> ByteDance's Jimeng added two editor-friendly features in Seedance 2.0 (released 2026-02, still being iterated on): 1) a redesigned Canvas that visually unifies the creation workflow — assets can be arranged in parallel and operated on together, plus a new "work order" mode that lets you jump straight into reworking a specific image or clip without hopping between separate pages; 2) Smart Multi-Frame 2.0, which supports stitching "video + video" or "video + image" combinations (up to 20 assets in one upload) and lets you lock a specific short segment for targeted re-editing without disturbing the parts you already like. Practical workflow: batch-generate several candidate shots with text-to-video/image-to-video, drop them into the Canvas to preview and shortlist, then use Multi-Frame to stitch the chosen clips into a full narrative — if one segment isn't right, lock just that segment and regenerate instead of redoing the whole sequence, saving both time and credits. Good fit for short dramas, product promo videos, or any multi-shot story that needs stitching and partial rework.
+
+### Kling 3.0's 4K video mode: when to turn it on, and how to time membership discounts
+`🟡 Intermediate ｜ 可灵 · Kling`  ·  可灵AI 官方文档与资讯
+
+> Kling's 3.0 video series (including Omni) lets you set `mode` to `4k` to render at full 4K resolution with the same expressive quality as high-quality mode, alongside 5-15s durations, 9:16/16:9 aspect ratios, and up to 15 seconds of continuous generation with smart shot-splitting. But 4K isn't worth turning on every time: 1) it burns noticeably more credits, so save it for the "final cut" clip after you've already validated composition, camera movement, and lip-sync at normal resolution — don't use 4K for bulk trial-and-error; 2) most social platforms re-compress video anyway, so a 1080p or even 720p draft looks nearly identical on a phone screen — only go 4K if you're projecting on a big screen or doing detailed post-production. Money-saving tip: Kling's membership discounts are tiered — Platinum and above get 20% off credits, Gold gets 10% off, and Kling periodically runs limited-time promos (e.g., 20% off the 3.0 video series in late June 2026) — so check whether you're inside a discount window before a batch render. One-line workflow: shortlist at normal resolution → lock the final shot → reserve 4K for the delivery clip, ideally timed to a discount window.
 
 ## 🧩 Skills
 
@@ -1194,6 +1214,21 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟡 Intermediate ｜ Claude`  ·  整理自 Claude Code 官方文档 Remote Control / Trusted Devices 说明（2026-07）
 
 > Claude Code's Remote Control feature lets you view and steer a local session from your phone or the web, and Team/Enterprise plans now add an extra safeguard called Trusted Devices: once an admin enables it, members must verify their device with Face ID, Touch ID, Windows Hello, or a passkey before they can view or steer a local session remotely, and re-verification is required if the sign-in is more than 18 hours old. This check only applies to the remote-control scenario — using Claude Code directly in a local terminal, or calling it via API, is completely unaffected, so day-to-day use won't be blocked. Anthropic notes that biometric data stays on the device for verification only; the company only stores the device's public key plus basic metadata like display name, platform, and enrollment time — never fingerprints or face data themselves. For team admins: if anyone on your team might remotely steer sessions touching production or sensitive code from their phone, turn this on under claude.ai/admin-settings/claude-code to add one more lock to that path. Solo developers using a single machine aren't affected and don't need to configure anything.
+
+### Skill Distillation: Have Fable 5 Teach Opus 4.8 Your Method Before the Free Window Closes
+`🟡 Intermediate ｜ Claude`  ·  整理自 Reddit 热帖与相关博客报道（2026-07）
+
+> Fable 5 came back online on 2026-07-01, and the window where 50% of usage counted as included in the plan expires today (July 7); from July 8 onward, extra usage is billed by the token (roughly $10 per million input tokens, $50 per million output). This gave rise to a community trick called "skill distillation": instead of racing to squeeze direct output out of Fable 5 before the meter starts, have it write down its own working method as a SKILL.md file that a cheaper daily model (Opus 4.8, Sonnet 5) can then load and follow. What actually transfers isn't the model's raw capability — it's the written discipline and procedure, and that file keeps working long after the window closes. A prompt template that works: "Write down the discipline you follow — planning before editing, self-verifying every step before moving on — as a SKILL.md that another model can load and follow." This isn't specific to Fable 5's free window either; it applies any time you get temporary access to a stronger model (a free trial, a weekend of a premium tier): distill the method first, don't just chase the output.
+
+### Claude Tag: an always-on AI teammate in Slack you just @-mention
+`🟡 Intermediate ｜ Claude`  ·  Anthropic 官方博客 (2026-06-23)
+
+> Anthropic launched Claude Tag on 2026-06-23 (beta for Team/Enterprise), turning Claude into a persistent Slack teammate instead of a bolt-on bot. Usage: @-mention Claude anywhere in a channel with a plain-language request; it breaks the task into steps, uses whatever tools it has access to, and replies in the same thread when done. Three things that differ from a typical bot: 1) everyone in a channel shares the same Claude instance — anyone can see what it's doing and pick up where the last person left off, no re-explaining needed; 2) it keeps reading channel messages over time and accumulates context, so you don't need to restate team jargon or project status every time; 3) it's best suited for multi-step but well-defined tasks — turning a meeting thread into action items, drafting a doc from prior discussion, or rolling up scattered feedback. Practical tip: pilot it in a low-stakes channel for a few days to gauge quality before adding it to a core project channel, and still have a human review anything consequential before it ships.
+
+### Claude Code 2.1.199: chain up to 5 skills in a single invocation
+`🔴 Advanced ｜ Claude`  ·  Claude Code Changelog (2.1.199, 2026-07-02)
+
+> Claude Code's 2.1.199 release (2026-07-02) fixed how stacked skill invocations behave: previously, triggering several slash-skills back to back would only load the first one and silently drop the rest; now up to 5 skills can be loaded together in one turn. It also fixed a bug where re-invoking an already-loaded skill duplicated its instructions in context (wasting tokens and risking contradictory repeated guidance) — that's now deduplicated automatically. The release also cleaned up MCP error messages so it's faster to tell whether a failure is a plugin config issue or a network issue. Practical effect: if your workflow is "use skill A to clean data, skill B to draft the doc, skill C to check formatting," you can now chain all three in a single task instead of three separate turns — but don't over-stack; loading more skills than you actually need dilutes instruction priority, so 2-3 skills at once tends to work best.
 
 ## 🔌 Plugins / MCP
 
@@ -1559,5 +1594,10 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟡 Intermediate ｜ GPT`  ·  整理自 OpenAI GPT-5.6 Sol/Terra/Luna 预览发布说明（2026-07）
 
 > OpenAI has begun a limited preview of the GPT-5.6 series with a new naming scheme: the generation number plus a capability tier — Sol (flagship), Terra (balanced), and Luna (fast and affordable) — each tier able to advance on its own cadence instead of all upgrading together. The new Ultra mode isn't simply "let the model think longer"; it splits a complex task across multiple subagents that work in parallel and then get merged, speeding up work that can genuinely be decomposed (e.g. researching three options at once, or writing tests and implementation in parallel). When briefing Ultra mode, include: 1) what the final deliverable should look like; 2) whether the task can actually be split into independent sub-parts (a strictly sequential single-threaded task won't get faster just by turning Ultra on); 3) an explicit final "merge/dedupe" step so the subagents' separate outputs get combined into one coherent result rather than just concatenated. Sol/Terra/Luna are all in limited preview right now, not yet generally available — individual developers may want to test token costs on Terra/Luna first before deciding whether to upgrade to Sol.
+
+### Claude Science Workbench: Wire Opus 4.8 Into 60+ Scientific Databases
+`🟡 Intermediate ｜ Claude`  ·  整理自 Anthropic 官方公告与相关报道（2026-07）
+
+> Anthropic launched the Claude Science Workbench, connecting Opus 4.8 to 60+ scientific databases spanning genomics, proteomics, cheminformatics, and clinical trial literature — skipping the manual work of searching, downloading, and organizing papers. Three tips for using it well: 1) give specific search terms (species, gene names, compound IDs, clinical trial numbers) instead of a vague "summarize progress in field X"; 2) explicitly ask it to cite the data source and retrieval path for every claim, so you can verify later — research contexts have near-zero tolerance for fabricated citations; 3) treat it as a "literature search plus first-pass organizing" assistant — conclusions still need review by you or a domain expert. On the newly public GeneBench-Pro computational-biology benchmark, accuracy is still low across the board (Opus 4.8 around 16%, GPT-5.6 Sol around 31.5%), which is a reminder this category of task is far from "fully automatable" — don't treat it as a black box that can make scientific judgment calls for you.
 
 <!-- AUTO-PROMPTS:END -->
