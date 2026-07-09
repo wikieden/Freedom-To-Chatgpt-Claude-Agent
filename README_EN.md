@@ -16,13 +16,13 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 ### Categories
 
-- 🚀 **Getting Started** (21)
+- 🚀 **Getting Started** (22)
 - 🎭 **Role Prompts** (149)
-- 🖼️ **Text-to-Image** (16)
+- 🖼️ **Text-to-Image** (17)
 - 🎬 **Text-to-Video** (24)
 - 🧩 **Skills** (26)
 - 🔌 **Plugins / MCP** (17)
-- 💡 **Prompt Craft** (51)
+- 💡 **Prompt Craft** (54)
 
 ## 🚀 Getting Started
 
@@ -130,6 +130,11 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟢 Beginner ｜ 豆包 · 通义千问`  ·  整理自豆包/通义千问官方下线公告与《人工智能拟人化互动服务管理暂行办法》相关报道（2026-07）
 
 > On July 3-4, Doubao and Qwen (Tongyi Qianwen) both announced that their custom "agent" features will be officially shut down on July 15, 2026 — the same day China's new Interim Measures for the Administration of AI Anthropomorphic Interactive Services take effect, which require platforms to strictly review all public-facing agent content and crack down on inappropriate personas and non-compliant user-generated content. Rather than review agents one by one, both platforms chose to pull the feature entirely. Only "user-built custom agents" (custom personas, roleplay bots, etc.) are affected — everyday chat, Q&A, and writing all keep working normally. If you previously configured an agent, you have a window from July 15 to October 15 to view and save your configuration and chat history yourself; after that, it can no longer be viewed or restored in the app. What to do now: open any agent you've configured and copy its full system prompt/persona description into a text file today. If that persona is useful to you, paste it as a prompt into a platform that still supports custom characters (Kimi, GLM, DeepSeek, etc.) or save it into your own prompt library — don't wait until the feature disappears to scramble for it.
+
+### Kimi K3 Announced for This Month: 2.5-Trillion Parameters, a 1M-Token Context — Should You Switch Now?
+`🟡 Intermediate ｜ Kimi`  ·  月之暗面官宣 Kimi K3 发布计划（2026-07）
+
+> In July 2026, Moonshot AI (月之暗面) announced that Kimi K3 will officially launch this month: 2.5 trillion total MoE parameters (surpassing DeepSeek V4 Pro's 1.6 trillion and even ERNIE 5.0's 2.4 trillion), a 1M-token context window, and native multimodal fusion — a new high-water mark for Chinese model parameter counts. The long-context pitch isn't just "it fits" but "it actually understands," per the company, aimed at scenarios like financial research analysis, legal case-file search, and whole-repository-level coding that genuinely require reading everything at once. One caveat: the previous generation, K2.7 Code, priced at roughly ¥6.5/M tokens after a price hike — about 6.5x DeepSeek V4 Pro — so K3 will likely continue that premium pricing rather than being both strongest and cheapest. Advice for everyday users and developers: 1) don't rush to switch just because of the parameter count — wait for official pricing and public benchmarks (especially coding benchmarks like SWE-Bench) before deciding if it's worth it; 2) if your use case genuinely involves reading an entire long document or codebase in one pass, put K3 near the top of your test list once it ships; 3) for everyday Q&A and writing, your current model (GPT/Claude/DeepSeek/Doubao, etc.) is still plenty — no need to migrate just to chase the biggest parameter count.
 
 ## 🎭 Role Prompts
 
@@ -969,6 +974,11 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 
 > Both Midjourney V7 and V8.1 support Conversational Mode: instead of typing parameters like `--ar` or `--sref`, you just describe what you want in plain language and the AI translates it into a proper Midjourney prompt. Two beginner-friendly details: 1) it's multilingual, including Chinese — it handles translation and parameter selection automatically; 2) it supports voice input — click the mic icon, speak, click again to stop (note: voice-based conversational mode requires Draft Mode to be on; text-based conversational mode works without it). It also supports pointing at a specific result and iterating: say things like "make another variation of image 4" or "warm up the lighting in image 2" instead of rewriting the whole prompt. Suggested flow for beginners: start in Draft Mode and use conversational mode to quickly explore directions (cheap and fast), then turn off draft and add HD once you've landed on something you like. This is far friendlier than memorizing a parameter cheat sheet, especially if you're not comfortable writing English keyword prompts and just want to describe things in your own words.
 
+### Google's Nano Banana 2 Lite: 4-Second Images That Still Keep Character Consistency — When to Reach for It
+`🟡 Intermediate ｜ Gemini · Nano Banana`  ·  Google DeepMind / Google Cloud Blog（2026-06-30）
+
+> On 2026-06-30 Google released Nano Banana 2 Lite (model name Gemini 3.1 Flash-Lite Image), positioned as the faster, cheaper option in the family: roughly 2.7x faster than its sibling Nano Banana 2 (Gemini 3.1 Flash Image), generating an image in about 4 seconds at a flat rate of $0.034 per 1,000 images. It outputs at 1K resolution across 14 aspect ratios, but still keeps the Nano Banana family's signature strengths — character consistency across a stream of images, precise local editing, data-visualization and layout drafts informed by real-world knowledge, and multilingual text rendering — with every output carrying an invisible SynthID watermark for AI-generated identification. When to reach for Lite instead of the pricier Pro/standard version: 1) bulk draft generation, e-commerce product-image variants, or exploring many design directions before narrowing down — this "generate wide, then pick" workflow is where Lite saves time and money; 2) once you've settled on a direction, switch the chosen image over to Nano Banana Pro/standard for the final high-detail render. It's currently available to enterprise developers via Google AI Studio and the Gemini API — individual users should watch for when it lands in the Gemini app.
+
 ## 🎬 Text-to-Video
 
 ### Kling/Sora camera-motion prompt
@@ -1599,5 +1609,20 @@ A beginner-friendly, **bilingual (中文 / English)** all-in-one hub: a big **pr
 `🟡 Intermediate ｜ Claude`  ·  整理自 Anthropic 官方公告与相关报道（2026-07）
 
 > Anthropic launched the Claude Science Workbench, connecting Opus 4.8 to 60+ scientific databases spanning genomics, proteomics, cheminformatics, and clinical trial literature — skipping the manual work of searching, downloading, and organizing papers. Three tips for using it well: 1) give specific search terms (species, gene names, compound IDs, clinical trial numbers) instead of a vague "summarize progress in field X"; 2) explicitly ask it to cite the data source and retrieval path for every claim, so you can verify later — research contexts have near-zero tolerance for fabricated citations; 3) treat it as a "literature search plus first-pass organizing" assistant — conclusions still need review by you or a domain expert. On the newly public GeneBench-Pro computational-biology benchmark, accuracy is still low across the board (Opus 4.8 around 16%, GPT-5.6 Sol around 31.5%), which is a reminder this category of task is far from "fully automatable" — don't treat it as a black box that can make scientific judgment calls for you.
+
+### ChatGPT Voice Goes Full-Duplex: Getting the Most Out of GPT-Live-1
+`🟢 Beginner ｜ ChatGPT`  ·  OpenAI 官方发布 GPT-Live / GPT-Live-1 mini（2026-07-08）
+
+> On 2026-07-08 OpenAI upgraded ChatGPT Voice with a new generation of models: paid users (Go/Plus/Pro) now default to GPT-Live-1, while Free users default to the lighter GPT-Live-1 mini. The core change is full-duplex operation — the old voice mode worked more like a walkie-talkie, waiting for you to finish before it processed and replied; the new one listens, processes, and decides whether to jump in all at the same time, so it can softly acknowledge with "mhmm" or "yeah" while you're still talking, let you interrupt it mid-sentence, or quietly wait while you gather your thoughts — conversations feel a lot more like a phone call than a push-to-talk radio. For questions that need web search, deep reasoning, or complex work, it quietly hands off to a stronger frontier model in the background and brings the result back into the conversation without breaking the flow. A newly unlocked feature is real-time simultaneous translation — just say "translate what I'm saying into Japanese in real time" and it translates as you speak, with only a small delay. Practical tips: 1) to interrupt, just start talking — no need to wait for it to finish a sentence; 2) if you need a moment to think, say something like "hang on, let me finish my thought"; 3) for foreign-language scenarios, try the new real-time translation feature first — it beats switching apps and copy-pasting back and forth.
+
+### DeepSeek V4 Is Getting Peak/Off-Peak Pricing: How to Time Your API Calls to Save Money
+`🟡 Intermediate ｜ DeepSeek`  ·  DeepSeek 官方公告 / API 更新日志（2026-06-29）
+
+> On 2026-06-29 DeepSeek announced that the official V4 release is targeted for mid-July, along with peak/off-peak pricing: 9:00-12:00 and 14:00-18:00 daily count as peak hours with API prices doubled, while all other hours keep the current rate. For V4-Pro, cache-hit input pricing is roughly ¥0.025/M tokens off-peak versus ¥0.05 at peak; cache-miss input is ¥3 off-peak versus ¥6 at peak; output is ¥6 off-peak versus ¥12 at peak. The company will also retire the old API model names `deepseek-chat` and `deepseek-reasoner` on 2026-07-24, requiring an explicit switch to `deepseek-v4-pro` or the lighter `deepseek-v4-flash` (callable via either the OpenAI ChatCompletions interface or the Anthropic-style interface). This mainly affects developers making bulk API calls — everyday chat use through the web app is essentially unaffected. Three tips if you're on the API: 1) schedule non-urgent batch work (running eval sets, offline data cleanup, overnight jobs) outside peak hours, e.g. evening or early morning; 2) check whether your automation scripts or agent workflows still reference the old model names, and switch before July 24 to avoid sudden errors in production; 3) if you already rely on prompt-cache hits to save money, the gap between peak and off-peak pricing gets even more pronounced when stacked with cache hits — worth re-running your cost math.
+
+### Claude Cowork Comes to Web and Mobile: How to Hand Off Work Across Devices
+`🟢 Beginner ｜ Claude`  ·  Anthropic 官方博客 / TechCrunch 报道（2026-07-07）
+
+> On 2026-07-07 Anthropic announced that Claude Cowork, previously desktop-only, is expanding to web and mobile — rolling out first to Max subscribers, with more plans following over the next several weeks. The core change is remote sessions plus synced files plus a shared chat/Cowork home across devices: you can kick off a Cowork session on your desktop to organize files or run a long task, then switch to your phone to check progress or add a quick instruction, without staying glued to your computer or re-explaining the task. Practical tips: 1) start long-running tasks (bulk document organizing, a research sweep) on desktop first, spelling out scope and output location before you hand it off; 2) mobile is best for lightweight actions — checking progress, approving something, adding a one-line instruction — while major direction changes or reviewing large files are still more efficient back on desktop; 3) for team accounts, check whether an admin has enabled this for Team/Enterprise yet; individual Max accounts can already use it directly.
 
 <!-- AUTO-PROMPTS:END -->

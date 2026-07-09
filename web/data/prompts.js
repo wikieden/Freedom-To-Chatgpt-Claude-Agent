@@ -6187,5 +6187,106 @@ window.PROMPTS = [
     ],
     "source": "可灵AI 官方文档与资讯",
     "updated": "2026-07-08"
+  },
+  {
+    "id": "craft-gpt-live1-full-duplex-voice",
+    "category": "craft",
+    "level": "beginner",
+    "title_zh": "ChatGPT 语音全双工上线：GPT-Live-1 怎么用才不像对讲机",
+    "title_en": "ChatGPT Voice Goes Full-Duplex: Getting the Most Out of GPT-Live-1",
+    "body_zh": "OpenAI 在 2026-07-08 给 ChatGPT 语音模式换上了新一代模型：付费用户（Go/Plus/Pro）默认用 GPT-Live-1，免费用户默认用 GPT-Live-1 mini。核心变化是「全双工（full-duplex）」——以前的语音模式更像对讲机，你说完它才处理再回答；现在它能一边听一边处理一边判断要不要插话，所以能在你说话时轻声回应「嗯」「对」表示在听，能被你打断，也能在你想不清楚时安静等你说完，交流的自然度更接近打电话而不是按键喊话。遇到需要联网搜索、深度推理或复杂任务的问题，它会在后台悄悄调用更强的旗舰模型处理，同时不打断和你的语音交流节奏，处理完直接把结果带回对话里。新解锁的一个实用功能是「实时同声传译」——直接说「帮我把我说的话实时翻译成日语」，它能边听边译，延迟很小。上手建议：①想被打断/插话时，直接开口说就行，不用等它说完一整句；②需要它别急着接话给自己留思考时间，可以说「等我一下，我还没想完」；③外语场景优先试试实时翻译这个新能力，比切换 App 来回粘贴方便得多。",
+    "body_en": "On 2026-07-08 OpenAI upgraded ChatGPT Voice with a new generation of models: paid users (Go/Plus/Pro) now default to GPT-Live-1, while Free users default to the lighter GPT-Live-1 mini. The core change is full-duplex operation — the old voice mode worked more like a walkie-talkie, waiting for you to finish before it processed and replied; the new one listens, processes, and decides whether to jump in all at the same time, so it can softly acknowledge with \"mhmm\" or \"yeah\" while you're still talking, let you interrupt it mid-sentence, or quietly wait while you gather your thoughts — conversations feel a lot more like a phone call than a push-to-talk radio. For questions that need web search, deep reasoning, or complex work, it quietly hands off to a stronger frontier model in the background and brings the result back into the conversation without breaking the flow. A newly unlocked feature is real-time simultaneous translation — just say \"translate what I'm saying into Japanese in real time\" and it translates as you speak, with only a small delay. Practical tips: 1) to interrupt, just start talking — no need to wait for it to finish a sentence; 2) if you need a moment to think, say something like \"hang on, let me finish my thought\"; 3) for foreign-language scenarios, try the new real-time translation feature first — it beats switching apps and copy-pasting back and forth.",
+    "models": [
+      "ChatGPT"
+    ],
+    "tags": [
+      "ChatGPT",
+      "语音模式",
+      "全双工",
+      "实时翻译"
+    ],
+    "source": "OpenAI 官方发布 GPT-Live / GPT-Live-1 mini（2026-07-08）",
+    "updated": "2026-07-09"
+  },
+  {
+    "id": "craft-deepseek-v4-peak-valley-pricing",
+    "category": "craft",
+    "level": "intermediate",
+    "title_zh": "DeepSeek V4 要上峰谷定价了：怎么错峰调用省钱",
+    "title_en": "DeepSeek V4 Is Getting Peak/Off-Peak Pricing: How to Time Your API Calls to Save Money",
+    "body_zh": "DeepSeek 在 2026-06-29 官宣：V4 正式版预计 7 月中旬上线，同时引入「峰谷定价」——每天 9:00-12:00 和 14:00-18:00 为高峰时段，API 价格直接翻倍；其余时段维持原价。以 V4-Pro 为例，缓存命中的输入价格平时约 0.025 元/百万 token，高峰要 0.05 元；缓存未命中的输入平时 3 元、高峰 6 元；输出平时 6 元、高峰 12 元。同时官方会在 2026-07-24 停用旧的 API 模型名 `deepseek-chat` / `deepseek-reasoner`，需要显式切换到 `deepseek-v4-pro` 或更轻的 `deepseek-v4-flash`（可通过 OpenAI ChatCompletions 接口或 Anthropic 接口调用）。这件事主要影响用 API 批量调用的开发者，普通人用网页版/App 聊天基本无感。给用 API 的人三条建议：①不紧急的批量任务（跑测试集、离线整理数据、夜间批处理）尽量排到高峰时段之外，比如晚上或清晨；②检查自己的自动化脚本、Agent 工作流是否还在用旧模型名，赶在 7 月 24 日前切好，避免线上突然报错；③本来就靠 prompt cache 命中省钱的场景，峰谷叠加缓存命中的价差会更明显，值得重新核算一遍成本。",
+    "body_en": "On 2026-06-29 DeepSeek announced that the official V4 release is targeted for mid-July, along with peak/off-peak pricing: 9:00-12:00 and 14:00-18:00 daily count as peak hours with API prices doubled, while all other hours keep the current rate. For V4-Pro, cache-hit input pricing is roughly ¥0.025/M tokens off-peak versus ¥0.05 at peak; cache-miss input is ¥3 off-peak versus ¥6 at peak; output is ¥6 off-peak versus ¥12 at peak. The company will also retire the old API model names `deepseek-chat` and `deepseek-reasoner` on 2026-07-24, requiring an explicit switch to `deepseek-v4-pro` or the lighter `deepseek-v4-flash` (callable via either the OpenAI ChatCompletions interface or the Anthropic-style interface). This mainly affects developers making bulk API calls — everyday chat use through the web app is essentially unaffected. Three tips if you're on the API: 1) schedule non-urgent batch work (running eval sets, offline data cleanup, overnight jobs) outside peak hours, e.g. evening or early morning; 2) check whether your automation scripts or agent workflows still reference the old model names, and switch before July 24 to avoid sudden errors in production; 3) if you already rely on prompt-cache hits to save money, the gap between peak and off-peak pricing gets even more pronounced when stacked with cache hits — worth re-running your cost math.",
+    "models": [
+      "DeepSeek"
+    ],
+    "tags": [
+      "DeepSeek",
+      "API",
+      "峰谷定价",
+      "省钱技巧"
+    ],
+    "source": "DeepSeek 官方公告 / API 更新日志（2026-06-29）",
+    "updated": "2026-07-09"
+  },
+  {
+    "id": "start-kimi-k3-2-5t-params",
+    "category": "start",
+    "level": "intermediate",
+    "title_zh": "Kimi K3 官宣本月发布：2.5 万亿参数、100 万字上下文，要不要现在就换",
+    "title_en": "Kimi K3 Announced for This Month: 2.5-Trillion Parameters, a 1M-Token Context — Should You Switch Now?",
+    "body_zh": "月之暗面在 2026 年 7 月官宣 Kimi K3 将于本月正式发布：2.5 万亿 MoE 总参数（超过 DeepSeek V4 Pro 的 1.6 万亿，也超过文心一言 5.0 的 2.4 万亿）、100 万 token 上下文窗口、原生多模态融合，刷新了国产大模型的参数天花板。它的长文本卖点不只是「塞得进」，官方强调是「读得懂」——面向金融研报分析、法律卷宗检索、全代码仓库级开发这类真正需要通篇理解的场景。要注意的是：上一代 K2.7 Code 在涨价后 API 价格约 6.5 元/百万 token，是 DeepSeek V4 Pro 的 6.5 倍，K3 大概率延续中高定价路线，不会是「又强又便宜」。给普通用户和开发者的建议：①先别急着为了参数量冲上去，等正式定价和公开评测（尤其是 SWE-Bench 这类编程基准）出来再判断值不值；②如果你的场景本来就是「超长文档/整仓库代码需要一次性读懂」，K3 值得放进你的模型候选池优先测；③日常问答、写作这类轻量任务，继续用现在手头的模型（GPT/Claude/DeepSeek/豆包等）就够，不用为了「参数最大」专门迁移。",
+    "body_en": "In July 2026, Moonshot AI (月之暗面) announced that Kimi K3 will officially launch this month: 2.5 trillion total MoE parameters (surpassing DeepSeek V4 Pro's 1.6 trillion and even ERNIE 5.0's 2.4 trillion), a 1M-token context window, and native multimodal fusion — a new high-water mark for Chinese model parameter counts. The long-context pitch isn't just \"it fits\" but \"it actually understands,\" per the company, aimed at scenarios like financial research analysis, legal case-file search, and whole-repository-level coding that genuinely require reading everything at once. One caveat: the previous generation, K2.7 Code, priced at roughly ¥6.5/M tokens after a price hike — about 6.5x DeepSeek V4 Pro — so K3 will likely continue that premium pricing rather than being both strongest and cheapest. Advice for everyday users and developers: 1) don't rush to switch just because of the parameter count — wait for official pricing and public benchmarks (especially coding benchmarks like SWE-Bench) before deciding if it's worth it; 2) if your use case genuinely involves reading an entire long document or codebase in one pass, put K3 near the top of your test list once it ships; 3) for everyday Q&A and writing, your current model (GPT/Claude/DeepSeek/Doubao, etc.) is still plenty — no need to migrate just to chase the biggest parameter count.",
+    "models": [
+      "Kimi"
+    ],
+    "tags": [
+      "Kimi",
+      "月之暗面",
+      "长上下文",
+      "模型选择"
+    ],
+    "source": "月之暗面官宣 Kimi K3 发布计划（2026-07）",
+    "updated": "2026-07-09"
+  },
+  {
+    "id": "craft-claude-cowork-web-mobile-handoff",
+    "category": "craft",
+    "level": "beginner",
+    "title_zh": "Claude Cowork 上线网页版和手机版：跨设备接力干活怎么用",
+    "title_en": "Claude Cowork Comes to Web and Mobile: How to Hand Off Work Across Devices",
+    "body_zh": "Anthropic 在 2026-07-07 宣布把原本只有桌面客户端的 Claude Cowork 扩展到网页版和手机端，先对 Max 订阅开放，之后数周逐步放开给更多档位。核心变化是「远程会话 + 文件同步 + 聊天与 Cowork 主页跨设备共享」：你可以在电脑上把一个整理文件、处理长任务的 Cowork 会话派出去，中途换成手机继续查看进度、补充一两句指令，不用守在电脑前，也不用重新把任务描述一遍。实操建议：①耗时长的任务（比如批量整理文档、跑一套调研）优先在桌面端起个头，把范围和产出位置讲清楚后再放手；②手机端最适合「看进度、做确认、补一句指令」这类轻量操作，真要大幅调整方向、翻看大段文件，还是回桌面端效率更高；③团队场景要留意管理员是否已经在后台放开了 Team/Enterprise 的这项权限，个人 Max 账号目前已经能直接用。",
+    "body_en": "On 2026-07-07 Anthropic announced that Claude Cowork, previously desktop-only, is expanding to web and mobile — rolling out first to Max subscribers, with more plans following over the next several weeks. The core change is remote sessions plus synced files plus a shared chat/Cowork home across devices: you can kick off a Cowork session on your desktop to organize files or run a long task, then switch to your phone to check progress or add a quick instruction, without staying glued to your computer or re-explaining the task. Practical tips: 1) start long-running tasks (bulk document organizing, a research sweep) on desktop first, spelling out scope and output location before you hand it off; 2) mobile is best for lightweight actions — checking progress, approving something, adding a one-line instruction — while major direction changes or reviewing large files are still more efficient back on desktop; 3) for team accounts, check whether an admin has enabled this for Team/Enterprise yet; individual Max accounts can already use it directly.",
+    "models": [
+      "Claude"
+    ],
+    "tags": [
+      "Claude",
+      "Cowork",
+      "跨设备",
+      "远程协作"
+    ],
+    "source": "Anthropic 官方博客 / TechCrunch 报道（2026-07-07）",
+    "updated": "2026-07-09"
+  },
+  {
+    "id": "image-nanobanana2-lite-fast-generation",
+    "category": "image",
+    "level": "intermediate",
+    "title_zh": "谷歌 Nano Banana 2 Lite：4 秒出图还保住人物一致性，什么时候该用它",
+    "title_en": "Google's Nano Banana 2 Lite: 4-Second Images That Still Keep Character Consistency — When to Reach for It",
+    "body_zh": "Google 在 2026-06-30 推出 Nano Banana 2 Lite（模型名 Gemini 3.1 Flash-Lite Image），定位是「更快更便宜」的版本：出图速度比同门的 Nano Banana 2（Gemini 3.1 Flash Image）快约 2.7 倍，一张图约 4 秒，价格低至每千张 0.034 美元；分辨率为 1K，支持 14 种画幅比例，但仍然保留了 Nano Banana 系列的看家本领——角色一致性（连续出图时人物长相不跑偏）、精准局部编辑、结合世界知识画数据可视化草图和排版、多语言文字渲染，所有输出都带隐形 SynthID 水印方便识别是 AI 生成。什么时候该用 Lite 而不是更贵的 Pro/标准版：①批量出草稿、电商商品图做多个变体、多个设计方向先出量再筛选，这类「先海选再精修」的场景用 Lite 省钱又快；②确定方向后，把选中的那一张换到 Nano Banana Pro/标准版做最终精修出图，分辨率和细节更好。目前通过 Google AI Studio、Gemini API 面向企业开发者开放，个人用户可以留意它什么时候上线到 Gemini App。",
+    "body_en": "On 2026-06-30 Google released Nano Banana 2 Lite (model name Gemini 3.1 Flash-Lite Image), positioned as the faster, cheaper option in the family: roughly 2.7x faster than its sibling Nano Banana 2 (Gemini 3.1 Flash Image), generating an image in about 4 seconds at a flat rate of $0.034 per 1,000 images. It outputs at 1K resolution across 14 aspect ratios, but still keeps the Nano Banana family's signature strengths — character consistency across a stream of images, precise local editing, data-visualization and layout drafts informed by real-world knowledge, and multilingual text rendering — with every output carrying an invisible SynthID watermark for AI-generated identification. When to reach for Lite instead of the pricier Pro/standard version: 1) bulk draft generation, e-commerce product-image variants, or exploring many design directions before narrowing down — this \"generate wide, then pick\" workflow is where Lite saves time and money; 2) once you've settled on a direction, switch the chosen image over to Nano Banana Pro/standard for the final high-detail render. It's currently available to enterprise developers via Google AI Studio and the Gemini API — individual users should watch for when it lands in the Gemini app.",
+    "models": [
+      "Gemini",
+      "Nano Banana"
+    ],
+    "tags": [
+      "Nano Banana",
+      "Gemini",
+      "文生图",
+      "效率工具"
+    ],
+    "source": "Google DeepMind / Google Cloud Blog（2026-06-30）",
+    "updated": "2026-07-09"
   }
 ];
